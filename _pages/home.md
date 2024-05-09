@@ -1,5 +1,5 @@
 ---
-title: "Poker Camp"
+title: "Expected Value Org"
 permalink: /
 sidebar:
   nav: "nav"
@@ -8,29 +8,4 @@ sidebar:
 # toc_sticky: true
 layout: single
 ---
-**Poker Camp** is a program to learn about probability, game theory, AI, and decision making through the lens of poker. 
-
-![Poker Camp](./assets/pc.png)
-
-There are two levels:
-
-**(L1) Poker Camp:** Poker strategy, math and probability, decision making, rationality, and an intro to game theory/AI
-
-Content is available here at [pokercamp.org](https://pokercamp.org) (Coming soon)
-
-<!---
- Goal to become better thinkers and decision makers and impact the world --> 
-
-**(L2) Poker AI Retreat:** Game theory, coding, solving small poker games, the Counterfactual Regret Minimization algorithm, machine learning, and AI
-
-Content is available at [aipokertutorial.com](https://aipokertutorial.com)
-
-<!---
-Goal world changing a lot becuase of AI, understand
- --> 
-
-All content is under construction through at least August. 
-
-Interested in contributing or want to get in touch? [Send a message](mailto:max@pokercamp.org) or sign up for the [mailing list](/mailinglist).
-
-Note that the programming and related materials/workshops are for educational purposes and will not use any real money. 
+**Expected Value Org** is a project to teach you about the important probability concept of expected value.
