@@ -31,13 +31,13 @@ $$
 \end{equation}
 $$
 
-There are many issues here. Importantly, since probabilities are by definition between $0$ and $1$, he clearly made an error. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
+There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
 
-We're not here to critique an error, but rather to **LEARN PROBABILITY**! So how DO you calculate this probability? 
+We're not here to critique an error, but rather to LEARN PROBABILITY! So how DO you calculate this probability? 
 
-Well we know that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. 
+For a single attempt, we use the assumption that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. 
 
-We also know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
+We also then know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
 
 So after 6 attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant 6 times in a row. Mathematically, we can write: 
 
