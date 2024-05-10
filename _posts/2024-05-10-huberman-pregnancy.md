@@ -86,6 +86,10 @@ We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-
 
 ![Pregnancy graph with p = 0.2](../assets/misc/preggraph.png)
 
+An even better graph: 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made a visualization for you all. <a href="https://t.co/LMTECq70HZ">https://t.co/LMTECq70HZ</a> <a href="https://t.co/IGIL1HyGQl">pic.twitter.com/IGIL1HyGQl</a></p>&mdash; Matthew B Jané (@MatthewBJane) <a href="https://twitter.com/MatthewBJane/status/1789015382230991289?ref_src=twsrc%5Etfw">May 10, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Finally, even more generally, we can say that after $ x $ attempts and the more general $ \Pr(\text{Pregnancy}) = p $ (i.e. using probability $p$ instead of $0.2$): 
 
 $$
