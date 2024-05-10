@@ -54,7 +54,7 @@ $$
 \end{equation}
 $$
 
-Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $. Multiplying this 6 times gets us the probability of *not* being pregnant after 6 attempts. So to get the probability *of* being pregnant after 6 attempts, we take 1 minus this, therefore getting $ 1 - (0.8)^6 $. 
+Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $ (note that this is a simplification because probabilities would probably vary for each attempt). Multiplying this 6 times gets us the probability of *not* being pregnant after 6 attempts. So to get the probability *of* being pregnant after 6 attempts, we take 1 minus this, therefore getting $ 1 - (0.8)^6 $. 
 
 More generally, after $ x $ attempts, we can say:
 
