@@ -91,8 +91,7 @@ Therefore after **21** pregnancy attempts where each attempt has a 20% likelihoo
 
 We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. 
 
-<p align="center">
-<img src="../assets/misc/preggraph.png" alt="Pregnancy graph with p = 0.2" width="300"/></p>
+![Pregnancy graph with p = 0.2](../assets/misc/preggraph.png)
 
 Finally, even more generally, we can say that after $ x $ attempts and the more general $ \Pr(\text{Pregnancy}) = p $: 
 $$
