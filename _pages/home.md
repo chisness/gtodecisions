@@ -16,7 +16,8 @@ layout: single
 
 Is there a fertility crisis? Bryan Caplan suggests to [have more kids](https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616) and recently posted [The Fertile Formula](https://www.betonit.ai/p/how-much-would-this-raise-fertility), an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal! 
 
-[![Bryan Caplan Selfish Reasons to Have More Kids](./assets/misc/bryancaplan.jpg)]
+<img src="../assets/misc/bryancaplan.jpg" alt="Bryan Caplan Selfish Reasons to Have More Kids" width="200"/>
+
 
 If you were guaranteed a pregnancy after five attempts, it would be an even better deal! Which is what Andrew Huberman was implying while discussing pregnancy probabilities in a recent video: 
 
@@ -30,7 +31,7 @@ In other words, he did this:
 $$
 \begin{equation}
 \begin{split}
-\Pr(\text{Pregnant after 6 attempts}) &= 6 * \Pr(\text{Pregnant after 1 attempt}) \\
+\Pr(\text{Preg after 6 attempts}) &= 6 * \Pr(\text{Preg after 1 attempt}) \\
   &= 6 * 0.2 \\
   &= 1.2
 \end{split}
@@ -43,12 +44,12 @@ We're not here to critique an error, but rather to LEARN PROBABILITY! So how DO 
 
 Well we know that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. We also know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
 
-So after 6 attempts, we can say that the $ \Pr(\text{Pregnant after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant 6 times in a row. Mathematically, we can write: 
+So after 6 attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant 6 times in a row. Mathematically, we can write: 
 
 $$
 \begin{equation}
 \begin{split}
-\Pr(\text{Pregnant after 6 attempts}) &= 1 - \Pr(\text{Not Pregnant after 6 attempts}) \\
+\Pr(\text{Preg after 6 attempts}) &= 1 - \Pr(\text{Not Preg after 6 attempts}) \\
   &= 1 - (0.8)^6 \\
   &= 0.738 \\
   &= 73.8\%
@@ -63,8 +64,38 @@ More generally, after $ x $ attempts, we can say:
 $$
 \begin{equation}
 \begin{split}
-\Pr(\text{Pregnant after 6 attempts}) &= 1 - \Pr(\text{Not Pregnant after 6 attempts}) \\
+\Pr(\text{Preg after 6 attempts}) &= 1 - \Pr(\text{Not Preg after 6 attempts}) \\
   &= 1 - (1-p)^x
 \end{split}
 \end{equation}
 $$
+
+<div id="graph" style="width: 100%; height: 500px;"></div>
+    <script>
+        // Define the function: f(x) = 1 - (0.8)^x
+        function f(x) {
+            return 1 - Math.pow(0.8, x);
+        }
+
+        // Generate data points for plotting
+        var x_values = Array.from({length: 100}, (_, i) => i * 0.1); // 0, 0.1, 0.2, ..., 9.9
+        var y_values = x_values.map(f);
+
+        // Plotly trace data
+        var trace = {
+            x: x_values,
+            y: y_values,
+            mode: 'lines',
+            name: '1 - (0.8)^x'
+        };
+
+        // Layout (title, labels, etc.)
+        var layout = {
+            title: 'Graph of 1 - (0.8)^x',
+            xaxis: {title: 'x'},
+            yaxis: {title: 'f(x)'},
+        };
+
+        // Plot the graph
+        Plotly.newPlot('graph', [trace], layout);
+    </script>
