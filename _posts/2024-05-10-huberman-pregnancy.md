@@ -31,7 +31,11 @@ $$
 \end{equation}
 $$
 
-There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
+There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. 10 pregnancy attempts by his logic would make you 200% likely to be pregnant, which doesn't really make too much sense. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
+
+By the end of this post, you'll understand how the actual theory works. 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made a visualization for you all. <a href="https://t.co/LMTECq70HZ">https://t.co/LMTECq70HZ</a> <a href="https://t.co/IGIL1HyGQl">pic.twitter.com/IGIL1HyGQl</a></p>&mdash; Matthew B Jané (@MatthewBJane) <a href="https://twitter.com/MatthewBJane/status/1789015382230991289?ref_src=twsrc%5Etfw">May 10, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 We're not here to critique an error, but rather to LEARN PROBABILITY! So how DO you calculate this probability? 
 
@@ -85,10 +89,6 @@ Therefore after **21** pregnancy attempts where each attempt has a 20% likelihoo
 We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. Note that the graph approaches, but will never exceed the probability of 1. 
 
 ![Pregnancy graph with p = 0.2](../assets/misc/preggraph.png)
-
-An even better graph: 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made a visualization for you all. <a href="https://t.co/LMTECq70HZ">https://t.co/LMTECq70HZ</a> <a href="https://t.co/IGIL1HyGQl">pic.twitter.com/IGIL1HyGQl</a></p>&mdash; Matthew B Jané (@MatthewBJane) <a href="https://twitter.com/MatthewBJane/status/1789015382230991289?ref_src=twsrc%5Etfw">May 10, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Finally, even more generally, we can say that after $ x $ attempts and the more general $ \Pr(\text{Pregnancy}) = p $ (i.e. using probability $p$ instead of $0.2$): 
 
