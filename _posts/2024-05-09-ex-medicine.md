@@ -1,6 +1,6 @@
 ---
 title: "Expected Value Example: Medicine"
-date: 2025-05-09
+date: 2024-05-09
 sidebar:
   nav: "nav"
 # toc: true
