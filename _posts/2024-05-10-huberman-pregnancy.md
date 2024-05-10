@@ -73,11 +73,11 @@ So assuming that $ \Pr(\text{Pregnancy}) = 0.2 $, when are you $ 99\% $ to be pr
 $$
 \begin{equation}
 \begin{split}
- 0.99 &= 1 - \Pr(\text{Not Preg after x attempts}) && \text{ Set pregnancy likelihood to } 0.99 \\
+ 0.99 &= 1 - \Pr(\text{Not Preg after x attempts}) && \Rightarrow \text{ Set pregnancy likelihood to } 0.99 \\
       &= 1 - (0.8)^x && \text{ Use equation from above } \\
-  0.99 + (0.8)^x &= 1 && \text{ Add } 0.8^x \text{ to both sides} \\
-  (0.8)^x &= 0.01 && \text{ Subtract } 0.99 \text{ from both sides} \\
-  x &= 20.64 && \text{ Use calculator to solve}
+  0.99 + (0.8)^x &= 1 && \Rightarrow \text{ Add } 0.8^x \text{ to both sides} \\
+  (0.8)^x &= 0.01 && \Rightarrow \text{ Subtract } 0.99 \text{ from both sides} \\
+  x &= 20.64 && \Rightarrow \text{ Use calculator to solve}
 \end{split}
 \end{equation}
 $$
