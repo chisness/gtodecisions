@@ -16,8 +16,8 @@ layout: single
 
 Is there a fertility crisis? Bryan Caplan suggests to [have more kids](https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616) and recently posted [The Fertile Formula](https://www.betonit.ai/p/how-much-would-this-raise-fertility), an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal! 
 
-<img src="../assets/misc/bryancaplan.jpg" alt="Bryan Caplan Selfish Reasons to Have More Kids" width="200"/>
-
+<p align="center">
+<a href="https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616"><img src="../assets/misc/bryancaplan.jpg" alt="Bryan Caplan Selfish Reasons to Have More Kids" width="300"/></a></p>
 
 If you were guaranteed a pregnancy after five attempts, it would be an even better deal! Which is what Andrew Huberman was implying while discussing pregnancy probabilities in a recent video: 
 
@@ -42,7 +42,9 @@ There are many issues here. Importantly, since probabilities are by definition b
 
 We're not here to critique an error, but rather to LEARN PROBABILITY! So how DO you calculate this probability? 
 
-Well we know that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. We also know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
+Well we know that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. 
+
+We also know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
 
 So after 6 attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant 6 times in a row. Mathematically, we can write: 
 
@@ -57,45 +59,47 @@ $$
 \end{equation}
 $$
 
-Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $. Multiplying this 6 times gets us the probability of *not* being pregnant after 6 attempts. So to get the probability *of* being pregnant after 6 attempts, we take $ 1 $ minus this, therefore getting $ 1 - (0.8)^6 $. 
+Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $. Multiplying this 6 times gets us the probability of *not* being pregnant after 6 attempts. So to get the probability *of* being pregnant after 6 attempts, we take 1 minus this, therefore getting $ 1 - (0.8)^6 $. 
 
 More generally, after $ x $ attempts, we can say:
 
 $$
 \begin{equation}
 \begin{split}
-\Pr(\text{Preg after 6 attempts}) &= 1 - \Pr(\text{Not Preg after 6 attempts}) \\
-  &= 1 - (1-p)^x
+\Pr(\text{Preg after x attempts}) &= 1 - \Pr(\text{Not Preg after x attempts}) \\
+  &= 1 - (1-0.2)^x \\
+  &= 1 - (0.8)^x
 \end{split}
 \end{equation}
 $$
 
-<div id="graph" style="width: 100%; height: 500px;"></div>
-    <script>
-        // Define the function: f(x) = 1 - (0.8)^x
-        function f(x) {
-            return 1 - Math.pow(0.8, x);
-        }
+So assuming that $ \Pr(\text{Pregnancy}) = 0.2 $, when are you $ 99\% $ to be pregnant? 
 
-        // Generate data points for plotting
-        var x_values = Array.from({length: 100}, (_, i) => i * 0.1); // 0, 0.1, 0.2, ..., 9.9
-        var y_values = x_values.map(f);
+$$
+\begin{equation}
+\begin{split}
+ 0.99 &= 1 - \Pr(\text{Not Preg after x attempts}) && \text{Set pregnancy likelihood to} 0.99 \\
+      &= 1 - (0.8)^x && \text{Use equation from above} \\
+  0.99 + (0.8)^x &= 1 && \text{Add} 0.8^x \text{to both sides} \\
+  (0.8)^x &= 0.01 && \text{Subtract} 0.99 \text{from both sides} \\
+  x &= 20.64 && \text{Use calculator to solve}
+\end{split}
+\end{equation}
+$$
 
-        // Plotly trace data
-        var trace = {
-            x: x_values,
-            y: y_values,
-            mode: 'lines',
-            name: '1 - (0.8)^x'
-        };
+Therefore after **21** pregnancy attempts where each attempt has a 20% likelihood, your cumulative likelihood of being pregant exceeds 99%. 
 
-        // Layout (title, labels, etc.)
-        var layout = {
-            title: 'Graph of 1 - (0.8)^x',
-            xaxis: {title: 'x'},
-            yaxis: {title: 'f(x)'},
-        };
+We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. 
 
-        // Plot the graph
-        Plotly.newPlot('graph', [trace], layout);
-    </script>
+<p align="center">
+<img src="../assets/misc/preggraph.png" alt="Pregnancy graph with p = 0.2" width="300"/></p>
+
+Finally, even more generally, we can say that after $ x $ attempts and the more general $ \Pr(\text{Pregnancy}) = p $: 
+$$
+\begin{equation}
+\begin{split}
+\Pr(\text{Preg after x attempts}) &= 1 - \Pr(\text{Not Preg after x attempts}) \\
+  &= 1 - (1-p)^x \\
+\end{split}
+\end{equation}
+$$
