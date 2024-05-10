@@ -7,8 +7,6 @@ sidebar:
 # toc_label: "TOC"
 # toc_sticky: true
 ---
-(Note that this is not expected value, but an important probability concept nonetheless.)
-
 Is there a fertility crisis? Bryan Caplan suggests to [have more kids](https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616) and recently posted [The Fertile Formula](https://www.betonit.ai/p/how-much-would-this-raise-fertility), an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal! 
 
 <p align="center">
