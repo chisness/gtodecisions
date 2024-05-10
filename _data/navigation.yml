@@ -13,22 +13,22 @@ nav:
   - title: What is Expected Value?
     children:
       - title: "1. EV Basics"
-        url: /ev-basics
+        # url: /ev-basics
       - title: "2. Why Useful?"
-        url: /ev-good
+        # url: /ev-good
       - title: "3. When Not Useful?"
-        url: /ev-bad
+        # url: /ev-bad
 
   - title: Expected Value Examples
     children:
       - title: "1. Basketball"
-        url: /ex-basketball
+        # url: /ex-basketball
       - title: "2. Dice"
-        url: /ex-dice
+        # url: /ex-dice
       - title: "3. Poker"
-        url: /ex-poker
+        # url: /ex-poker
       - title: "4. Medicine"
-        url: /ex-medicine
+        # url: /ex-medicine
   
   - title: Misc Stuff
     children:
