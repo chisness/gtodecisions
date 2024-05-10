@@ -16,7 +16,7 @@ layout: single
 
 Is there a fertility crisis? Bryan Caplan suggests to [have more kids](https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616) and recently posted [The Fertile Formula](https://www.betonit.ai/p/how-much-would-this-raise-fertility), an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal! 
 
-[![Bryan Caplan Selfish Reasons to Have More Kids](/assets/bryancaplan.jpg)]
+[![Bryan Caplan Selfish Reasons to Have More Kids](../assets/bryancaplan.jpg)]
 
 If you were guaranteed a pregnancy after five attempts, it would be an even better deal! 
 
