@@ -29,3 +29,7 @@ nav:
         url: /ex-poker
       - title: "4. Medicine"
         url: /ex-medicine
+  - title: Misc Stuff
+    children:
+      - title: "1. Pregnancy Probability"
+        url: /huberman-pregnancy
