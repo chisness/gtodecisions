@@ -75,7 +75,7 @@ $$
 \begin{split}
  0.99 &= 1 - \Pr(\text{Not Preg after x attempts}) && \ \text{Set pregnancy likelihood to} \ 0.99 \\
       &= 1 - (0.8)^x && \ \text{Use equation from above} \\
-  0.99 + (0.8)^x &= 1 && \ \text{Add} 0.8^x \ \text{to both sides} \\
+  0.99 + (0.8)^x &= 1 && \ \text{Add } 0.8^x \ \text{to both sides} \\
   (0.8)^x &= 0.01 && \ \text{Subtract} \ 0.99 \ \text{from both sides} \\
   x &= 20.64 && \ \text{Use calculator to solve}
 \end{split}
