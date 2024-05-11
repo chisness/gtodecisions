@@ -96,7 +96,7 @@ $$
 \end{equation}
 $$
 
-Therefore after **$21$** pregnancy attempts where each attempt has a $20\%$ likelihood, your cumulative likelihood of being pregant exceeds $99\%$. (We round up from $20.64$ because each one is discrete and after $20$ the probability would be under $99\%$, so only after $21$ does it exceed $99\%$.)
+Therefore after **$21$** pregnancy attempts where each attempt has a $20\%$ likelihood, your cumulative likelihood of being pregant exceeds $99\%$. (We round up from $20.64$ because each one is discrete and at $20$ the probability would be under $99\%$, so only *after* $20.64$ does it exceed $99\%$, which means it exceeds at attempt $21$.)
 
 We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. Note that the graph approaches, but will never exceed the probability of $1$. 
 
