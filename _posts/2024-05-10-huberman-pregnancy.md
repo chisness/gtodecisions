@@ -19,7 +19,7 @@ If you were guaranteed a pregnancy after five attempts, it would be an even bett
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Andrew Huberman says that having sex 6 times gives you a 120% chance of getting pregnant<br><br>Multiply that by his 6 girlfriends and we have a 120% chance of having 36 Hubermans after 6 years<br><br>Population crisis solved <a href="https://t.co/m1u5qgmwUJ">https://t.co/m1u5qgmwUJ</a></p>&mdash; BuccoCapital Bloke (@buccocapital) <a href="https://twitter.com/buccocapital/status/1788575303889035600?ref_src=twsrc%5Etfw">May 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 He was specifically talking about cumulative probabilities and he said that if the 
-$ \Pr(\text{Pregnancy}) = 0.2 $, then the $ \Pr(\text{Pregnancy}) $ after $ 6 $ attempts is $ 1.2 $, i.e. $120\%$. 
+$ \Pr(\text{Pregnancy}) = 0.2 $ per attempt, then the $ \Pr(\text{Pregnancy}) $ after $ 6 $ attempts is $ 1.2 $, i.e. $120\%$. 
 
 In other words, he did this: 
 
