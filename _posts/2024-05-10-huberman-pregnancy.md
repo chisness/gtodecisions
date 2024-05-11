@@ -3,15 +3,17 @@ title: "Pregnancy Probability Starring Andrew Huberman"
 date: 2024-05-10
 sidebar:
   nav: "nav"
-# toc: true
-# toc_label: "TOC"
-# toc_sticky: true
+toc: true
+toc_label: "TOC"
+toc_sticky: true
 ---
+# Fertility Crisis
 Is there a fertility crisis? Bryan Caplan suggests to [have more kids](https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616) and recently posted [The Fertile Formula](https://www.betonit.ai/p/how-much-would-this-raise-fertility), an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal! 
 
 <p align="center">
 <a href="https://www.amazon.com/Selfish-Reasons-Have-More-Kids/dp/0465028616"><img src="../assets/misc/bryancaplan.jpg" alt="Bryan Caplan Selfish Reasons to Have More Kids" width="300"/></a></p>
 
+# Andrew Huberman Calculates Pregnancy Probability
 If you were guaranteed a pregnancy after five attempts, it would be an even better deal! Which is what Andrew Huberman was implying while discussing pregnancy probabilities in a recent video: 
 
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Andrew Huberman says that having sex 6 times gives you a 120% chance of getting pregnant<br><br>Multiply that by his 6 girlfriends and we have a 120% chance of having 36 Hubermans after 6 years<br><br>Population crisis solved <a href="https://t.co/m1u5qgmwUJ">https://t.co/m1u5qgmwUJ</a></p>&mdash; BuccoCapital Bloke (@buccocapital) <a href="https://twitter.com/buccocapital/status/1788575303889035600?ref_src=twsrc%5Etfw">May 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -32,18 +34,24 @@ $$
 \end{equation}
 $$
 
-There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. $10$ pregnancy attempts by his logic would make you $200\%$ likely to be pregnant, which doesn't really make too much sense. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
+## Huberman Calculation Issues
+There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. $10$ pregnancy attempts by his logic would make you $200\%$ likely to be pregnant, which doesn't really make too much sense. 
 
-By the end of this post, you'll understand how the actual theory works. 
+Huberman was *adding* $20\%$ for each attempt, which is not the correct approach. By the end of this post, we'll explain how the actual theory works. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made a visualization for you all. <a href="https://t.co/LMTECq70HZ">https://t.co/LMTECq70HZ</a> <a href="https://t.co/IGIL1HyGQl">pic.twitter.com/IGIL1HyGQl</a></p>&mdash; Matthew B Jané (@MatthewBJane) <a href="https://twitter.com/MatthewBJane/status/1789015382230991289?ref_src=twsrc%5Etfw">May 10, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## Huberman Correction
+He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
+
+# Correctly Calculating Pregnancy Probabilities
 We're not here to critique an error, but rather to LEARN PROBABILITY! So how DO you calculate this probability? 
 
 For a single attempt, we use the Huberman assumption that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. 
 
 We also then know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
 
+## 6 Pregnancy Attempts 
 So after $6$ attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant $6$ times in a row. Mathematically, we can write: 
 
 $$
@@ -57,8 +65,10 @@ $$
 \end{equation}
 $$
 
+### Independent Probabilities 
 Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $ (note that this is a simplification because probabilities would generally vary for each attempt). Multiplying this $6$ times gets us the probability of *not* being pregnant after $6$ attempts. So to get the probability *of* being pregnant after $6$ attempts, we take 1 minus this, therefore getting $ 1 - (0.8)^6 $. 
 
+## x Pregnancy Attempts
 More generally, after $ x $ attempts, we can say:
 
 $$
@@ -71,6 +81,7 @@ $$
 \end{equation}
 $$
 
+## 99% Likelihood of Pregnancy
 So assuming that $ \Pr(\text{Pregnancy}) = 0.2 $, when are you $ 99\% $ to be pregnant? 
 
 $$
@@ -91,6 +102,7 @@ We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-
 
 ![Pregnancy graph with p = 0.2](../assets/misc/preggraph.png)
 
+## Generalized Pregnancy Equation
 Finally, even more generally, we can say that after $ x $ attempts and the more general $ \Pr(\text{Pregnancy}) = p $ (i.e. using probability $p$ instead of $0.2$): 
 
 $$
