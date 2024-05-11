@@ -37,7 +37,7 @@ $$
 ## Huberman Calculation Issues
 There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. $10$ pregnancy attempts by his logic would make you $200\%$ likely to be pregnant, which doesn't really make too much sense. 
 
-Huberman was *adding* $20\%$ for each attempt, which is not the correct approach. By the end of this post, we'll explain how the actual theory works. 
+Huberman was *adding* $20\%$ for each attempt, which is not the correct approach. In this post, we'll explain how the actual theory works. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made a visualization for you all. <a href="https://t.co/LMTECq70HZ">https://t.co/LMTECq70HZ</a> <a href="https://t.co/IGIL1HyGQl">pic.twitter.com/IGIL1HyGQl</a></p>&mdash; Matthew B Jané (@MatthewBJane) <a href="https://twitter.com/MatthewBJane/status/1789015382230991289?ref_src=twsrc%5Etfw">May 10, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
