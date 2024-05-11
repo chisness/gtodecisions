@@ -29,7 +29,7 @@ $$
 \Pr(\text{Preg after 6 attempts}) &= 6 * \Pr(\text{Preg after 1 attempt}) \\
   &= 6 * 0.2 \\
   &= 1.2 \\
-  &= 120%
+  &= 120\%
 \end{split}
 \end{equation}
 $$
