@@ -17,7 +17,7 @@ If you were guaranteed a pregnancy after five attempts, it would be an even bett
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Andrew Huberman says that having sex 6 times gives you a 120% chance of getting pregnant<br><br>Multiply that by his 6 girlfriends and we have a 120% chance of having 36 Hubermans after 6 years<br><br>Population crisis solved <a href="https://t.co/m1u5qgmwUJ">https://t.co/m1u5qgmwUJ</a></p>&mdash; BuccoCapital Bloke (@buccocapital) <a href="https://twitter.com/buccocapital/status/1788575303889035600?ref_src=twsrc%5Etfw">May 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 He was specifically talking about cumulative probabilities and he said that if the 
-$ \Pr(\text{Pregnancy}) = 0.2 $, then the $ \Pr(\text{Pregnancy}) $ after $ 6 $ attempts is $ 1.2 $. 
+$ \Pr(\text{Pregnancy}) = 0.2 $, then the $ \Pr(\text{Pregnancy}) $ after $ 6 $ attempts is $ 1.2 $, i.e. $120\%$. 
 
 In other words, he did this: 
 
@@ -26,12 +26,13 @@ $$
 \begin{split}
 \Pr(\text{Preg after 6 attempts}) &= 6 * \Pr(\text{Preg after 1 attempt}) \\
   &= 6 * 0.2 \\
-  &= 1.2
+  &= 1.2 \\
+  &= 120%
 \end{split}
 \end{equation}
 $$
 
-There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. 10 pregnancy attempts by his logic would make you 200% likely to be pregnant, which doesn't really make too much sense. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
+There are many issues here. To start, since probabilities are by definition between $0$ and $1$, he clearly made an error. $10$ pregnancy attempts by his logic would make you $200\%$ likely to be pregnant, which doesn't really make too much sense. He since posted a [Twitter correction](https://twitter.com/hubermanlab/status/1788964558758965281) and has updated the original videos. 
 
 By the end of this post, you'll understand how the actual theory works. 
 
@@ -39,11 +40,11 @@ By the end of this post, you'll understand how the actual theory works.
 
 We're not here to critique an error, but rather to LEARN PROBABILITY! So how DO you calculate this probability? 
 
-For a single attempt, we use the assumption that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. 
+For a single attempt, we use the Huberman assumption that $ \Pr(\text{Pregnancy}) = 0.2 $. We'll define this as $ p = 0.2 $. 
 
 We also then know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
 
-So after 6 attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant 6 times in a row. Mathematically, we can write: 
+So after $6$ attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant $6$ times in a row. Mathematically, we can write: 
 
 $$
 \begin{equation}
@@ -56,7 +57,7 @@ $$
 \end{equation}
 $$
 
-Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $ (note that this is a simplification because probabilities would probably vary for each attempt). Multiplying this 6 times gets us the probability of *not* being pregnant after 6 attempts. So to get the probability *of* being pregnant after 6 attempts, we take 1 minus this, therefore getting $ 1 - (0.8)^6 $. 
+Why is it $ 1 - (0.8)^6 $? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of $ 0.8 $ (note that this is a simplification because probabilities would generally vary for each attempt). Multiplying this $6$ times gets us the probability of *not* being pregnant after $6$ attempts. So to get the probability *of* being pregnant after $6$ attempts, we take 1 minus this, therefore getting $ 1 - (0.8)^6 $. 
 
 More generally, after $ x $ attempts, we can say:
 
@@ -84,9 +85,9 @@ $$
 \end{equation}
 $$
 
-Therefore after **21** pregnancy attempts where each attempt has a 20% likelihood, your cumulative likelihood of being pregant exceeds 99%. (We round up from 20.64 because each one is discrete and after 20 the probability would be under 99%, so only after 21 does it exceed 99%.)
+Therefore after **$21$** pregnancy attempts where each attempt has a $20\%$ likelihood, your cumulative likelihood of being pregant exceeds $99\%$. (We round up from $20.64$ because each one is discrete and after $20$ the probability would be under $99\%$, so only after $21$ does it exceed $99\%$.)
 
-We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. Note that the graph approaches, but will never exceed the probability of 1. 
+We can see this on the graph below where $ \Pr(\text{Pregnancy}) = 0.2 $. The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. Note that the graph approaches, but will never exceed the probability of $1$. 
 
 ![Pregnancy graph with p = 0.2](../assets/misc/preggraph.png)
 
