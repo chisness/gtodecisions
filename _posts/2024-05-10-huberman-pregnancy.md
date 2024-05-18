@@ -52,7 +52,7 @@ For a single attempt, we use the Huberman assumption that $ \Pr(\text{Pregnancy}
 We also then know that $ \Pr(\text{No Pregnancy}) = 1 - p = 1 - 0.2 = 0.8 $. 
 
 ## 6 Pregnancy Attempts 
-So after $6$ attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant $6$ times in a row. Why? The probability of an event and its inverse always sum to $1$. For example, if it's $70\%$ to be sunny tomorrow, then it's $30\%$ to be not-sunny. 
+So after $6$ attempts, we can say that the $ \Pr(\text{Preg after 6 attempts}) $ is equal to the inverse of the probability of *not* getting pregnant $6$ times in a row. Why? The probability of an event and its complement always sum to $1$. For example, if it's $70\%$ to be sunny tomorrow, then it's $30\%$ to be not-sunny. 
 
 Mathematically, we can write: 
 
