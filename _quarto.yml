@@ -6,9 +6,9 @@ website:
   title: "Expected Value Org"
   open-graph: true
   # google-analytics: 
-  twitter-card: true
-    creator: "@chisness"
   # favicon: 
+  twitter-card:
+    creator: "@chisness"
   navbar: 
     background: primary
     right: 
@@ -25,7 +25,7 @@ website:
     style: docked
     background: light
     contents: 
-      - section: "WHAT IS EXPECTED VALUE?"
+      - section: "EXPECTED VALUE"
         contents: 
           - href: ev-basics.qmd
             text: EV Basics
@@ -33,7 +33,7 @@ website:
             text: EV Benefits
           - href: ev-faults.qmd
             text: EV Faults
-      - section: "EXPECTED VALUE EXAMPLES"
+      - section: "EV EXAMPLES"
         contents: 
           - href: basketball.qmd
             text: Basketball
