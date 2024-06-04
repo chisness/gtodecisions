@@ -4,6 +4,11 @@ project:
 
 website:
   title: "Expected Value Org"
+  open-graph: true
+  # google-analytics: 
+  twitter-card: true
+    creator: "@chisness"
+  # favicon: 
   navbar: 
     background: primary
     right: 
