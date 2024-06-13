@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Expected Value Org"
+  title: "The Expected Value Foundation"
   open-graph: true
   # google-analytics: 
   # favicon: 
