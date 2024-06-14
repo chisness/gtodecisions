@@ -4,7 +4,7 @@ format:
   html:
     math: true
 ---
-The Expected Value Org is a project by [Max Chiswick](https://maxchiswick.com) because expected value is important! 
+The Expected Value Foundation is a project by [Max Chiswick](https://maxchiswick.com) because expected value is important! 
 
 **Links:** 
 

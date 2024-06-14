@@ -64,7 +64,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "The Expected Value Org is a project by Max Chiswick because expected value is important!\nLinks:\n\nPoker Camp\nLinkedIn"
+    "text": "The Expected Value Foundation is a project by Max Chiswick because expected value is important!\nLinks:\n\nPoker Camp\nLinkedIn"
   },
   {
     "objectID": "poker.html#section-2",
@@ -357,7 +357,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Expected Value Org",
+    "title": "The Expected Value Foundation",
     "section": "",
     "text": "What is the expected value of this site?\n\nimport ipywidgets as widgets\nwidgets.IntSlider()\n\n\n\n\nTo learn more about Quarto books visit https://quarto.org/docs/books."
   },
