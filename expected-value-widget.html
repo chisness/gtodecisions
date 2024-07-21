@@ -1,6 +1,6 @@
 <div id="expectedValueWidget">
     <h3>What is the expected value of this website?</h3>
-    <p id="entryCount">Entries so far: 0</p>
+    <p id="entryCount">Entries so far: Loading...</p>
     <div id="inputSection">
         <input type="text" id="valueInput" placeholder="Enter value">
         <button id="submitBtn">Submit</button>
@@ -18,16 +18,12 @@
 let currentEntryCount = 0;
 
 function fetchEntryCount() {
-    const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbz_uKuy02d6RfOO8vsE1wXy7WhqbRLyVNlycu5CuhefnL5RrlVxZgrDywKpManscKGS/exec ';
 
     return fetch(url)
-        .then(response => response.text())  // Change this line
-        .then(countText => {
-            const count = parseInt(countText, 10);  // Parse the count as an integer
-            if (isNaN(count)) {
-                throw new Error('Invalid count received');
-            }
-            currentEntryCount = count;
+        .then(response => response.json())
+        .then(data => {
+            const count = data.count;
             document.getElementById('entryCount').textContent = `Entries so far: ${count}`;
             return count;
         })
@@ -39,7 +35,7 @@ function fetchEntryCount() {
 
 function sendToGoogleSheets(value) {
     // Replace with your Google Apps Script Web App URL
-    const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbz_uKuy02d6RfOO8vsE1wXy7WhqbRLyVNlycu5CuhefnL5RrlVxZgrDywKpManscKGS/exec ';
 
     return fetch(url, {
         method: 'POST',
@@ -61,25 +57,29 @@ function sendToGoogleSheets(value) {
     });
 }
 
-function fetchAllSubmissions(newSubmission) {
+function fetchAllSubmissions() {
     console.log('Fetching submissions...');
-    const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbz_uKuy02d6RfOO8vsE1wXy7WhqbRLyVNlycu5CuhefnL5RrlVxZgrDywKpManscKGS/exec ';
 
     return fetch(url)
         .then(response => response.json())
         .then(data => {
             console.log('Raw data from server:', data);
-            let allSubmissions = data && data.length > 0 ? data.map(row => {
-                const parsed = parseFloat(row[0]);
-                if (isNaN(parsed)) {
-                    console.error('Invalid data in submission:', row[0]);
-                    return null;
-                }
-                return parsed;
-            }).filter(val => val !== null) : [];
-            // We're no longer adding the new submission here
-            console.log('Processed submissions:', allSubmissions);
-            return allSubmissions;
+            if (data && data.submissions && data.submissions.length > 0) {
+                let allSubmissions = data.submissions.map(row => {
+                    const parsed = parseFloat(row[0]);
+                    if (isNaN(parsed)) {
+                        console.error('Invalid data in submission:', row[0]);
+                        return null;
+                    }
+                    return parsed;
+                }).filter(val => val !== null);
+                console.log('Processed submissions:', allSubmissions);
+                return allSubmissions;
+            } else {
+                console.log('No submissions found');
+                return [];
+            }
         })
         .catch(error => {
             console.error('Error fetching submissions:', error);
@@ -130,19 +130,14 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     const valueInput = document.getElementById('valueInput');
     const inputValue = valueInput.value.replace(/,/g, '');
     const value = parseFloat(inputValue);
-    if (isNaN(value) || value < 0 || value > 1e6) { 
-        alert('Please enter a valid number between 0 and 1m');
+    if (isNaN(value) || value < 0 || value > 1e12) { // 1e12 is one trillion
+        alert('Please enter a valid number between 0 and 1,000,000,000,000');
         return;
     }
     
     console.log('Submitting value:', value);
-    fetchEntryCount()
-        .then(() => sendToGoogleSheets(value))
+    sendToGoogleSheets(value)
         .then(() => {
-            // Update entry count display
-            currentEntryCount++;
-            document.getElementById('entryCount').textContent = `Entries so far: ${currentEntryCount}`;
-            
             // Disable input and show thank you message
             document.getElementById('inputSection').style.display = 'none';
             document.getElementById('thankYouMessage').style.display = 'block';
@@ -151,6 +146,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
             return fetchAllSubmissions();
         })
         .then(updateStats)
+        .then(fetchEntryCount)  // Fetch the updated count after submission
         .catch(error => {
             console.error('Error in submission process:', error);
         });
