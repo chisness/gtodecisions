@@ -5,7 +5,7 @@
         <button id="submitBtn">Submit</button>
     </div>
     <div id="thankYouMessage" style="display: none;">
-        <p>Thank you for your submission!</p>
+        <p>Thank you and have a nice day! Stats loading...</p>
     </div>
     <div id="statsSection" style="display: none;">
         <p>Median value: <span id="medianValue">No data yet</span></p>
@@ -37,14 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     console.log('Submitting value:', value);
-    sendToGoogleSheets(value);
+    sendToGoogleSheets(value)
+        .then(() => {
+            // Disable input and show thank you message
+            inputSection.style.display = 'none';
+            thankYouMessage.style.display = 'block';
 
-    // Disable input and show thank you message
-    inputSection.style.display = 'none';
-    thankYouMessage.style.display = 'block';
-
-    console.log('Fetching all submissions...');
-    fetchAllSubmissions();
+            console.log('Fetching all submissions...');
+            return fetchAllSubmissions();
+        })
+        .then(() => {
+            updateStats(value);
+        })
+        .catch(error => {
+            console.error('Error in submission process:', error);
+        });
     }); 
     
     console.log('Submitting value:', value);
@@ -58,11 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchAllSubmissions();
     });
 
-function sendToGoogleSheets(value) {
+    function sendToGoogleSheets(value) {
     // Replace with your Google Apps Script Web App URL
     const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
 
-    fetch(url, {
+    return fetch(url, {
         method: 'POST',
         mode: 'no-cors',
         cache: 'no-cache',
@@ -72,8 +79,14 @@ function sendToGoogleSheets(value) {
         redirect: 'follow',
         body: JSON.stringify({value: value, timestamp: new Date().toISOString()})
     })
-    .then(response => console.log('Success:', response))
-    .catch(error => console.error('Error:', error));
+    .then(response => {
+        console.log('Success:', response);
+        return response;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        throw error;
+    });
 }
 
 function fetchAllSubmissions() {
@@ -81,7 +94,7 @@ function fetchAllSubmissions() {
     // Replace with your Google Apps Script Web App URL
     const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
 
-    fetch(url)
+    return fetch(url)
         .then(response => response.json())
         .then(data => {
             console.log('Data parsed:', data);
@@ -92,29 +105,29 @@ function fetchAllSubmissions() {
                 allSubmissions = [];
                 console.log('No submissions found');
             }
-            updateStats();
         })
         .catch(error => {
             console.error('Error fetching submissions:', error);
             allSubmissions = [];
-            updateStats();
+            throw error;
         });
 }
 
-function updateStats() {
+function updateStats(newSubmission) {
     console.log('Updating stats...');
     const statsSection = document.getElementById('statsSection');
     const medianValueSpan = document.getElementById('medianValue');
     const averageValueSpan = document.getElementById('averageValue');
     const lastSubmissionSpan = document.getElementById('lastSubmission');
 
-    if (allSubmissions.length === 0) {
+    if (allSubmissions.length === 0 && !newSubmission) {
         console.log('No submissions to display');
         medianValueSpan.textContent = 'No data yet';
         averageValueSpan.textContent = 'No data yet';
         lastSubmissionSpan.textContent = 'No submissions yet';
     } else {
-        const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
+        const allValues = newSubmission ? [...allSubmissions, newSubmission] : allSubmissions;
+        const sortedSubmissions = allValues.slice().sort((a, b) => a - b);
         const len = sortedSubmissions.length;
 
         // Calculate median
@@ -125,13 +138,13 @@ function updateStats() {
         // Calculate average
         const average = sortedSubmissions.reduce((a, b) => a + b, 0) / len;
 
-        // Get last submission
-        const lastSubmission = allSubmissions[allSubmissions.length - 1];
+        // Get last submission (which is the second to last in allValues if newSubmission exists)
+        const lastSubmission = newSubmission ? allSubmissions[allSubmissions.length - 1] : allValues[allValues.length - 1];
 
         console.log('Median:', median, 'Average:', average, 'Last Submission:', lastSubmission);
         medianValueSpan.textContent = median.toFixed(2);
         averageValueSpan.textContent = average.toFixed(2);
-        lastSubmissionSpan.textContent = lastSubmission.toFixed(2);
+        lastSubmissionSpan.textContent = lastSubmission ? lastSubmission.toFixed(2) : 'No previous submissions';
     }
 
     statsSection.style.display = 'block';
