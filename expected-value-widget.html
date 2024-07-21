@@ -1,7 +1,7 @@
 <div id="expectedValueWidget">
     <h3>What is the expected value of this website?</h3>
     <div id="inputSection">
-        <input type="number" id="valueInput" min="0" step="0.01" placeholder="Enter value">
+        <input type="text" id="valueInput" placeholder="Enter value">
         <button id="submitBtn">Submit</button>
     </div>
     <div id="thankYouMessage" style="display: none;">
@@ -18,6 +18,7 @@
 console.log('Chart.js loaded:', !!window.Chart);
 
 let allSubmissions = [];
+let myChart;
 
 document.addEventListener('DOMContentLoaded', function() {
     const valueInput = document.getElementById('valueInput');
@@ -27,21 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const chartSection = document.getElementById('chartSection');
 
     submitBtn.addEventListener('click', function() {
-        const value = parseFloat(valueInput.value);
-        if (isNaN(value) || value < 0) {
-            alert('Please enter a valid positive number');
-            return;
-        }
-        
-        console.log('Submitting value:', value);
-        sendToGoogleSheets(value);
+    const value = parseFloat(valueInput.value.replace(/,/g, ''));
+    if (isNaN(value) || value < 0) {
+        alert('Please enter a valid positive number');
+        return;
+    }
+    
+    console.log('Submitting value:', value);
+    sendToGoogleSheets(value);
 
-        // Disable input and show thank you message
-        inputSection.style.display = 'none';
-        thankYouMessage.style.display = 'block';
+    // Disable input and show thank you message
+    inputSection.style.display = 'none';
+    thankYouMessage.style.display = 'block';
 
-        console.log('Fetching all submissions...');
-        fetchAllSubmissions();
+    console.log('Fetching all submissions...');
+    fetchAllSubmissions();
     });
 });
 
@@ -88,7 +89,7 @@ function updateChart() {
     console.log('Updating chart...');
     const chartSection = document.getElementById('chartSection');
     const medianValueSpan = document.getElementById('medianValue');
-    const ctx = document.getElementById('submissionsChart').getContext('2d');
+    const ctx = document.getElementById('submissionsChart');
 
     if (allSubmissions.length === 0) {
         console.log('No submissions to chart');
@@ -96,7 +97,7 @@ function updateChart() {
     }
 
     // Calculate median
-    const sortedSubmissions = [...allSubmissions].sort((a, b) => a - b);
+    const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
     const median = sortedSubmissions.length % 2 === 0
         ? (sortedSubmissions[sortedSubmissions.length / 2 - 1] + sortedSubmissions[sortedSubmissions.length / 2]) / 2
         : sortedSubmissions[Math.floor(sortedSubmissions.length / 2)];
@@ -104,13 +105,35 @@ function updateChart() {
     console.log('Calculated median:', median);
     medianValueSpan.textContent = median.toFixed(2);
 
-    new Chart(ctx, {
+    // Create histogram data
+    const binCount = 10;
+    const min = Math.min(...allSubmissions);
+    const max = Math.max(...allSubmissions);
+    const binSize = (max - min) / binCount;
+    const bins = Array(binCount).fill(0);
+
+    allSubmissions.forEach(value => {
+        const binIndex = Math.min(Math.floor((value - min) / binSize), binCount - 1);
+        bins[binIndex]++;
+    });
+
+    const labels = bins.map((_, index) => {
+        const start = (min + index * binSize).toFixed(2);
+        const end = (min + (index + 1) * binSize).toFixed(2);
+        return `${start} - ${end}`;
+    });
+
+    if (window.myChart instanceof Chart) {
+        window.myChart.destroy();
+    }
+
+    window.myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: allSubmissions.map((_, index) => `Submission ${index + 1}`),
+            labels: labels,
             datasets: [{
-                label: 'Submissions',
-                data: allSubmissions,
+                label: 'Number of Submissions',
+                data: bins,
                 backgroundColor: 'rgba(75, 192, 192, 0.6)'
             }]
         },
@@ -118,7 +141,23 @@ function updateChart() {
             responsive: true,
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Number of Submissions'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Value Ranges'
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Distribution of Submissions'
                 }
             }
         }
