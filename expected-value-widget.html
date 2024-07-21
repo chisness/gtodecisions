@@ -14,6 +14,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot@4.0.0/build/Chart.BoxPlot.min.js"></script>
 <script>
 console.log('Chart.js loaded:', !!window.Chart);
 
@@ -29,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     submitBtn.addEventListener('click', function() {
     const value = parseFloat(valueInput.value.replace(/,/g, ''));
-    if (isNaN(value) || value < 0) {
-        alert('Please enter a valid positive number');
+    if (isNaN(value) || value < 0 || value > 1e6) { 
+        alert('Please enter a valid number between 0 and 1,000,000');
         return;
     }
     
@@ -44,7 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Fetching all submissions...');
     fetchAllSubmissions();
     });
-});
+    
+    console.log('Submitting value:', value);
+    sendToGoogleSheets(value);
+
+    // Disable input and show thank you message
+    inputSection.style.display = 'none';
+    thankYouMessage.style.display = 'block';
+
+    console.log('Fetching all submissions...');
+    fetchAllSubmissions();
+    });
 
 function sendToGoogleSheets(value) {
     // Replace with your Google Apps Script Web App URL
@@ -96,68 +107,66 @@ function updateChart() {
         return;
     }
 
-    // Calculate median
     const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
-    const median = sortedSubmissions.length % 2 === 0
-        ? (sortedSubmissions[sortedSubmissions.length / 2 - 1] + sortedSubmissions[sortedSubmissions.length / 2]) / 2
-        : sortedSubmissions[Math.floor(sortedSubmissions.length / 2)];
+    const len = sortedSubmissions.length;
 
-    console.log('Calculated median:', median);
+    // Calculate quartiles
+    const q1 = sortedSubmissions[Math.floor(len * 0.25)];
+    const median = len % 2 === 0
+        ? (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2
+        : sortedSubmissions[Math.floor(len / 2)];
+    const q3 = sortedSubmissions[Math.floor(len * 0.75)];
+
+    // Calculate min and max (excluding outliers)
+    const iqr = q3 - q1;
+    const lowerFence = Math.max(q1 - 1.5 * iqr, sortedSubmissions[0]);
+    const upperFence = Math.min(q3 + 1.5 * iqr, sortedSubmissions[len - 1]);
+
+    console.log('Box plot data:', { lowerFence, q1, median, q3, upperFence });
     medianValueSpan.textContent = median.toFixed(2);
-
-    // Create histogram data
-    const binCount = 10;
-    const min = Math.min(...allSubmissions);
-    const max = Math.max(...allSubmissions);
-    const binSize = (max - min) / binCount;
-    const bins = Array(binCount).fill(0);
-
-    allSubmissions.forEach(value => {
-        const binIndex = Math.min(Math.floor((value - min) / binSize), binCount - 1);
-        bins[binIndex]++;
-    });
-
-    const labels = bins.map((_, index) => {
-        const start = (min + index * binSize).toFixed(2);
-        const end = (min + (index + 1) * binSize).toFixed(2);
-        return `${start} - ${end}`;
-    });
 
     if (window.myChart instanceof Chart) {
         window.myChart.destroy();
     }
 
     window.myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'boxplot',
         data: {
-            labels: labels,
             datasets: [{
-                label: 'Number of Submissions',
-                data: bins,
-                backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                label: 'Submissions',
+                data: [{
+                    min: lowerFence,
+                    q1: q1,
+                    median: median,
+                    q3: q3,
+                    max: upperFence,
+                    outliers: sortedSubmissions.filter(v => v < lowerFence || v > upperFence)
+                }],
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                outlierBackgroundColor: 'rgba(255, 99, 132, 0.6)',
+                outlierBorderColor: 'rgba(255, 99, 132, 1)'
             }]
         },
         options: {
             responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Distribution of Submissions'
+                },
+                legend: {
+                    display: false
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Number of Submissions'
+                        text: 'Value'
                     }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Value Ranges'
-                    }
-                }
-            },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Distribution of Submissions'
                 }
             }
         }
