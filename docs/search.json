@@ -60,130 +60,94 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "ev-basics.html",
+    "href": "ev-basics.html",
+    "title": "Expected Value: Basics",
     "section": "",
-    "text": "The Expected Value Foundation is a project by Max Chiswick because expected value is important!\nLinks:\n\nPoker Camp\nLinkedIn"
+    "text": "ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2",
+    "crumbs": [
+      "About",
+      "EXPECTED VALUE",
+      "EV Basics"
+    ]
   },
   {
-    "objectID": "poker.html#section-2",
-    "href": "poker.html#section-2",
-    "title": "Expected Value Example: Poker",
+    "objectID": "ev-basics.html#section-1",
+    "href": "ev-basics.html#section-1",
+    "title": "Expected Value: Basics",
+    "section": "",
+    "text": "ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2",
+    "crumbs": [
+      "About",
+      "EXPECTED VALUE",
+      "EV Basics"
+    ]
+  },
+  {
+    "objectID": "ev-basics.html#section-3",
+    "href": "ev-basics.html#section-3",
+    "title": "Expected Value: Basics",
+    "section": "Section 3",
+    "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3",
+    "crumbs": [
+      "About",
+      "EXPECTED VALUE",
+      "EV Basics"
+    ]
+  },
+  {
+    "objectID": "ev-basics.html#section-4",
+    "href": "ev-basics.html#section-4",
+    "title": "Expected Value: Basics",
+    "section": "Section 4",
+    "text": "Section 4",
+    "crumbs": [
+      "About",
+      "EXPECTED VALUE",
+      "EV Basics"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Expected Value Foundation",
+    "section": "",
+    "text": "What is the expected value of this site?"
+  },
+  {
+    "objectID": "medicine.html#section-2",
+    "href": "medicine.html#section-2",
+    "title": "Expected Value Example: Medicine",
     "section": "Section 2",
     "text": "Section 2\n\nSection 2.1\n\n\nSection 2.2",
     "crumbs": [
       "About",
       "EV EXAMPLES",
-      "Poker"
+      "Medicine"
     ]
   },
   {
-    "objectID": "poker.html#section-3",
-    "href": "poker.html#section-3",
-    "title": "Expected Value Example: Poker",
+    "objectID": "medicine.html#section-3",
+    "href": "medicine.html#section-3",
+    "title": "Expected Value Example: Medicine",
     "section": "Section 3",
     "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3",
     "crumbs": [
       "About",
       "EV EXAMPLES",
-      "Poker"
+      "Medicine"
     ]
   },
   {
-    "objectID": "poker.html#section-4",
-    "href": "poker.html#section-4",
-    "title": "Expected Value Example: Poker",
+    "objectID": "medicine.html#section-4",
+    "href": "medicine.html#section-4",
+    "title": "Expected Value Example: Medicine",
     "section": "Section 4",
     "text": "Section 4",
     "crumbs": [
       "About",
       "EV EXAMPLES",
-      "Poker"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html",
-    "href": "huberman-pregnancy.html",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "",
-    "text": "Is there a fertility crisis? Bryan Caplan suggests to have more kids and recently posted The Fertile Formula, an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal!",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html#huberman-calculation-issues",
-    "href": "huberman-pregnancy.html#huberman-calculation-issues",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "Huberman Calculation Issues",
-    "text": "Huberman Calculation Issues\nThere are many issues here. To start, since probabilities are by definition between \\(0\\) and \\(1\\), he clearly made an error. \\(10\\) pregnancy attempts by his logic would make you \\(200\\%\\) likely to be pregnant, which doesn’t really make too much sense.\nHuberman was adding \\(20\\%\\) for each attempt, which is not the correct approach. In this post, we’ll explain how the actual theory works.\n\n\nI made a visualization for you all. https://t.co/LMTECq70HZ pic.twitter.com/IGIL1HyGQl\n\n— Matthew B Jané (@MatthewBJane) May 10, 2024",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html#huberman-correction",
-    "href": "huberman-pregnancy.html#huberman-correction",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "Huberman Correction",
-    "text": "Huberman Correction\nHe since posted a Twitter correction and has updated the original videos.",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html#pregnancy-attempts",
-    "href": "huberman-pregnancy.html#pregnancy-attempts",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "6 Pregnancy Attempts",
-    "text": "6 Pregnancy Attempts\nSo after \\(6\\) attempts, we can say that the \\(\\Pr(\\text{Preg after 6 attempts})\\) is equal to the inverse of the probability of not getting pregnant \\(6\\) times in a row. Why? The probability of an event and its complement always sum to \\(1\\). For example, if it’s \\(70\\%\\) to be sunny tomorrow, then it’s \\(30\\%\\) to be not-sunny.\nMathematically, we can write:\n\\[\n\\begin{equation}\n\\begin{split}\n\\Pr(\\text{Preg after 6 attempts}) &= 1 - \\Pr(\\text{Not Preg after 6 attempts}) \\\\\n  &= 1 - (0.8)^6 \\\\\n  &= 0.738 \\\\\n  &= 73.8\\%\n\\end{split}\n\\end{equation}\n\\]\n\nIndependent Probabilities\nWhy is it \\(1 - (0.8)^6\\)? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of \\(0.8\\) (note that this is a simplification because probabilities would generally vary for each attempt). Multiplying this \\(6\\) times gets us the probability of not being pregnant after \\(6\\) attempts. So to get the probability of being pregnant after \\(6\\) attempts, we take \\(1\\) minus this, therefore getting \\(1 - (0.8)^6\\).",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html#x-pregnancy-attempts",
-    "href": "huberman-pregnancy.html#x-pregnancy-attempts",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "x Pregnancy Attempts",
-    "text": "x Pregnancy Attempts\nMore generally, after \\(x\\) attempts, we can say:\n\\[\n\\begin{equation}\n\\begin{split}\n\\Pr(\\text{Preg after x attempts}) &= 1 - \\Pr(\\text{Not Preg after x attempts}) \\\\\n  &= 1 - (1-0.2)^x \\\\\n  &= 1 - (0.8)^x\n\\end{split}\n\\end{equation}\n\\]",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html#likelihood-of-pregnancy",
-    "href": "huberman-pregnancy.html#likelihood-of-pregnancy",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "99% Likelihood of Pregnancy",
-    "text": "99% Likelihood of Pregnancy\nSo assuming that \\(\\Pr(\\text{Pregnancy}) = 0.2\\), when are you \\(99\\%\\) to be pregnant?\n\\[\n\\begin{equation}\n\\begin{split}\n0.99 &= 1 - \\Pr(\\text{Not Preg after x attempts}) && \\Rightarrow \\text{ Set pregnancy likelihood to } 0.99 \\\\\n      &= 1 - (0.8)^x && \\Rightarrow \\text{ Use equation from above } \\\\\n  0.99 + (0.8)^x &= 1 && \\Rightarrow \\text{ Add } 0.8^x \\text{ to both sides} \\\\\n  (0.8)^x &= 0.01 && \\Rightarrow \\text{ Subtract } 0.99 \\text{ from both sides} \\\\\n  x &= 20.64 && \\Rightarrow \\text{ Use calculator to solve}\n\\end{split}\n\\end{equation}\n\\]\nTherefore after \\(21\\) pregnancy attempts where each attempt has a \\(20\\%\\) likelihood, your cumulative likelihood of being pregant exceeds \\(99\\%\\). (We round up from \\(20.64\\) because each one is discrete and at \\(20\\) the probability would be under \\(99\\%\\), so only after \\(20.64\\) does it exceed \\(99\\%\\), which means it exceeds at attempt \\(21\\).)\nWe can see this on the graph below where \\(\\Pr(\\text{Pregnancy}) = 0.2\\). The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. Note that the graph approaches, but will never exceed the probability of \\(1\\).\n\n\n\nPregnancy graph with p = 0.2",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
-    ]
-  },
-  {
-    "objectID": "huberman-pregnancy.html#generalized-pregnancy-equation",
-    "href": "huberman-pregnancy.html#generalized-pregnancy-equation",
-    "title": "Pregnancy Probability Starring Andrew Huberman",
-    "section": "Generalized Pregnancy Equation",
-    "text": "Generalized Pregnancy Equation\nFinally, even more generally, we can say that after $ x $ attempts and the more general \\(\\Pr(\\text{Pregnancy}) = p\\) (i.e. using probability \\(p\\) instead of \\(0.2\\)):\n\\[\n\\begin{equation}\n\\begin{split}\n\\Pr(\\text{Preg after x attempts}) &= 1 - \\Pr(\\text{Not Preg after x attempts}) \\\\\n  &= 1 - (1-p)^x \\\\\n\\end{split}\n\\end{equation}\n\\]",
-    "crumbs": [
-      "About",
-      "CURRENT EVENTS",
-      "Andrew Huberman Pregnancy Probability"
+      "Medicine"
     ]
   },
   {
@@ -319,95 +283,180 @@
     ]
   },
   {
-    "objectID": "medicine.html#section-2",
-    "href": "medicine.html#section-2",
-    "title": "Expected Value Example: Medicine",
+    "objectID": "huberman-pregnancy.html",
+    "href": "huberman-pregnancy.html",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "",
+    "text": "Is there a fertility crisis? Bryan Caplan suggests to have more kids and recently posted The Fertile Formula, an idea to reduce federal taxes based on how many kids you have, getting to income tax-free for life after six kids. Great deal!",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "huberman-pregnancy.html#huberman-calculation-issues",
+    "href": "huberman-pregnancy.html#huberman-calculation-issues",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "Huberman Calculation Issues",
+    "text": "Huberman Calculation Issues\nThere are many issues here. To start, since probabilities are by definition between \\(0\\) and \\(1\\), he clearly made an error. \\(10\\) pregnancy attempts by his logic would make you \\(200\\%\\) likely to be pregnant, which doesn’t really make too much sense.\nHuberman was adding \\(20\\%\\) for each attempt, which is not the correct approach. In this post, we’ll explain how the actual theory works.\n\n\nI made a visualization for you all. https://t.co/LMTECq70HZ pic.twitter.com/IGIL1HyGQl\n\n— Matthew B Jané (@MatthewBJane) May 10, 2024",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "huberman-pregnancy.html#huberman-correction",
+    "href": "huberman-pregnancy.html#huberman-correction",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "Huberman Correction",
+    "text": "Huberman Correction\nHe since posted a Twitter correction and has updated the original videos.",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "huberman-pregnancy.html#pregnancy-attempts",
+    "href": "huberman-pregnancy.html#pregnancy-attempts",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "6 Pregnancy Attempts",
+    "text": "6 Pregnancy Attempts\nSo after \\(6\\) attempts, we can say that the \\(\\Pr(\\text{Preg after 6 attempts})\\) is equal to the inverse of the probability of not getting pregnant \\(6\\) times in a row. Why? The probability of an event and its complement always sum to \\(1\\). For example, if it’s \\(70\\%\\) to be sunny tomorrow, then it’s \\(30\\%\\) to be not-sunny.\nMathematically, we can write:\n\\[\n\\begin{equation}\n\\begin{split}\n\\Pr(\\text{Preg after 6 attempts}) &= 1 - \\Pr(\\text{Not Preg after 6 attempts}) \\\\\n  &= 1 - (0.8)^6 \\\\\n  &= 0.738 \\\\\n  &= 73.8\\%\n\\end{split}\n\\end{equation}\n\\]\n\nIndependent Probabilities\nWhy is it \\(1 - (0.8)^6\\)? This is because when we are calculating probabilities involving independent events, they are multiplied. Each case of not becoming pregnant has an independent probability of \\(0.8\\) (note that this is a simplification because probabilities would generally vary for each attempt). Multiplying this \\(6\\) times gets us the probability of not being pregnant after \\(6\\) attempts. So to get the probability of being pregnant after \\(6\\) attempts, we take \\(1\\) minus this, therefore getting \\(1 - (0.8)^6\\).",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "huberman-pregnancy.html#x-pregnancy-attempts",
+    "href": "huberman-pregnancy.html#x-pregnancy-attempts",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "x Pregnancy Attempts",
+    "text": "x Pregnancy Attempts\nMore generally, after \\(x\\) attempts, we can say:\n\\[\n\\begin{equation}\n\\begin{split}\n\\Pr(\\text{Preg after x attempts}) &= 1 - \\Pr(\\text{Not Preg after x attempts}) \\\\\n  &= 1 - (1-0.2)^x \\\\\n  &= 1 - (0.8)^x\n\\end{split}\n\\end{equation}\n\\]",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "huberman-pregnancy.html#likelihood-of-pregnancy",
+    "href": "huberman-pregnancy.html#likelihood-of-pregnancy",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "99% Likelihood of Pregnancy",
+    "text": "99% Likelihood of Pregnancy\nSo assuming that \\(\\Pr(\\text{Pregnancy}) = 0.2\\), when are you \\(99\\%\\) to be pregnant?\n\\[\n\\begin{equation}\n\\begin{split}\n0.99 &= 1 - \\Pr(\\text{Not Preg after x attempts}) && \\Rightarrow \\text{ Set pregnancy likelihood to } 0.99 \\\\\n      &= 1 - (0.8)^x && \\Rightarrow \\text{ Use equation from above } \\\\\n  0.99 + (0.8)^x &= 1 && \\Rightarrow \\text{ Add } 0.8^x \\text{ to both sides} \\\\\n  (0.8)^x &= 0.01 && \\Rightarrow \\text{ Subtract } 0.99 \\text{ from both sides} \\\\\n  x &= 20.64 && \\Rightarrow \\text{ Use calculator to solve}\n\\end{split}\n\\end{equation}\n\\]\nTherefore after \\(21\\) pregnancy attempts where each attempt has a \\(20\\%\\) likelihood, your cumulative likelihood of being pregant exceeds \\(99\\%\\). (We round up from \\(20.64\\) because each one is discrete and at \\(20\\) the probability would be under \\(99\\%\\), so only after \\(20.64\\) does it exceed \\(99\\%\\), which means it exceeds at attempt \\(21\\).)\nWe can see this on the graph below where \\(\\Pr(\\text{Pregnancy}) = 0.2\\). The x-axis is the number of attempts and the y-axis is the cumulative (overall) probability of pregnancy after that many attempts. Note that the graph approaches, but will never exceed the probability of \\(1\\).\n\n\n\nPregnancy graph with p = 0.2",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "huberman-pregnancy.html#generalized-pregnancy-equation",
+    "href": "huberman-pregnancy.html#generalized-pregnancy-equation",
+    "title": "Pregnancy Probability Starring Andrew Huberman",
+    "section": "Generalized Pregnancy Equation",
+    "text": "Generalized Pregnancy Equation\nFinally, even more generally, we can say that after $ x $ attempts and the more general \\(\\Pr(\\text{Pregnancy}) = p\\) (i.e. using probability \\(p\\) instead of \\(0.2\\)):\n\\[\n\\begin{equation}\n\\begin{split}\n\\Pr(\\text{Preg after x attempts}) &= 1 - \\Pr(\\text{Not Preg after x attempts}) \\\\\n  &= 1 - (1-p)^x \\\\\n\\end{split}\n\\end{equation}\n\\]",
+    "crumbs": [
+      "About",
+      "CURRENT EVENTS",
+      "Andrew Huberman Pregnancy Probability"
+    ]
+  },
+  {
+    "objectID": "poker.html#section-2",
+    "href": "poker.html#section-2",
+    "title": "Expected Value Example: Poker",
     "section": "Section 2",
     "text": "Section 2\n\nSection 2.1\n\n\nSection 2.2",
     "crumbs": [
       "About",
       "EV EXAMPLES",
-      "Medicine"
+      "Poker"
     ]
   },
   {
-    "objectID": "medicine.html#section-3",
-    "href": "medicine.html#section-3",
-    "title": "Expected Value Example: Medicine",
+    "objectID": "poker.html#section-3",
+    "href": "poker.html#section-3",
+    "title": "Expected Value Example: Poker",
     "section": "Section 3",
     "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3",
     "crumbs": [
       "About",
       "EV EXAMPLES",
-      "Medicine"
+      "Poker"
     ]
   },
   {
-    "objectID": "medicine.html#section-4",
-    "href": "medicine.html#section-4",
-    "title": "Expected Value Example: Medicine",
+    "objectID": "poker.html#section-4",
+    "href": "poker.html#section-4",
+    "title": "Expected Value Example: Poker",
     "section": "Section 4",
     "text": "Section 4",
     "crumbs": [
       "About",
       "EV EXAMPLES",
-      "Medicine"
+      "Poker"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Expected Value Foundation",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "What is the expected value of this site?\n\nimport ipywidgets as widgets\nwidgets.IntSlider()\n\n\n\n\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "The Expected Value Foundation is a project by Max Chiswick because expected value is important!\nLinks:\n\nPoker Camp\nLinkedIn\n\ndrqwing a card from a deck variance EV of skipping train ticket Look into spoiler/hidden text thing and having multiple choice quizzes integrated https://seeing-theory.brown.edu/ Lotto thing Slider for expected value with estimates, current events Blackjack Taylor Swift Trump Expected value of domain Highest EV time to have a kid Site just asking what is the value of the site plane ticket stuff (see ojm list)"
   },
   {
-    "objectID": "ev-basics.html",
-    "href": "ev-basics.html",
-    "title": "Expected Value: Basics",
+    "objectID": "pizza.html",
+    "href": "pizza.html",
+    "title": "Value Example: Pizza",
     "section": "",
-    "text": "ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2",
-    "crumbs": [
-      "About",
-      "EXPECTED VALUE",
-      "EV Basics"
-    ]
+    "text": "Sorry, this is about value and not expected value. There’s an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.\nLast week I ate my first San Francisco pizza at Gioia’s. I of course got a margherita pizza (I don’t eat meat on pizza and don’t like vegetables on pizza cause then they remind me of omelettes (I also don’t like vegetables in omelettes)).\nThe menu was like this:\n\n\n\nPizza Type\nPrice\nNotes\n\n\n\n\n14” Pizza\n$24\n6 slices per pizza\n\n\n18” Pizza\n$34\n8 slices per pizza\n\n\n18” Pizza Slice\n$4.50\nSlice from 18”"
   },
   {
-    "objectID": "ev-basics.html#section-1",
-    "href": "ev-basics.html#section-1",
-    "title": "Expected Value: Basics",
+    "objectID": "pizza.html#gioias-pizza-in-sf",
+    "href": "pizza.html#gioias-pizza-in-sf",
+    "title": "Value Example: Pizza",
     "section": "",
-    "text": "ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2",
-    "crumbs": [
-      "About",
-      "EXPECTED VALUE",
-      "EV Basics"
-    ]
+    "text": "Sorry, this is about value and not expected value. There’s an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.\nLast week I ate my first San Francisco pizza at Gioia’s. I of course got a margherita pizza (I don’t eat meat on pizza and don’t like vegetables on pizza cause then they remind me of omelettes (I also don’t like vegetables in omelettes)).\nThe menu was like this:\n\n\n\nPizza Type\nPrice\nNotes\n\n\n\n\n14” Pizza\n$24\n6 slices per pizza\n\n\n18” Pizza\n$34\n8 slices per pizza\n\n\n18” Pizza Slice\n$4.50\nSlice from 18”"
   },
   {
-    "objectID": "ev-basics.html#section-3",
-    "href": "ev-basics.html#section-3",
-    "title": "Expected Value: Basics",
-    "section": "Section 3",
-    "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3",
-    "crumbs": [
-      "About",
-      "EXPECTED VALUE",
-      "EV Basics"
-    ]
+    "objectID": "pizza.html#general-pizza-and-circle-computatations",
+    "href": "pizza.html#general-pizza-and-circle-computatations",
+    "title": "Value Example: Pizza",
+    "section": "General Pizza and Circle Computatations",
+    "text": "General Pizza and Circle Computatations\nPizzas are approximately circular. The equation to calculate the area of a circle is:\n\\[\n\\text{Area} = \\pi * r^2\n\\]"
   },
   {
-    "objectID": "ev-basics.html#section-4",
-    "href": "ev-basics.html#section-4",
-    "title": "Expected Value: Basics",
-    "section": "Section 4",
-    "text": "Section 4",
-    "crumbs": [
-      "About",
-      "EXPECTED VALUE",
-      "EV Basics"
-    ]
+    "objectID": "pizza.html#areas-of-pizzas",
+    "href": "pizza.html#areas-of-pizzas",
+    "title": "Value Example: Pizza",
+    "section": "Areas of Pizzas",
+    "text": "Areas of Pizzas\nLet’s get the area of each pizza so they are directly comparable. Note that pizzas are shown with their diameter, but the equation uses radius, so we have to divide the diameters in 2 before using them.\n\\[\n\\text{14\" Pizza Area} = \\pi * 7^2 = 153.94 \\text{ in.}^2\n\\]\n\\[\n\\text{18\" Pizza Area} = \\pi * 9^2 = 254.47 \\text{ in.}^2\n\\]\nThere are 8 slices in the 18” pizza, so we can compute the area per slice: \\[\n\\text{18\" Pizza Slice Area} = 254.47/8 = 31.81 \\text{ in.}^2\n\\]\nLet’s review:\n\n\n\nPizza Type\nPrice\nSquare Inches\nNotes\n\n\n\n\n14” Pizza\n$24\n153.94\n6 slices per pizza\n\n\n18” Pizza\n$34\n254.47\n8 slices per pizza\n\n\n18” Slice\n$4.50\n31.81\nSlice from 18”"
+  },
+  {
+    "objectID": "pizza.html#price-per-area-of-pizzas",
+    "href": "pizza.html#price-per-area-of-pizzas",
+    "title": "Value Example: Pizza",
+    "section": "Price per Area of Pizzas",
+    "text": "Price per Area of Pizzas\nNow let’s run the numbers on the square inches per dollar.\n\\[\n\\text{14\" Pizza Sq In. per Dollar} = 153.94/\\$24 = 6.41\n\\]\n\\[\n\\text{18\" Pizza Sq In. per Dollar} = 254.47/\\$34 = 7.48\n\\]\n\\[\n\\text{18\" Slice Sq In. per Dollar} = 31.81\\$4.50 = 7.07\n\\]\n\n\n\n\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\nNotes\n\n\n\n\n14” Pizza\n$24\n153.94\n6.41\n6 slices per pizza\n\n\n18” Pizza\n$34\n254.47\n7.48\n8 slices per pizza\n\n\n18” Slice\n$4.50\n31.81\n7.07\nSlice from 18”"
+  },
+  {
+    "objectID": "pizza.html#direct-comparisons",
+    "href": "pizza.html#direct-comparisons",
+    "title": "Value Example: Pizza",
+    "section": "Direct Comparisons",
+    "text": "Direct Comparisons\nFrom the above chart we see that the 18” pizza is the best deal for $34, which has has a value of 7.48 sq in. per dollar.\nSo if you want 8 large slices, that’s the way to go.\nThe 14” pizza is the most expensive option at $24 for the pizza, getting only 6.41 sq in. per dollar.\nTherefore if you want less than 8 large slices, it’s probably best to just order by the slice at 7.07 sq in. per dollar.\nHow many slices from the 18” pizza would it take to match the size of the 14”? The 14” is 153.94 sq in. and the 18” slices are 31.81 sq in.\n\\[\n\\text{How many slices?} = 153.94/31.81 = 4.84 \\text{ in.}^2\n\\]\nHow much would it cost for 4.84 slices?\n\\[\n\\text{Cost of 4.84 slices} = \\$4.50*4.84 = \\$21.78\n\\]\nThis means we can get the same amount of pizza for $21.78, except we can’t actually order 4.84 slices. So how about 5?\n\\[\n\\text{Cost of 5 slices} = \\$4.50*5 = \\$22.00\n\\]\nThe small pizza is a terrible deal! You can get 5 slices from the bigger pizza, which is slightly more pizza (\\(31.81*5-153.94 = 5.11\\) bonus sq in.) and is $2 cheaper!\nAnd finally, if you spent the $24 you would have on the small pizza on slices, how many could you get?\n\\[\n\\text{Slices for \\$24?} = \\$24/\\$4.5 = 5.33\n\\]\nTherefore you would have \\(5.33*31.81 - 153.94 = 15.61\\) bonus sq in., or about half a slice bonus for the same price."
+  },
+  {
+    "objectID": "pizza.html#general-equations",
+    "href": "pizza.html#general-equations",
+    "title": "Value Example: Pizza",
+    "section": "General Equations",
+    "text": "General Equations\nHow to not make this mistake yourself? The above situation seems fairly rare.\nThe more common scenario is that larger pizzas are actually way cheaper than smaller ones per sq in.\nThe general equation for sq in. per dollar is:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Price per Sq In.} &= \\frac{\\text{Area}}{{Price}} \\\\ \\\\\n&= \\frac{\\pi*r^2}{\\text{Price}}\n\\end{split}\n\\end{equation}\n\\]\nHere are some prices for Domino’s (most well known) and Lou Malnati’s (finest pizza around).\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nDomino’s 10”\n$12.99\n78.54\n6.05\n\n\nDomino’s 12”\n$15.99\n113.10\n7.07\n\n\nDomino’s 14”\n$18.99\n153.94\n8.11\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nLou Malnati’s 6”\n$10.59\n28.27\n2.67\n\n\nLou Malnati’s 9”\n$15.99\n63.62\n3.98\n\n\nLou Malnati’s 12”\n$21.49\n113.10\n5.26\n\n\nLou Malnati’s 14”\n$26.79\n153.94\n5.75\n\n\n\nAs you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6” pizzas instead of 12” makes sense, but the area equation is based on the square of the radius, and \\(3^2\\) is much smaller than \\(6^2\\) (it’s \\(1/4\\)!).\nAt Lou Malnati’s if you got two 6” pizzas, you’d be paying $21.18 for 56.54 sq in. of pizza, compared to a 12” for $21.49 that gives you 113.10 sq in. of pizza. Exactly double the size for just about the same price!"
   },
   {
     "objectID": "dice.html#section-2",

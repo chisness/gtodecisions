@@ -1,0 +1,146 @@
+---
+title: "Value Example: Pizza"
+format:
+  html:
+    math: true
+---
+## Gioia's Pizza in SF
+
+Sorry, this is about value and not expected value. There's an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.  
+
+Last week I ate my first San Francisco pizza at [Gioia's](https://www.gioiapizzeria.com/san-francisco). I of course got a margherita pizza (I don't eat meat on pizza and don't like vegetables on pizza cause then they remind me of omelettes (I also don't like vegetables in omelettes)). 
+
+The menu was like this:
+
+| Pizza Type  | Price  | Notes |
+|-------------|--------|-------|
+| 14" Pizza   | $24    | 6 slices per pizza      |
+| 18" Pizza   | $34    | 8 slices per pizza      |
+| 18" Pizza Slice   | $4.50  | Slice from 18" |
+
+## General Pizza and Circle Computatations
+
+Pizzas are approximately circular. The equation to calculate the area of a circle is: 
+
+$$
+\text{Area} = \pi * r^2
+$$
+
+## Areas of Pizzas
+Let's get the area of each pizza so they are directly comparable. Note that pizzas are shown with their *diameter*, but the equation uses radius, so we have to divide the diameters in 2 before using them. 
+
+$$
+\text{14" Pizza Area} = \pi * 7^2 = 153.94 \text{ in.}^2
+$$
+
+$$
+\text{18" Pizza Area} = \pi * 9^2 = 254.47 \text{ in.}^2
+$$
+
+There are 8 slices in the 18" pizza, so we can compute the area per slice: 
+$$
+\text{18" Pizza Slice Area} = 254.47/8 = 31.81 \text{ in.}^2
+$$
+
+Let's review:
+
+| Pizza Type  | Price  | Square Inches | Notes |
+|-------------|--------|---------------|-------|
+| 14" Pizza   | $24    | 153.94        | 6 slices per pizza |
+| 18" Pizza   | $34    | 254.47        |  8 slices per pizza |
+| 18" Slice   | $4.50  | 31.81         | Slice from 18" |
+
+## Price per Area of Pizzas
+Now let's run the numbers on the square inches per dollar. 
+
+$$
+\text{14" Pizza Sq In. per Dollar} = 153.94/\$24 = 6.41
+$$
+
+$$
+\text{18" Pizza Sq In. per Dollar} = 254.47/\$34 = 7.48
+$$
+
+$$
+\text{18" Slice Sq In. per Dollar} = 31.81\$4.50 = 7.07
+$$
+
+| Pizza Type  | Price  | Square Inches | Square Inch per Dollar | Notes               |
+|-------------|--------|---------------|----------------------|---------------------|
+| 14" Pizza   | $24    | 153.94        | 6.41              | 6 slices per pizza  |
+| 18" Pizza   | $34    | 254.47        | 7.48              | 8 slices per pizza  |
+| 18" Slice   | $4.50  | 31.81         | 7.07               | Slice from 18"      |
+
+## Direct Comparisons
+
+From the above chart we see that the 18" pizza is the best deal for $34, which has has a value of 7.48 sq in. per dollar.
+
+So if you want 8 large slices, that's the way to go. 
+
+The 14" pizza is the most expensive option at $24 for the pizza, getting only 6.41 sq in. per dollar. 
+
+Therefore if you want less than 8 large slices, it's probably best to just order by the slice at 7.07 sq in. per dollar. 
+
+How many slices from the 18" pizza would it take to match the size of the 14"? The 14" is 153.94 sq in. and the 18" slices are 31.81 sq in. 
+
+$$
+\text{How many slices?} = 153.94/31.81 = 4.84 \text{ in.}^2
+$$
+
+How much would it cost for 4.84 slices? 
+
+$$
+\text{Cost of 4.84 slices} = \$4.50*4.84 = \$21.78
+$$
+
+This means we can get the same amount of pizza for $21.78, except we can't actually order 4.84 slices. So how about 5? 
+
+$$
+\text{Cost of 5 slices} = \$4.50*5 = \$22.00
+$$
+
+The small pizza is a terrible deal! You can get 5 slices from the bigger pizza, which is slightly more pizza ($31.81*5-153.94 = 5.11$ bonus sq in.) and is $2 cheaper! 
+
+And finally, if you spent the $24 you would have on the small pizza on slices, how many could you get? 
+
+$$
+\text{Slices for \$24?} = \$24/\$4.5 = 5.33
+$$
+
+Therefore you would have $5.33*31.81 - 153.94 = 15.61$ bonus sq in., or about half a slice bonus for the same price. 
+
+## General Equations
+How to not make this mistake yourself? The above situation seems fairly rare. 
+
+The more common scenario is that larger pizzas are actually *way* cheaper than smaller ones per sq in.  
+
+The general equation for sq in. per dollar is: 
+
+$$
+\begin{equation}
+\begin{split}
+\text{Price per Sq In.} &= \frac{\text{Area}}{{Price}} \\ \\
+&= \frac{\pi*r^2}{\text{Price}}
+\end{split}
+\end{equation}
+$$
+
+Here are some prices for Domino's (most well known) and Lou Malnati's (finest pizza around).
+
+| Pizza Type    | Price   | Square Inches | Square Inch per Dollar |
+|---------------|---------|---------------|------------------------|
+| Domino's 10"  | \$12.99 | 78.54         | 6.05                   |
+| Domino's 12"  | \$15.99 | 113.10        | 7.07                   |
+| Domino's 14"  | \$18.99 | 153.94        | 8.11                   |
+
+| Pizza Type        | Price   | Square Inches | Square Inch per Dollar |
+|-------------------|---------|---------------|------------------------|
+| Lou Malnati's 6"  | \$10.59 | 28.27         | 2.67                   |
+| Lou Malnati's 9"  | \$15.99 | 63.62         | 3.98                   |
+| Lou Malnati's 12" | \$21.49 | 113.10        | 5.26                   |
+| Lou Malnati's 14" | \$26.79 | 153.94        | 5.75                   |
+
+As you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6" pizzas instead of 12" makes sense, but the area equation is based on the *square* of the radius, and $3^2$ is much smaller than $6^2$ (it's $1/4$!). 
+
+At Lou Malnati's if you got two 6" pizzas, you'd be paying $21.18 for 56.54 sq in. of pizza, compared to a 12" for $21.49 that gives you 113.10 sq in. of pizza. Exactly double the size for just about the same price! 
+

@@ -3,10 +3,10 @@ format: html
 ---
 
 What is the expected value of this site? 
-
+<!-- 
 ```{python}
 import ipywidgets as widgets
 widgets.IntSlider()
-```
+``` -->
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+<!-- To learn more about Quarto books visit <https://quarto.org/docs/books>. -->
