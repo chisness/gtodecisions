@@ -193,7 +193,7 @@ $$
 \begin{equation}
 \begin{split}
 \text{Value of Pizza 1 Compared to Pizza 2} &= \frac{p_2*d_1^2}{p_1*d_2^2} \\
-&= \frac{\$10.59*12^2}{21.49*6^2} \\
+&= \frac{\$10.59*12^2}{\$21.49*6^2} \\
 &= 1.97
 \end{split}
 \end{equation}
