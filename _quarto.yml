@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "The Expected Value Foundation"
+  title: "The EV Foundation"
   open-graph: true
   google-analytics: G-P015KRTLYQ
   favicon: assets/favicon.png
