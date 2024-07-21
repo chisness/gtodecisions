@@ -63,17 +63,22 @@ function sendToGoogleSheets(value) {
 
 function fetchAllSubmissions(newSubmission) {
     console.log('Fetching submissions...');
-    // Replace with your Google Apps Script Web App URL
     const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
 
     return fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log('Data parsed:', data);
-            let allSubmissions = data && data.length > 0 ? data.map(row => parseFloat(row[0])) : [];
-            // Include the new submission
-            allSubmissions.push(newSubmission);
-            console.log('All submissions:', allSubmissions);
+            console.log('Raw data from server:', data);
+            let allSubmissions = data && data.length > 0 ? data.map(row => {
+                const parsed = parseFloat(row[0]);
+                if (isNaN(parsed)) {
+                    console.error('Invalid data in submission:', row[0]);
+                    return null;
+                }
+                return parsed;
+            }).filter(val => val !== null) : [];
+            // We're no longer adding the new submission here
+            console.log('Processed submissions:', allSubmissions);
             return allSubmissions;
         })
         .catch(error => {
@@ -133,7 +138,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     console.log('Submitting value:', value);
     fetchEntryCount()
         .then(() => sendToGoogleSheets(value))
-        .then(submittedValue => {
+        .then(() => {
             // Update entry count display
             currentEntryCount++;
             document.getElementById('entryCount').textContent = `Entries so far: ${currentEntryCount}`;
@@ -143,7 +148,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
             document.getElementById('thankYouMessage').style.display = 'block';
 
             console.log('Fetching all submissions...');
-            return fetchAllSubmissions(submittedValue);
+            return fetchAllSubmissions();
         })
         .then(updateStats)
         .catch(error => {
