@@ -1,5 +1,6 @@
 <div id="expectedValueWidget">
     <h3>What is the expected value of this website?</h3>
+    <p id="entryCount">Entries so far: 0</p>
     <div id="inputSection">
         <input type="text" id="valueInput" placeholder="Enter value">
         <button id="submitBtn">Submit</button>
@@ -10,64 +11,32 @@
     <div id="statsSection" style="display: none;">
         <p>Median value: <span id="medianValue">No data yet</span></p>
         <p>Average value: <span id="averageValue">No data yet</span></p>
-        <p>Last submission: <span id="lastSubmission">No submissions yet</span></p>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-// console.log('Chart.js loaded:', !!window.Chart);
+let currentEntryCount = 0;
 
-let allSubmissions = [];
-let myChart;
+function fetchEntryCount() {
+    // Replace with your Google Apps Script Web App URL
+    const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
 
-document.addEventListener('DOMContentLoaded', function() {
-    const valueInput = document.getElementById('valueInput');
-    const submitBtn = document.getElementById('submitBtn');
-    const inputSection = document.getElementById('inputSection');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-    const chartSection = document.getElementById('chartSection');
-
-    submitBtn.addEventListener('click', function() {
-    const inputValue = valueInput.value.replace(/,/g, '');
-    const value = parseFloat(inputValue);
-    if (isNaN(value) || value < 0 || value > 1e6) { 
-        alert('Please enter a valid number between 0 and 1m');
-        return;
-    }
-    
-    console.log('Submitting value:', value);
-    sendToGoogleSheets(value)
-        .then(() => {
-            // Disable input and show thank you message
-            inputSection.style.display = 'none';
-            thankYouMessage.style.display = 'block';
-
-            console.log('Fetching all submissions...');
-            return fetchAllSubmissions();
-        })
-        .then(() => {
-            updateStats(value);
+    return fetch(url)
+        .then(response => response.json())
+        .then(count => {
+            currentEntryCount = count;
+            document.getElementById('entryCount').textContent = `Entries so far: ${count}`;
+            return count;
         })
         .catch(error => {
-            console.error('Error in submission process:', error);
+            console.error('Error fetching entry count:', error);
+            throw error;
         });
-    }); 
-    
-    console.log('Submitting value:', value);
-    sendToGoogleSheets(value);
+}
 
-    // Disable input and show thank you message
-    inputSection.style.display = 'none';
-    thankYouMessage.style.display = 'block';
-
-    console.log('Fetching all submissions...');
-    fetchAllSubmissions();
-    });
-
-    function sendToGoogleSheets(value) {
+function sendToGoogleSheets(value) {
     // Replace with your Google Apps Script Web App URL
-    const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
+    const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
 
     return fetch(url, {
         method: 'POST',
@@ -81,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => {
         console.log('Success:', response);
-        return response;
+        return value;
     })
     .catch(error => {
         console.error('Error:', error);
@@ -89,45 +58,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }
 
-function fetchAllSubmissions() {
+function fetchAllSubmissions(newSubmission) {
     console.log('Fetching submissions...');
     // Replace with your Google Apps Script Web App URL
-    const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
+    const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
 
     return fetch(url)
         .then(response => response.json())
         .then(data => {
             console.log('Data parsed:', data);
-            if (data && data.length > 0) {
-                allSubmissions = data.map(row => parseFloat(row[0]));
-                console.log('Parsed submissions:', allSubmissions);
-            } else {
-                allSubmissions = [];
-                console.log('No submissions found');
-            }
+            let allSubmissions = data && data.length > 0 ? data.map(row => parseFloat(row[0])) : [];
+            // Include the new submission
+            allSubmissions.push(newSubmission);
+            console.log('All submissions:', allSubmissions);
+            return allSubmissions;
         })
         .catch(error => {
             console.error('Error fetching submissions:', error);
-            allSubmissions = [];
             throw error;
         });
 }
 
-function updateStats(newSubmission) {
+function updateStats(submissions) {
     console.log('Updating stats...');
     const statsSection = document.getElementById('statsSection');
     const medianValueSpan = document.getElementById('medianValue');
     const averageValueSpan = document.getElementById('averageValue');
-    const lastSubmissionSpan = document.getElementById('lastSubmission');
 
-    if (allSubmissions.length === 0 && !newSubmission) {
+    if (submissions.length === 0) {
         console.log('No submissions to display');
         medianValueSpan.textContent = 'No data yet';
         averageValueSpan.textContent = 'No data yet';
-        lastSubmissionSpan.textContent = 'No submissions yet';
     } else {
-        const allValues = newSubmission ? [...allSubmissions, newSubmission] : allSubmissions;
-        const sortedSubmissions = allValues.slice().sort((a, b) => a - b);
+        const sortedSubmissions = submissions.slice().sort((a, b) => a - b);
         const len = sortedSubmissions.length;
 
         // Calculate median
@@ -136,17 +99,47 @@ function updateStats(newSubmission) {
             : sortedSubmissions[Math.floor(len / 2)];
 
         // Calculate average
-        const average = sortedSubmissions.reduce((a, b) => a + b, 0) / len;
+        const average = submissions.reduce((a, b) => a + b, 0) / len;
 
-        // Get last submission (which is the second to last in allValues if newSubmission exists)
-        const lastSubmission = newSubmission ? allSubmissions[allSubmissions.length - 1] : allValues[allValues.length - 1];
-
-        console.log('Median:', median, 'Average:', average, 'Last Submission:', lastSubmission);
+        console.log('Median:', median, 'Average:', average);
         medianValueSpan.textContent = median.toFixed(2);
         averageValueSpan.textContent = average.toFixed(2);
-        lastSubmissionSpan.textContent = lastSubmission ? lastSubmission.toFixed(2) : 'No previous submissions';
     }
 
     statsSection.style.display = 'block';
 }
+
+// Fetch entry count when the page loads
+document.addEventListener('DOMContentLoaded', fetchEntryCount);
+
+// Update the submit button event listener
+document.getElementById('submitBtn').addEventListener('click', function() {
+    const valueInput = document.getElementById('valueInput');
+    const inputValue = valueInput.value.replace(/,/g, '');
+    const value = parseFloat(inputValue);
+    if (isNaN(value) || value < 0 || value > 1e6) { 
+        alert('Please enter a valid number between 0 and 1m');
+        return;
+    }
+    
+    console.log('Submitting value:', value);
+    fetchEntryCount()
+        .then(() => sendToGoogleSheets(value))
+        .then(submittedValue => {
+            // Update entry count display
+            currentEntryCount++;
+            document.getElementById('entryCount').textContent = `Entries so far: ${currentEntryCount}`;
+            
+            // Disable input and show thank you message
+            document.getElementById('inputSection').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+
+            console.log('Fetching all submissions...');
+            return fetchAllSubmissions(submittedValue);
+        })
+        .then(updateStats)
+        .catch(error => {
+            console.error('Error in submission process:', error);
+        });
+});
 </script>
