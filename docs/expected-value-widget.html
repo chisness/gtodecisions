@@ -5,17 +5,18 @@
         <button id="submitBtn">Submit</button>
     </div>
     <div id="thankYouMessage" style="display: none;">
-        <p>Thank you for your submission!</p>
+        <p>Thank you and have a nice day!</p>
     </div>
-    <div id="chartSection" style="display: none;">
-        <canvas id="submissionsChart"></canvas>
+    <div id="statsSection" style="display: none;">
         <p>Median value: <span id="medianValue"></span></p>
+        <p>Average value: <span id="averageValue"></span></p>
+        <p>Last submission: <span id="lastSubmission"></span></p>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-console.log('Chart.js loaded:', !!window.Chart);
+// console.log('Chart.js loaded:', !!window.Chart);
 
 let allSubmissions = [];
 let myChart;
@@ -28,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const chartSection = document.getElementById('chartSection');
 
     submitBtn.addEventListener('click', function() {
-    const value = parseFloat(valueInput.value.replace(/,/g, ''));
-    if (isNaN(value) || value < 0 || value > 1e6) { 
-        alert('Please enter a valid number between 0 and 1,000,000');
+    const inputValue = valueInput.value.replace(/,/g, '');
+    const value = parseFloat(inputValue);
+    if (isNaN(value) || value < 0 || value > 1e12) { // 1e12 is one trillion
+        alert('Please enter a valid number between 0 and 1,000,000,000,000');
         return;
     }
     
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Fetching all submissions...');
     fetchAllSubmissions();
-    });
+    }); 
     
     console.log('Submitting value:', value);
     sendToGoogleSheets(value);
@@ -80,125 +82,49 @@ function fetchAllSubmissions() {
     const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
 
     fetch(url)
-        .then(response => {
-            console.log('Response received:', response);
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             console.log('Data parsed:', data);
             allSubmissions = data.map(row => parseFloat(row[0]));
             console.log('Parsed submissions:', allSubmissions);
-            updateChart();
+            updateStats();
         })
         .catch(error => {
             console.error('Error fetching submissions:', error);
         });
 }
 
-function updateChart() {
-    console.log('Updating chart...');
-    const chartSection = document.getElementById('chartSection');
+function updateStats() {
+    console.log('Updating stats...');
+    const statsSection = document.getElementById('statsSection');
     const medianValueSpan = document.getElementById('medianValue');
-    const ctx = document.getElementById('submissionsChart');
+    const averageValueSpan = document.getElementById('averageValue');
+    const lastSubmissionSpan = document.getElementById('lastSubmission');
 
     if (allSubmissions.length === 0) {
-        console.log('No submissions to chart');
+        console.log('No submissions to display');
         return;
     }
 
     const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
     const len = sortedSubmissions.length;
 
-    // Calculate quartiles and median
-    const q1 = sortedSubmissions[Math.floor(len * 0.25)];
+    // Calculate median
     const median = len % 2 === 0
         ? (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2
         : sortedSubmissions[Math.floor(len / 2)];
-    const q3 = sortedSubmissions[Math.floor(len * 0.75)];
 
-    // Calculate min and max (excluding outliers)
-    const iqr = q3 - q1;
-    const lowerWhisker = Math.max(q1 - 1.5 * iqr, sortedSubmissions[0]);
-    const upperWhisker = Math.min(q3 + 1.5 * iqr, sortedSubmissions[len - 1]);
+    // Calculate average
+    const average = sortedSubmissions.reduce((a, b) => a + b, 0) / len;
 
-    console.log('Box plot data:', { lowerWhisker, q1, median, q3, upperWhisker });
+    // Get last submission
+    const lastSubmission = allSubmissions[allSubmissions.length - 1];
+
+    console.log('Median:', median, 'Average:', average, 'Last Submission:', lastSubmission);
     medianValueSpan.textContent = median.toFixed(2);
+    averageValueSpan.textContent = average.toFixed(2);
+    lastSubmissionSpan.textContent = lastSubmission.toFixed(2);
 
-    if (window.myChart instanceof Chart) {
-        window.myChart.destroy();
-    }
-
-    window.myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Box Plot'],
-            datasets: [
-                {
-                    label: 'Min to Q1',
-                    data: [q1 - lowerWhisker],
-                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                    base: lowerWhisker
-                },
-                {
-                    label: 'Q1 to Median',
-                    data: [median - q1],
-                    backgroundColor: 'rgba(75, 192, 192, 0.8)',
-                    base: q1
-                },
-                {
-                    label: 'Median to Q3',
-                    data: [q3 - median],
-                    backgroundColor: 'rgba(75, 192, 192, 0.8)',
-                    base: median
-                },
-                {
-                    label: 'Q3 to Max',
-                    data: [upperWhisker - q3],
-                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                    base: q3
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            indexAxis: 'y',
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Distribution of Submissions'
-                },
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            const label = context.dataset.label || '';
-                            if (label) {
-                                return label + ': ' + context.parsed.x.toFixed(2);
-                            }
-                            return '';
-                        }
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Value'
-                    }
-                },
-                y: {
-                    display: false
-                }
-            }
-        }
-    });
-
-    console.log('Chart updated');
-    chartSection.style.display = 'block';
-    console.log('Chart section display:', chartSection.style.display);
+    statsSection.style.display = 'block';
 }
 </script>
