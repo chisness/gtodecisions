@@ -1,0 +1,81 @@
+<div id="expectedValueWidget">
+    <h3>What is the expected value of this website?</h3>
+    <div id="inputSection">
+      <input type="number" id="valueInput" min="0" step="0.01" placeholder="Enter value">
+      <button id="submitBtn">Submit</button>
+    </div>
+    <div id="thankYouMessage" style="display: none;">
+      <p>Thank you for your submission!</p>
+    </div>
+    <div id="chartSection" style="display: none;">
+      <canvas id="submissionsChart"></canvas>
+      <p>Median value: <span id="medianValue"></span></p>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  // JavaScript code goes here
+  let allSubmissions = [];
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const valueInput = document.getElementById('valueInput');
+    const submitBtn = document.getElementById('submitBtn');
+    const inputSection = document.getElementById('inputSection');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const chartSection = document.getElementById('chartSection');
+  
+    submitBtn.addEventListener('click', function() {
+      const value = parseFloat(valueInput.value);
+      if (isNaN(value) || value < 0) {
+        alert('Please enter a valid positive number');
+        return;
+      }
+      
+      sendToGoogleSheets(value);
+  
+      // Disable input and show thank you message
+      inputSection.style.display = 'none';
+      thankYouMessage.style.display = 'block';
+  
+      // Fetch all submissions and update chart
+      fetchAllSubmissions();
+    });
+  });
+  
+  function sendToGoogleSheets(value) {
+    // Replace with your Google Apps Script Web App URL
+    const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
+  
+    fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      redirect: 'follow',
+      body: JSON.stringify({value: value, timestamp: new Date().toISOString()})
+    })
+    .then(response => console.log('Success:', response))
+    .catch(error => console.error('Error:', error));
+  }
+  
+  function fetchAllSubmissions() {
+    // Replace with your Google Apps Script Web App URL for GET requests
+    const url = 'https://script.google.com/macros/s/AKfycbyL8bvTVKKpaP47li6bbYixwt8SMklECwF4VPnsWzufb_zAi7jZ5MBMxgLUxDta0vo9/exec';
+  
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        allSubmissions = data.map(row => parseFloat(row[0]));
+        updateChart();
+      })
+      .catch(error => console.error('Error:', error));
+  }
+  
+  function updateChart() {
+    // Chart update code goes here
+    // (The same as in the previous message)
+  }
+  </script>

@@ -1,12 +1,5 @@
 ---
 format: html
 ---
-
-What is the expected value of this site? 
-<!-- 
-```{python}
-import ipywidgets as widgets
-widgets.IntSlider()
-``` -->
-
-<!-- To learn more about Quarto books visit <https://quarto.org/docs/books>. -->
+```{=html}
+<iframe src="expected-value-widget.html" width="100%" height="500px" frameborder="0"></iframe>

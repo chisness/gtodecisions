@@ -20,14 +20,14 @@ The menu was like this:
 
 ## General Pizza and Circle Computatations
 
-Pizzas are approximately circular. The equation to calculate the area of a circle is: 
+Pizzas are approximately circular. The equation to calculate the area of a circle is below. Note that pizzas are shown with their *diameter*, but the equation uses radius, so we have to divide the diameters in 2 before using them. 
 
 $$
 \text{Area} = \pi * r^2
 $$
 
 ## Areas of Pizzas
-Let's get the area of each pizza so they are directly comparable. Note that pizzas are shown with their *diameter*, but the equation uses radius, so we have to divide the diameters in 2 before using them. 
+Let's get the area of each pizza so they are directly comparable.
 
 $$
 \text{14" Pizza Area} = \pi * 7^2 = 153.94 \text{ in.}^2
@@ -73,7 +73,7 @@ $$
 
 ## Direct Comparisons
 
-From the above chart we see that the 18" pizza is the best deal for $34, which has has a value of 7.48 sq in. per dollar.
+From the above chart we see that the 18" pizza for $34 is the best deal because it has a value of 7.48 sq in. per dollar.
 
 So if you want 8 large slices, that's the way to go. 
 
@@ -109,21 +109,11 @@ $$
 
 Therefore you would have $5.33*31.81 - 153.94 = 15.61$ bonus sq in., or about half a slice bonus for the same price. 
 
-## General Equations
+## Other Restaurants
+
 How to not make this mistake yourself? The above situation seems fairly rare. 
 
 The more common scenario is that larger pizzas are actually *way* cheaper than smaller ones per sq in.  
-
-The general equation for sq in. per dollar is: 
-
-$$
-\begin{equation}
-\begin{split}
-\text{Price per Sq In.} &= \frac{\text{Area}}{{Price}} \\ \\
-&= \frac{\pi*r^2}{\text{Price}}
-\end{split}
-\end{equation}
-$$
 
 Here are some prices for Domino's (most well known) and Lou Malnati's (finest pizza around).
 
@@ -144,3 +134,67 @@ As you can see, the square inch per dollar values tend to go up significantly as
 
 At Lou Malnati's if you got two 6" pizzas, you'd be paying $21.18 for 56.54 sq in. of pizza, compared to a 12" for $21.49 that gives you 113.10 sq in. of pizza. Exactly double the size for just about the same price! 
 
+## General Equations
+
+The general equation for sq in. per dollar is: 
+
+$$
+\begin{equation}
+\begin{split}
+\text{Sq In. per Dollar} &= \frac{\text{Area}}{{\text{Price}}} \\ \\
+&= \frac{\pi*r^2}{\text{Price}}
+\end{split}
+\end{equation}
+$$
+
+If you want to compare two pizzas and you know the sizes and prices, you can use a shortcut and take the ratios. 
+
+Let's formalize and clarify this: 
+
+General Pizza $i$ with diameter $d$, radius $d/2 = r$, price $p$
+
+$$
+\text{Sq In. per Dollar} = \frac{\pi*(\frac{d_i}{2})^2}{p_i}
+$$
+
+To compare two, we can take the ratios: 
+
+$$
+\begin{equation}
+\begin{split}
+\text{Sq In. per Dollar} &= \frac{\frac{\pi*(\frac{d_1}{2})^2}{p_1}}{\frac{\pi*(\frac{d_2}{2})^2}{p_2}} \\
+&= \frac{\pi*p_2*(\frac{d_1}{2})^2}{\pi*p_1*(\frac{d_2}{2})^2} \\
+&= \frac{p_2*d_1^2}{p_1*d_2^2}
+\end{split}
+\end{equation}
+$$
+
+Note that $\pi$ and the denominator of $d/2 = r$ drop out, so we only need to use $p_1$, $p_2$, $d_1$, and $d_2$. 
+
+## The Ratio Equation
+**This is the important equation that you should use in real life pizza value scenarios!** Let Pizza 1 be the larger one. 
+
+$$
+\text{Value of Pizza 1 Compared to Pizza 2} = \frac{p_2*d_1^2}{p_1*d_2^2}
+$$
+
+Here's an example using Lou Malnati's 12" and 6" pizzas from above: 
+
+| Pizza | Diameter | Price  |
+|------------|----------|--------|
+| Pizza 1    | 12"      | $21.49 |
+| Pizza 2    | 6"       | $10.59 |
+
+Now we can use our equation:
+
+$$
+\begin{equation}
+\begin{split}
+\text{Sq In. per Dollar} &= \frac{p_2*d_1^2}{p_1*d_2^2} \\
+&= \frac{\$10.59*12^2}{21.49*6^2} \\
+&= 1.97
+\end{split}
+\end{equation}
+$$
+
+This shows us that Pizza 1 is about 1.97 better value than Pizza 2 (in terms of square inches per dollar)! 

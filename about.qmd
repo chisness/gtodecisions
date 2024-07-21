@@ -8,7 +8,7 @@ The Expected Value Foundation is a project by [Max Chiswick](https://maxchiswick
 
 **Links:** 
 
-- [Poker Camp](https://pokercamp.org)
+- [Poker Camp](https://poker.camp)
 
 - [LinkedIn](https://www.linkedin.com/in/maxchiswick/)
 
@@ -16,6 +16,8 @@ drqwing a card from a deck
 variance 
 EV of skipping train ticket
 Look into spoiler/hidden text thing and having multiple choice quizzes integrated
+Use EV page as template including problem set/exercises at end
+
 https://seeing-theory.brown.edu/ 
 Lotto thing
 Slider for expected value with estimates, current events 

@@ -5,8 +5,8 @@ project:
 website:
   title: "The Expected Value Foundation"
   open-graph: true
-  # google-analytics: 
-  # favicon: 
+  google-analytics: G-P015KRTLYQ
+  favicon: assets/favicon.png
   twitter-card:
     creator: "@chisness"
   navbar: 
@@ -15,7 +15,7 @@ website:
       - text: "About"
         href: about.qmd
       - text: "Poker Camp"
-        href: https://pokercamp.org
+        href: https://poker.camp
     tools: 
       - icon: twitter
         href: https://x.com/chisness
@@ -27,30 +27,33 @@ website:
     contents: 
       - section: "EXPECTED VALUE"
         contents: 
-          - href: ev-basics.qmd
-            text: EV Basics
-          - href: ev-benefits.qmd
-            text: EV Benefits
-          - href: ev-faults.qmd
-            text: EV Faults
+          # - href: ev-basics.qmd
+          - text: SOON
+          # - href: ev-benefits.qmd
+          #   text: EV Benefits
+          # - href: ev-faults.qmd
+          #   text: EV Faults
       - section: "EV EXAMPLES"
         contents: 
-          - href: basketball.qmd
-            text: Basketball
-          - href: dice.qmd
-            text: Dice
-          - href: poker.qmd
-            text: Poker
-          - href: medicine.qmd
-            text: Medicine
-          - href: rice.qmd
-            text: Rice
+          - text: ALSO SOON
+          # - href: basketball.qmd
+          #   text: Basketball
+          # - href: dice.qmd
+          #   text: Dice
+          # - href: poker.qmd
+          #   text: Poker
+          # - href: medicine.qmd
+          #   text: Medicine
+          # - href: rice.qmd
+          #   text: Rice
       - section: "CURRENT EVENTS"
         contents: 
-          - href: gamestop.qmd
-            text: Roaring Kitty Gamestop
+          # - href: gamestop.qmd
+          #   text: Roaring Kitty Gamestop
           - href: huberman-pregnancy.qmd 
             text: Andrew Huberman Pregnancy Probability
+          - href: pizza.qmd
+            text: Pizza Calculations
 
 format:
   html:
