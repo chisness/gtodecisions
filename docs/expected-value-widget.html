@@ -18,19 +18,22 @@
 let currentEntryCount = 0;
 
 function fetchEntryCount() {
-    // Replace with your Google Apps Script Web App URL
     const url = 'https://script.google.com/macros/s/AKfycby71JogbnFqhM9rUs1b9uSMzK5zB-YrbFmZ2Ut47OUsPvWXhWp60slmpAggRDOWp-JQ/exec';
 
     return fetch(url)
-        .then(response => response.json())
-        .then(count => {
+        .then(response => response.text())  // Change this line
+        .then(countText => {
+            const count = parseInt(countText, 10);  // Parse the count as an integer
+            if (isNaN(count)) {
+                throw new Error('Invalid count received');
+            }
             currentEntryCount = count;
             document.getElementById('entryCount').textContent = `Entries so far: ${count}`;
             return count;
         })
         .catch(error => {
             console.error('Error fetching entry count:', error);
-            throw error;
+            document.getElementById('entryCount').textContent = 'Entries so far: Unable to fetch';
         });
 }
 
@@ -94,13 +97,18 @@ function updateStats(submissions) {
         const len = sortedSubmissions.length;
 
         // Calculate median
-        const median = len % 2 === 0
-            ? (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2
-            : sortedSubmissions[Math.floor(len / 2)];
+        let median;
+        if (len % 2 === 0) {
+            median = (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2;
+        } else {
+            median = sortedSubmissions[Math.floor(len / 2)];
+        }
 
         // Calculate average
-        const average = submissions.reduce((a, b) => a + b, 0) / len;
+        const sum = submissions.reduce((a, b) => a + b, 0);
+        const average = sum / len;
 
+        console.log('Sorted submissions:', sortedSubmissions);
         console.log('Median:', median, 'Average:', average);
         medianValueSpan.textContent = median.toFixed(2);
         averageValueSpan.textContent = average.toFixed(2);
