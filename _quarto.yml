@@ -28,14 +28,14 @@ website:
       - section: "EXPECTED VALUE"
         contents: 
           # - href: ev-basics.qmd
-          - text: SOON
+          - text: Soon
           # - href: ev-benefits.qmd
           #   text: EV Benefits
           # - href: ev-faults.qmd
           #   text: EV Faults
       - section: "EV EXAMPLES"
         contents: 
-          - text: ALSO SOON
+          - text: Also soon
           # - href: basketball.qmd
           #   text: Basketball
           # - href: dice.qmd
