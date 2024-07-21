@@ -57,7 +57,7 @@ website:
 
 format:
   html:
-    theme: cerulean
+    theme: flatly
     math: true 
     toc: true
     toc-expand: true
