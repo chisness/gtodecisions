@@ -5,12 +5,12 @@
         <button id="submitBtn">Submit</button>
     </div>
     <div id="thankYouMessage" style="display: none;">
-        <p>Thank you and have a nice day!</p>
+        <p>Thank you for your submission!</p>
     </div>
     <div id="statsSection" style="display: none;">
-        <p>Median value: <span id="medianValue"></span></p>
-        <p>Average value: <span id="averageValue"></span></p>
-        <p>Previous submission: <span id="lastSubmission"></span></p>
+        <p>Median value: <span id="medianValue">No data yet</span></p>
+        <p>Average value: <span id="averageValue">No data yet</span></p>
+        <p>Last submission: <span id="lastSubmission">No submissions yet</span></p>
     </div>
 </div>
 
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.addEventListener('click', function() {
     const inputValue = valueInput.value.replace(/,/g, '');
     const value = parseFloat(inputValue);
-    if (isNaN(value) || value < 0 || value > 1e12) { // 1e12 is one trillion
-        alert('Please enter a valid number between 0 and 1,000,000,000,000');
+    if (isNaN(value) || value < 0 || value > 1e6) { 
+        alert('Please enter a valid number between 0 and 1m');
         return;
     }
     
@@ -85,12 +85,19 @@ function fetchAllSubmissions() {
         .then(response => response.json())
         .then(data => {
             console.log('Data parsed:', data);
-            allSubmissions = data.map(row => parseFloat(row[0]));
-            console.log('Parsed submissions:', allSubmissions);
+            if (data && data.length > 0) {
+                allSubmissions = data.map(row => parseFloat(row[0]));
+                console.log('Parsed submissions:', allSubmissions);
+            } else {
+                allSubmissions = [];
+                console.log('No submissions found');
+            }
             updateStats();
         })
         .catch(error => {
             console.error('Error fetching submissions:', error);
+            allSubmissions = [];
+            updateStats();
         });
 }
 
@@ -103,27 +110,29 @@ function updateStats() {
 
     if (allSubmissions.length === 0) {
         console.log('No submissions to display');
-        return;
+        medianValueSpan.textContent = 'No data yet';
+        averageValueSpan.textContent = 'No data yet';
+        lastSubmissionSpan.textContent = 'No submissions yet';
+    } else {
+        const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
+        const len = sortedSubmissions.length;
+
+        // Calculate median
+        const median = len % 2 === 0
+            ? (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2
+            : sortedSubmissions[Math.floor(len / 2)];
+
+        // Calculate average
+        const average = sortedSubmissions.reduce((a, b) => a + b, 0) / len;
+
+        // Get last submission
+        const lastSubmission = allSubmissions[allSubmissions.length - 1];
+
+        console.log('Median:', median, 'Average:', average, 'Last Submission:', lastSubmission);
+        medianValueSpan.textContent = median.toFixed(2);
+        averageValueSpan.textContent = average.toFixed(2);
+        lastSubmissionSpan.textContent = lastSubmission.toFixed(2);
     }
-
-    const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
-    const len = sortedSubmissions.length;
-
-    // Calculate median
-    const median = len % 2 === 0
-        ? (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2
-        : sortedSubmissions[Math.floor(len / 2)];
-
-    // Calculate average
-    const average = sortedSubmissions.reduce((a, b) => a + b, 0) / len;
-
-    // Get last submission
-    const lastSubmission = allSubmissions[allSubmissions.length - 1];
-
-    console.log('Median:', median, 'Average:', average, 'Last Submission:', lastSubmission);
-    medianValueSpan.textContent = median.toFixed(2);
-    averageValueSpan.textContent = average.toFixed(2);
-    lastSubmissionSpan.textContent = lastSubmission.toFixed(2);
 
     statsSection.style.display = 'block';
 }
