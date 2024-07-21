@@ -14,7 +14,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot@4.0.0/build/Chart.BoxPlot.min.js"></script>
 <script>
 console.log('Chart.js loaded:', !!window.Chart);
 
@@ -110,7 +109,7 @@ function updateChart() {
     const sortedSubmissions = allSubmissions.slice().sort((a, b) => a - b);
     const len = sortedSubmissions.length;
 
-    // Calculate quartiles
+    // Calculate quartiles and median
     const q1 = sortedSubmissions[Math.floor(len * 0.25)];
     const median = len % 2 === 0
         ? (sortedSubmissions[len / 2 - 1] + sortedSubmissions[len / 2]) / 2
@@ -119,10 +118,10 @@ function updateChart() {
 
     // Calculate min and max (excluding outliers)
     const iqr = q3 - q1;
-    const lowerFence = Math.max(q1 - 1.5 * iqr, sortedSubmissions[0]);
-    const upperFence = Math.min(q3 + 1.5 * iqr, sortedSubmissions[len - 1]);
+    const lowerWhisker = Math.max(q1 - 1.5 * iqr, sortedSubmissions[0]);
+    const upperWhisker = Math.min(q3 + 1.5 * iqr, sortedSubmissions[len - 1]);
 
-    console.log('Box plot data:', { lowerFence, q1, median, q3, upperFence });
+    console.log('Box plot data:', { lowerWhisker, q1, median, q3, upperWhisker });
     medianValueSpan.textContent = median.toFixed(2);
 
     if (window.myChart instanceof Chart) {
@@ -130,27 +129,39 @@ function updateChart() {
     }
 
     window.myChart = new Chart(ctx, {
-        type: 'boxplot',
+        type: 'bar',
         data: {
-            datasets: [{
-                label: 'Submissions',
-                data: [{
-                    min: lowerFence,
-                    q1: q1,
-                    median: median,
-                    q3: q3,
-                    max: upperFence,
-                    outliers: sortedSubmissions.filter(v => v < lowerFence || v > upperFence)
-                }],
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1,
-                outlierBackgroundColor: 'rgba(255, 99, 132, 0.6)',
-                outlierBorderColor: 'rgba(255, 99, 132, 1)'
-            }]
+            labels: ['Box Plot'],
+            datasets: [
+                {
+                    label: 'Min to Q1',
+                    data: [q1 - lowerWhisker],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    base: lowerWhisker
+                },
+                {
+                    label: 'Q1 to Median',
+                    data: [median - q1],
+                    backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                    base: q1
+                },
+                {
+                    label: 'Median to Q3',
+                    data: [q3 - median],
+                    backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                    base: median
+                },
+                {
+                    label: 'Q3 to Max',
+                    data: [upperWhisker - q3],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    base: q3
+                }
+            ]
         },
         options: {
             responsive: true,
+            indexAxis: 'y',
             plugins: {
                 title: {
                     display: true,
@@ -158,15 +169,29 @@ function updateChart() {
                 },
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const label = context.dataset.label || '';
+                            if (label) {
+                                return label + ': ' + context.parsed.x.toFixed(2);
+                            }
+                            return '';
+                        }
+                    }
                 }
             },
             scales: {
-                y: {
+                x: {
                     beginAtZero: true,
                     title: {
                         display: true,
                         text: 'Value'
                     }
+                },
+                y: {
+                    display: false
                 }
             }
         }
