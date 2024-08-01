@@ -239,7 +239,6 @@ window.Quarto = {
   <li><a href="#when-is-expected-value-useful" id="toc-when-is-expected-value-useful" class="nav-link" data-scroll-target="#when-is-expected-value-useful">When is expected value useful?</a></li>
   <li><a href="#when-is-expected-value-not-useful" id="toc-when-is-expected-value-not-useful" class="nav-link" data-scroll-target="#when-is-expected-value-not-useful">When is expected value not useful?</a></li>
   <li><a href="#startup-vs.-normal-job" id="toc-startup-vs.-normal-job" class="nav-link" data-scroll-target="#startup-vs.-normal-job">Startup vs.&nbsp;Normal Job</a></li>
-  <li><a href="#dreidel-ev" id="toc-dreidel-ev" class="nav-link" data-scroll-target="#dreidel-ev">Dreidel EV</a></li>
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">Section 2</a>
   <ul class="collapse">
   <li><a href="#section-2.1" id="toc-section-2.1" class="nav-link" data-scroll-target="#section-2.1">Section 2.1</a></li>
@@ -348,6 +347,9 @@ window.Quarto = {
 <p>https://80000hours.org/articles/be-more-ambitious/</p>
 <p>https://forum.effectivealtruism.org/posts/FKnhB28EvG4og87JP/1-e-x-is-not-e-1-x</p>
 <p>https://blog.givewell.org/2016/07/26/deworming-might-huge-impact-might-close-zero-impact/</p>
+<p>ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2</p>
+<p>drqwing a card from a deck variance EV of skipping train ticket Look into spoiler/hidden text thing and having multiple choice quizzes integrated Use EV page as template including problem set/exercises at end</p>
+<p>https://seeing-theory.brown.edu/ Lotto thing Slider for expected value with estimates, current events Blackjack Taylor Swift Trump Expected value of domain Highest EV time to have a kid Site just asking what is the value of the site plane ticket stuff (see ojm list)</p>
 <p>https://reducing-suffering.org/does-vegetarianism-make-a-difference/</p>
 <p>https://forum.effectivealtruism.org/posts/GjifPPAAGont94Z7F/in-cost-effectiveness-analyses-when-should-we-take-the</p>
 <p>https://80000hours.org/podcast/episodes/alan-hajek-probability-expected-value/</p>
@@ -461,24 +463,6 @@ window.Quarto = {
 \end{split}
 \end{equation}
 \]</span></p>
-</section>
-<section id="dreidel-ev" class="level2">
-<h2 class="anchored" data-anchor-id="dreidel-ev">Dreidel EV</h2>
-<p>Dreidel is a game played during Hanukkah where each player starts by putting 1 piece into the pot and then players rotate around spinning the 4-sided dreidel. If the pot goes to 0 or 1 then all players again put 1 unit into the pot.</p>
-<p>The outcomes are: | Dreidel Spin | Probability | Game Outcome | | ——– | ——- | ——- | | נ (nun) | <span class="math inline">\(\frac{1}{4}\)</span> | Do nothing | | ג (gimel) | <span class="math inline">\(\frac{1}{4}\)</span> | Take whole pot | | ש (shin) | <span class="math inline">\(\frac{1}{4}\)</span> | Take half pot | | ה (hei) | <span class="math inline">\(\frac{1}{4}\)</span> | Put 1 unit into pot |</p>
-<p>Suppose it’s your turn to spin and the pot has 6 pieces in it.</p>
-<p>The outcomes are: | Dreidel Spin | Probability | Game Outcome | | ——– | ——- | ——- | | נ (nun) | <span class="math inline">\(\frac{1}{4}\)</span> | 0 | | ג (gimel) | <span class="math inline">\(\frac{1}{4}\)</span> | +6 | | ש (shin) | <span class="math inline">\(\frac{1}{4}\)</span> | +3 | | ה (hei) | <span class="math inline">\(\frac{1}{4}\)</span> | -1 |</p>
-<p>We can now compute the expected value of the spin:</p>
-<p><span class="math display">\[
-\begin{equation}
-\begin{split}
-\mathbb{E}[\text{Dreidel Spin}] &amp;= 0*\frac{1}{4} + 6*\frac{1}{4} + 3*\frac{1}{4} + (-1)*\frac{1}{4} \\
-  &amp;= 0 + 1.5 + 0.75 + (-0.25) \\
-  &amp;= 2
-\end{split}
-\end{equation}
-\]</span></p>
-<p>(It turns out that the game is “painfully slow” such that a 4 person game where each player starts with 10 units and each spin takes 10 seconds would take an average of 2 hours and 23 minutes (860 spins). <a href="https://www.slate.com/articles/life/holidays/2014/12/rules_of_dreidel_the_hannukah_game_is_way_too_slow_let_s_speed_it_up.html">Ben Blatt has suggested improvements</a>.)</p>
 </section>
 <section id="section-2" class="level2">
 <h2 class="anchored" data-anchor-id="section-2">Section 2</h2>
