@@ -27,7 +27,8 @@ website:
     contents: 
       - section: "EXPECTED VALUE"
         contents: 
-          # - href: ev-basics.qmd
+          - href: ev-basics.qmd
+            text: What is EV?
           - text: Soon
           # - href: ev-benefits.qmd
           #   text: EV Benefits
@@ -35,7 +36,8 @@ website:
           #   text: EV Faults
       - section: "EV EXAMPLES"
         contents: 
-          - text: Also soon
+          - href: dreidel.qmd
+            text: Dreidel
           # - href: basketball.qmd
           #   text: Basketball
           # - href: dice.qmd
