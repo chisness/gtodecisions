@@ -4,4 +4,4 @@ format:
   html:
     math: true
 ---
-The Expected Value Foundation is run by [Max Chiswick](https://maxchiswick.com) because expected value is important. 
+The Expected Value Foundation is run by [Max Chiswick](https://maxchiswick.com) 
