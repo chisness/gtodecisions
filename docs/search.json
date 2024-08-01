@@ -37,28 +37,28 @@
   {
     "objectID": "ev-basics.html",
     "href": "ev-basics.html",
-    "title": "Expected Value: Basics",
+    "title": "What is expected value?",
     "section": "",
     "text": "ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2\ndrqwing a card from a deck variance EV of skipping train ticket Look into spoiler/hidden text thing and having multiple choice quizzes integrated Use EV page as template including problem set/exercises at end\nhttps://seeing-theory.brown.edu/ Lotto thing Slider for expected value with estimates, current events Blackjack Taylor Swift Trump Expected value of domain Highest EV time to have a kid Site just asking what is the value of the site plane ticket stuff (see ojm list)"
   },
   {
     "objectID": "ev-basics.html#section-1",
     "href": "ev-basics.html#section-1",
-    "title": "Expected Value: Basics",
+    "title": "What is expected value?",
     "section": "",
     "text": "ev only part of picture, because if bet is big part of bankroll then not good! ## Section 2 ### Section 2.1 ### Section 2.2\ndrqwing a card from a deck variance EV of skipping train ticket Look into spoiler/hidden text thing and having multiple choice quizzes integrated Use EV page as template including problem set/exercises at end\nhttps://seeing-theory.brown.edu/ Lotto thing Slider for expected value with estimates, current events Blackjack Taylor Swift Trump Expected value of domain Highest EV time to have a kid Site just asking what is the value of the site plane ticket stuff (see ojm list)"
   },
   {
     "objectID": "ev-basics.html#section-3",
     "href": "ev-basics.html#section-3",
-    "title": "Expected Value: Basics",
+    "title": "What is expected value?",
     "section": "Section 3",
     "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3"
   },
   {
     "objectID": "ev-basics.html#section-4",
     "href": "ev-basics.html#section-4",
-    "title": "Expected Value: Basics",
+    "title": "What is expected value?",
     "section": "Section 4",
     "text": "Section 4"
   },
@@ -88,21 +88,21 @@
     "href": "ev-benefits.html",
     "title": "Expected Value Benefits",
     "section": "",
-    "text": "basic algebra, equations, variables A few easy explanations A few exercises A short video A really short video Dice EV, what if you get option for 2nd Expected Value Foundation? Expected value most upvoted answer on “what EAs should know if they know 1 concept”\nopportunity cost comparative advantage As its name suggests, opportunity cost refers to the cost of choosing one opportunity over others. This “cost” reflects the value you could have gained in all the options you didn’t pursue.\nAccounting for opportunity cost can help us understand the comparative value of our available options and spend our time, money, and effort more effectively. This is particularly important for avoiding spending limited resources on an option that seems attractive at first (because it has positive expected value) but will actually give you much worse value than another available option.\nhttps://www.cold-takes.com/expected-value/#fnref1\nhttps://brilliant.org/wiki/expected-value/\nhttps://80000hours.org/articles/expected-value/\nhttps://jc.gatspress.com/pdf/on_expected_utility.pdf\nhttps://80000hours.org/2023/02/how-much-do-solutions-differ-in-effectiveness/#ways-the-data-might-overstate-the-true-degree-of-spread\nhttps://80000hours.org/2023/03/moderation-in-doing-good/\nhttps://80000hours.org/articles/moral-uncertainty/"
+    "text": "Issues Risk tolerance: Expected value doesn’t account for individual risk preferences. Two options might have the same expected value, but one could be much riskier. Non-linear utility: The subjective value (utility) of money often doesn’t scale linearly. Gaining $1000 might be more than twice as valuable to someone as gaining $500. Frequency of events: For rare events or one-time decisions, the law of large numbers doesn’t apply, making expected value less reliable. Uncertainty in probabilities: Often, the probabilities used in calculations are estimates, which can lead to inaccurate results if they’re off. Neglect of qualitative factors: Expected value focuses on quantifiable outcomes, potentially overlooking important qualitative considerations. Assumption of independence: Many expected value calculations assume events are independent, which isn’t always true in real-life scenarios. Short-term vs. long-term outcomes: As you mentioned, time value of money isn’t typically factored in, nor are potential long-term consequences. Ethical considerations: Purely quantitative decision-making based on expected value might lead to ethically questionable choices in some situations. Complexity of real-world scenarios: Many situations involve multiple, interrelated variables that are difficult to capture in a simple expected value calculation. Behavioral biases: People often don’t act rationally according to expected value, due to various cognitive biases and emotional factors. Black swan events: Rare, high-impact events that are hard to predict can significantly affect outcomes but are often not accounted for in expected value calculations. Changing circumstances: Expected value calculations assume static conditions, but real-world situations can change rapidly.\nTime Value of Money:\nAs you mentioned, EV calculations typically do not account for the time value of money. Future cash flows need to be discounted to present value to make a proper comparison. Risk and Uncertainty:\nEV does not account for risk preferences or aversion. Two options with the same EV might have different levels of risk, which can significantly affect decision-making. Probability Estimation:\nAccurate probability estimation is crucial for EV calculations. Inaccurate or biased estimates can lead to misleading results. Utility:\nEV assumes linear utility of money, but in reality, the utility of money can be nonlinear. For example, losing $100 might feel worse than gaining $100 feels good. Rare Events:\nEV can be heavily influenced by rare, high-impact events. While these events may have a significant effect on the EV, their actual occurrence might be so infrequent that they should be considered differently. Decision Context:\nEV calculations do not always consider the broader context or other qualitative factors that may influence a decision. Opportunity Cost:\nEV does not inherently account for opportunity costs, which are the benefits you miss out on when choosing one alternative over another. Behavioral Factors:\nHuman behavior often deviates from rational decision-making models. Factors such as emotions, cognitive biases, and social influences can impact decisions beyond what EV can capture. Data Quality:\nThe quality and reliability of the data used to calculate probabilities and outcomes are critical. Poor data can lead to inaccurate EV calculations. Interdependencies:\nEV calculations typically assume independent outcomes, but in reality, events can be interdependent, affecting the overall decision-making process. Long-Term vs. Short-Term:\nEV may not distinguish between long-term and short-term benefits and costs, which can be important depending on the decision context. Scalability:\nEV is additive and may not scale well with large numbers of small probabilities, potentially leading to overestimation of the value of combining many low-probability events.\nPros: Expected value calculations offer several important benefits, which is why they remain a valuable tool in decision-making and analysis. Here are some key advantages:\nQuantitative framework: Provides a structured, numerical approach to comparing different options or scenarios. Objectivity: Helps reduce emotional bias in decision-making by focusing on probabilities and outcomes. Risk assessment: Allows for the incorporation of risk and uncertainty into decision-making processes. Comparative analysis: Facilitates easy comparison between multiple options, even when they have different probabilities and outcomes. Long-term perspective: Encourages thinking about the average outcome over many repetitions, which can be valuable for recurring decisions. Simplification of complex scenarios: Distills complicated situations into more manageable components (probabilities and payoffs). Identification of high-value opportunities: Helps in recognizing options that may have low probability but high potential payoff. Resource allocation: Assists in determining where to best allocate limited resources for maximum expected return. Decision consistency: Provides a consistent method for evaluating different scenarios across an organization or over time. Scenario planning: Useful in modeling various potential futures and their likelihood, aiding in strategic planning. Probabilistic thinking: Encourages consideration of multiple possible outcomes rather than just focusing on the most likely scenario. Foundation for more complex models: Serves as a basis for more sophisticated decision-making tools and risk analysis techniques. Learning tool: Helps in developing a more nuanced understanding of probability and its role in outcomes. Communication aid: Offers a clear way to explain the reasoning behind decisions to stakeholders.\nQuantitative Analysis:\nEV provides a clear, numerical method to evaluate and compare different options based on their potential outcomes and associated probabilities. Objective Decision-Making:\nBy focusing on probabilities and outcomes, EV helps reduce the influence of emotions and biases, leading to more rational and objective decisions. Informed Risk Assessment:\nEV allows decision-makers to quantify and assess the risks associated with different choices, enabling better risk management. Consistency:\nApplying EV consistently across different decisions ensures a systematic approach to evaluating options, promoting consistency in decision-making processes. Simplification:\nEV simplifies complex decisions by reducing them to a single value, making it easier to compare and contrast different scenarios. Strategic Planning:\nEV can be used in strategic planning to evaluate long-term projects and investments, helping organizations prioritize initiatives based on their expected returns. Resource Allocation:\nEV helps in optimal resource allocation by identifying the options with the highest expected returns, ensuring efficient use of resources. Identifying Best Practices:\nBy analyzing the EV of past decisions, organizations can identify best practices and improve future decision-making processes. Clarifying Trade-offs:\nEV highlights the trade-offs between different options, making it easier to understand the potential costs and benefits of each choice. Probability Sensitivity:\nEV calculations can reveal how sensitive a decision is to changes in probabilities, helping identify key factors that impact outcomes. Encourages Data-Driven Decisions:\nEV promotes the use of data and empirical evidence in decision-making, leading to more reliable and accurate evaluations. Facilitates Communication:\nEV provides a common framework for discussing and comparing different options, making it easier to communicate decisions to stakeholders. Supports Optimization:\nEV can be used in optimization problems to find the best possible decision given constraints and objectives. Cost-Benefit Analysis:\nEV is a fundamental component of cost-benefit analysis, helping to evaluate whether the benefits of a decision outweigh the costs. Decision Justification:\nEV offers a logical and transparent basis for justifying decisions, making it easier to explain and defend choices to others. Balancing Short-Term and Long-Term Goals:\nEV can help balance short-term and long-term goals by providing a framework to evaluate the expected value of immediate versus future benefits."
   },
   {
     "objectID": "ev-benefits.html#section-1",
     "href": "ev-benefits.html#section-1",
     "title": "Expected Value Benefits",
-    "section": "",
-    "text": "basic algebra, equations, variables A few easy explanations A few exercises A short video A really short video Dice EV, what if you get option for 2nd Expected Value Foundation? Expected value most upvoted answer on “what EAs should know if they know 1 concept”\nopportunity cost comparative advantage As its name suggests, opportunity cost refers to the cost of choosing one opportunity over others. This “cost” reflects the value you could have gained in all the options you didn’t pursue.\nAccounting for opportunity cost can help us understand the comparative value of our available options and spend our time, money, and effort more effectively. This is particularly important for avoiding spending limited resources on an option that seems attractive at first (because it has positive expected value) but will actually give you much worse value than another available option.\nhttps://www.cold-takes.com/expected-value/#fnref1\nhttps://brilliant.org/wiki/expected-value/\nhttps://80000hours.org/articles/expected-value/\nhttps://jc.gatspress.com/pdf/on_expected_utility.pdf\nhttps://80000hours.org/2023/02/how-much-do-solutions-differ-in-effectiveness/#ways-the-data-might-overstate-the-true-degree-of-spread\nhttps://80000hours.org/2023/03/moderation-in-doing-good/\nhttps://80000hours.org/articles/moral-uncertainty/"
+    "section": "Section 1",
+    "text": "Section 1\nExpected Value = (Probability of an outcome) × (Value of that outcome) Here’s a simple, real-life example: Imagine a raffle where:\nTickets cost $1 each There’s a 1 in 100 chance of winning The prize is $150\nTo calculate the expected value:\nProbability of winning: 1/100 = 0.01 Value of winning: $150 Expected Value = 0.01 × $150 = $1.50\nThis means that, on average, each ticket is “worth” $1.50. Since the ticket costs $1, and its expected value is $1.50, it’s technically a good deal in the long run. However, remember that this doesn’t guarantee you’ll win - it’s an average over many tries. This simple calculation helps you make decisions by weighing the likelihood of outcomes against their potential value. It’s a basic tool for comparing options with different risks and rewards.\nLottery tickets Roulette Blackjack Extended warranty Flight insurance Degree Solar panel Gas vs. EV car Poker Sports bet Chinese auction Food: Carrots, watermelon, XL vs. L eggs Salad bar Ebike vs. regular Dreidel\nbasic algebra, equations, variables A few easy explanations A few exercises A short video A really short video Dice EV, what if you get option for 2nd Expected Value Foundation? Expected value most upvoted answer on “what EAs should know if they know 1 concept”\nExpected value is fundamental in decision-making under uncertainty, a key area of focus for effective altruists. It allows individuals to make choices that maximize their positive impact, even when outcomes are uncertain. This principle is frequently discussed on platforms like the Effective Altruism Forum and in related literature.\nWhile I can’t pinpoint the exact source of the most upvoted answer you mentioned, it’s consistent with the general emphasis within the community on understanding and applying expected value to make better decisions.\nopportunity cost comparative advantage As its name suggests, opportunity cost refers to the cost of choosing one opportunity over others. This “cost” reflects the value you could have gained in all the options you didn’t pursue.\nAccounting for opportunity cost can help us understand the comparative value of our available options and spend our time, money, and effort more effectively. This is particularly important for avoiding spending limited resources on an option that seems attractive at first (because it has positive expected value) but will actually give you much worse value than another available option.\nhttps://www.cold-takes.com/expected-value/#fnref1\nhttps://brilliant.org/wiki/expected-value/\nhttps://80000hours.org/articles/expected-value/\nhttps://jc.gatspress.com/pdf/on_expected_utility.pdf\nhttps://80000hours.org/2023/02/how-much-do-solutions-differ-in-effectiveness/#ways-the-data-might-overstate-the-true-degree-of-spread\nhttps://80000hours.org/2023/03/moderation-in-doing-good/\nhttps://80000hours.org/articles/moral-uncertainty/"
   },
   {
     "objectID": "ev-benefits.html#technical-definition",
     "href": "ev-benefits.html#technical-definition",
     "title": "Expected Value Benefits",
     "section": "Technical Definition",
-    "text": "Technical Definition\nWikipedia: “The expected value of a random variable with a finite number of outcomes is a weighted average of all possible outcomes”.\nMathematically, with a random variable \\(X\\) and a list of possible outcomes \\(x_1, ..., x_k\\) each of which has probability \\(p_1, ..., p_k\\) of occurring, respectively. Then \\(\\mathbb{E}[X] = x_1 p_1 + x_2 p_2 + ... + x_k p_k\\).\nWhat is a random variable? It represents possible outcomes. A random variable is defined by its possible outcomes and the probability of each outcome.\nan agent making an optimal choice in the context of incomplete information is often assumed to maximize the expected value of their utility function.\nhttps://www.cold-takes.com/the-bayesian-mindset/#1-connecting-opinions-to-anticipated-observations\nhttps://80000hours.org/2023/02/how-much-do-solutions-differ-in-effectiveness/#ways-the-data-might-overstate-the-true-degree-of-spread\nhttps://blog.givewell.org/2011/08/18/why-we-cant-take-expected-value-estimates-literally-even-when-theyre-unbiased/\nhttps://80000hours.org/articles/be-more-ambitious/\nhttps://forum.effectivealtruism.org/posts/FKnhB28EvG4og87JP/1-e-x-is-not-e-1-x\nhttps://blog.givewell.org/2016/07/26/deworming-might-huge-impact-might-close-zero-impact/\nhttps://reducing-suffering.org/does-vegetarianism-make-a-difference/\nhttps://forum.effectivealtruism.org/posts/GjifPPAAGont94Z7F/in-cost-effectiveness-analyses-when-should-we-take-the\nhttps://80000hours.org/podcast/episodes/alan-hajek-probability-expected-value/"
+    "text": "Technical Definition\nWikipedia: “The expected value of a random variable with a finite number of outcomes is a weighted average of all possible outcomes”.\nMathematically, with a random variable \\(X\\) and a list of possible outcomes \\(x_1, ..., x_k\\) each of which has probability \\(p_1, ..., p_k\\) of occurring, respectively. Then \\(\\mathbb{E}[X] = x_1 p_1 + x_2 p_2 + ... + x_k p_k\\).\nWhat is a random variable? It represents possible outcomes. A random variable is defined by its possible outcomes and the probability of each outcome.\nan agent making an optimal choice in the context of incomplete information is often assumed to maximize the expected value of their utility function.\nhttps://www.cold-takes.com/the-bayesian-mindset/#1-connecting-opinions-to-anticipated-observations\nhttps://forum.effectivealtruism.org/posts/jo7tM4s5ApPgv2DPC/expected-value-theory\nhttps://forum.effectivealtruism.org/topics/expected-value\nhttps://80000hours.org/2023/02/how-much-do-solutions-differ-in-effectiveness/#ways-the-data-might-overstate-the-true-degree-of-spread\nhttps://blog.givewell.org/2011/08/18/why-we-cant-take-expected-value-estimates-literally-even-when-theyre-unbiased/\nhttps://80000hours.org/articles/be-more-ambitious/\nhttps://forum.effectivealtruism.org/posts/FKnhB28EvG4og87JP/1-e-x-is-not-e-1-x\nhttps://blog.givewell.org/2016/07/26/deworming-might-huge-impact-might-close-zero-impact/\nhttps://reducing-suffering.org/does-vegetarianism-make-a-difference/\nhttps://forum.effectivealtruism.org/posts/GjifPPAAGont94Z7F/in-cost-effectiveness-analyses-when-should-we-take-the\nhttps://80000hours.org/podcast/episodes/alan-hajek-probability-expected-value/"
   },
   {
     "objectID": "ev-benefits.html#not-considered",
@@ -270,7 +270,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "The Expected Value Foundation is a project by Max Chiswick because expected value is important.\nLinks:\n\nPoker Camp\nLinkedIn"
+    "text": "The Expected Value Foundation is run by Max Chiswick because expected value is important."
   },
   {
     "objectID": "pizza.html",
@@ -280,8 +280,8 @@
     "text": "Sorry, this is about value and not expected value. There’s an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.\nLast week I ate my first San Francisco pizza at Gioia’s. I of course got a margherita pizza (I don’t eat meat on pizza and don’t like vegetables on pizza cause then they remind me of omelettes (I also don’t like vegetables in omelettes)).\nThe menu was like this:\n\n\n\nPizza Type\nPrice\nNotes\n\n\n\n\n14” Pizza\n$24\n6 slices per pizza\n\n\n18” Pizza\n$34\n8 slices per pizza\n\n\n18” Pizza Slice\n$4.50\nSlice from 18”",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -292,8 +292,8 @@
     "text": "Sorry, this is about value and not expected value. There’s an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.\nLast week I ate my first San Francisco pizza at Gioia’s. I of course got a margherita pizza (I don’t eat meat on pizza and don’t like vegetables on pizza cause then they remind me of omelettes (I also don’t like vegetables in omelettes)).\nThe menu was like this:\n\n\n\nPizza Type\nPrice\nNotes\n\n\n\n\n14” Pizza\n$24\n6 slices per pizza\n\n\n18” Pizza\n$34\n8 slices per pizza\n\n\n18” Pizza Slice\n$4.50\nSlice from 18”",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -304,8 +304,8 @@
     "text": "General Pizza and Circle Computatations\nPizzas are approximately circular. The equation to calculate the area of a circle is below. Note that pizzas are shown with their diameter, but the equation uses radius, so we have to divide the diameters in 2 before using them.\n\\[\n\\text{Area} = \\pi * r^2\n\\]",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -316,8 +316,8 @@
     "text": "Area of Pizzas\nLet’s get the area of each pizza so they are directly comparable.\n\\[\n\\text{14\" Pizza Area} = \\pi * 7^2 = 153.94 \\text{ in.}^2\n\\]\n\\[\n\\text{18\" Pizza Area} = \\pi * 9^2 = 254.47 \\text{ in.}^2\n\\]\nThere are 8 slices in the 18” pizza, so we can compute the area per slice: \\[\n\\text{18\" Pizza Slice Area} = 254.47/8 = 31.81 \\text{ in.}^2\n\\]\nLet’s review:\n\n\n\nPizza Type\nPrice\nSquare Inches\nNotes\n\n\n\n\n14” Pizza\n$24\n153.94\n6 slices per pizza\n\n\n18” Pizza\n$34\n254.47\n8 slices per pizza\n\n\n18” Slice\n$4.50\n31.81\nSlice from 18”",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -328,8 +328,8 @@
     "text": "Price per Area of Pizzas\nNow let’s run the numbers on the square inches per dollar.\n\\[\n\\text{14\" Pizza Sq In. per Dollar} = 153.94/\\$24 = 6.41\n\\]\n\\[\n\\text{18\" Pizza Sq In. per Dollar} = 254.47/\\$34 = 7.48\n\\]\n\\[\n\\text{18\" Slice Sq In. per Dollar} = 31.81/\\$4.50 = 7.07\n\\]\n\n\n\n\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\nNotes\n\n\n\n\n14” Pizza\n$24\n153.94\n6.41\n6 slices per pizza\n\n\n18” Pizza\n$34\n254.47\n7.48\n8 slices per pizza\n\n\n18” Slice\n$4.50\n31.81\n7.07\nSlice from 18”",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -340,8 +340,8 @@
     "text": "Direct Comparisons\nFrom the above chart we see that the 18” pizza for $34 is the best deal because it has a value of 7.48 sq in. per dollar.\nSo if you want 8 large slices, that’s the way to go.\nThe 14” pizza is the most expensive option at $24 for the pizza, getting only 6.41 sq in. per dollar.\nTherefore if you want less than 8 large slices, it’s probably best to just order by the slice at 7.07 sq in. per dollar.\nHow many slices from the 18” pizza would it take to match the size of the 14”? The 14” is 153.94 sq in. and the 18” slices are 31.81 sq in.\n\\[\n\\text{How many slices?} = 153.94/31.81 = 4.84 \\text{ in.}^2\n\\]\nHow much would it cost for 4.84 slices?\n\\[\n\\text{Cost of 4.84 slices} = \\$4.50*4.84 = \\$21.78\n\\]\nThis means we can get the same amount of pizza for $21.78, except we can’t actually order 4.84 slices. So how about 5?\n\\[\n\\text{Cost of 5 slices} = \\$4.50*5 = \\$22.00\n\\]\nThe small pizza is a terrible deal! You can get 5 slices from the 18” pizza, which is slightly more pizza area (\\(31.81*5-153.94 = 5.11\\) bonus sq in.) and is $2 cheaper!\nAnd finally, if you spent the $24 you would have on the small pizza on slices, how many could you get?\n\\[\n\\text{Slices for \\$24?} = \\$24/\\$4.5 = 5.33\n\\]\nTherefore you would have \\(5.33*31.81 - 153.94 = 15.61\\) bonus sq in., or about half a slice bonus for the same price.",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -349,11 +349,11 @@
     "href": "pizza.html#other-restaurants",
     "title": "Value Example: Pizza",
     "section": "Other Restaurants",
-    "text": "Other Restaurants\nHow to not make this mistake yourself? The above situation seems fairly rare.\nThe more common scenario is that larger pizzas are actually way cheaper than smaller ones per sq in.\nHere are some prices for Domino’s (most well known) and Lou Malnati’s (finest pizza around).\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nDomino’s 10”\n$12.99\n78.54\n6.05\n\n\nDomino’s 12”\n$15.99\n113.10\n7.07\n\n\nDomino’s 14”\n$18.99\n153.94\n8.11\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nLou Malnati’s 6”\n$10.59\n28.27\n2.67\n\n\nLou Malnati’s 9”\n$15.99\n63.62\n3.98\n\n\nLou Malnati’s 12”\n$21.49\n113.10\n5.26\n\n\nLou Malnati’s 14”\n$26.79\n153.94\n5.75\n\n\n\nAs you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6” pizzas instead of 12” makes sense, but the area equation is based on the square of the radius, and \\(3^2\\) is much smaller than \\(6^2\\) (it’s \\(1/4\\)!).\nAt Lou Malnati’s if you got two 6” pizzas, you’d be paying $21.18 for 56.54 sq in. of pizza, compared to a 12” for $21.49 that gives you 113.10 sq in. of pizza. The bigger one is exactly double the size for just about the same price!",
+    "text": "Other Restaurants\nHow to not make this mistake yourself? The above situation seems fairly rare.\nThe more common scenario is that larger pizzas are actually way cheaper than smaller ones per sq in.\nHere are some prices for Domino’s (most well known) and Lou Malnati’s (finest pizza around).\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nDomino’s 10”\n$12.99\n78.54\n6.05\n\n\nDomino’s 12”\n$15.99\n113.10\n7.07\n\n\nDomino’s 14”\n$18.99\n153.94\n8.11\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nLou Malnati’s 6”\n$10.59\n28.27\n2.67\n\n\nLou Malnati’s 9”\n$15.99\n63.62\n3.98\n\n\nLou Malnati’s 12”\n$21.49\n113.10\n5.26\n\n\nLou Malnati’s 14”\n$26.79\n153.94\n5.75\n\n\n\nAs you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6” pizzas instead of 12” makes sense, but the area equation is based on the square of the radius, and \\(3^2\\) is much smaller than \\(6^2\\) (it’s \\(1/4\\)!).\nAt Lou Malnati’s if you got two 6” pizzas, you’d be paying $21.18 for 56.54 sq in. of pizza, compared to a 12” for $21.49 that gives you 113.10 sq in. of pizza. The bigger one is exactly double the size for just about the same price!\n\nWhole Foods\nAt Whole Foods, a whole 18” cheese pizza is $12, which is 6 slices. By the slice it’s $8 for 2 or $4.29 each. In this case it’s quite clear that the full pizza is a better deal",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {
@@ -364,8 +364,8 @@
     "text": "General Equations\nThe general equation for sq in. per dollar is:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Sq In. per Dollar} &= \\frac{\\text{Area}}{{\\text{Price}}} \\\\ \\\\\n&= \\frac{\\pi*r^2}{\\text{Price}}\n\\end{split}\n\\end{equation}\n\\]\nIf you want to compare two pizzas and you know the sizes and prices, you can use a shortcut and take the ratios.\nLet’s formalize and clarify this:\nGeneral Pizza \\(i\\) with diameter \\(d\\), radius \\(d/2 = r\\), price \\(p\\)\n\\[\n\\text{Sq In. per Dollar} = \\frac{\\pi*(\\frac{d_i}{2})^2}{p_i}\n\\]\nTo compare two, we can take the ratios:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Sq In. per Dollar} &= \\frac{\\frac{\\pi*(\\frac{d_1}{2})^2}{p_1}}{\\frac{\\pi*(\\frac{d_2}{2})^2}{p_2}} \\\\\n&= \\frac{\\pi*p_2*(\\frac{d_1}{2})^2}{\\pi*p_1*(\\frac{d_2}{2})^2} \\\\\n&= \\frac{p_2*d_1^2}{p_1*d_2^2}\n\\end{split}\n\\end{equation}\n\\]\nNote that \\(\\pi\\) and the denominator of \\(d/2 = r\\) drop out, so we only need to use \\(p_1\\), \\(p_2\\), \\(d_1\\), and \\(d_2\\).\n\nThe Comparison Equation\nThis is the important equation that you should use in real life pizza value scenarios!\nLet Pizza 1 be the larger one for consistency.\n\\[\n\\text{Value of Pizza 1 Compared to Pizza 2} = \\frac{p_2*d_1^2}{p_1*d_2^2}\n\\]\nHere’s an example using Lou Malnati’s 12” and 6” pizzas from above:\n\n\n\nPizza\nDiameter\nPrice\n\n\n\n\nPizza 1\n12”\n$21.49\n\n\nPizza 2\n6”\n$10.59\n\n\n\nNow we can use our equation:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Value of Pizza 1 Compared to Pizza 2} &= \\frac{p_2*d_1^2}{p_1*d_2^2} \\\\\n&= \\frac{\\$10.59*12^2}{\\$21.49*6^2} \\\\\n&= 1.97\n\\end{split}\n\\end{equation}\n\\]\nThis shows us that Pizza 1 is about 1.97x better value than Pizza 2 (in terms of square inches per dollar)!",
     "crumbs": [
       "About",
-      "CURRENT EVENTS",
-      "Pizza Calculations"
+      "EV EXAMPLES",
+      "Pizza"
     ]
   },
   {

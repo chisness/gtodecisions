@@ -46,14 +46,12 @@ website:
           #   text: Medicine
           # - href: rice.qmd
           #   text: Rice
+          - href: pizza.qmd
+            text: Pizza
       - section: "CURRENT EVENTS"
         contents: 
-          # - href: gamestop.qmd
-          #   text: Roaring Kitty Gamestop
           - href: huberman-pregnancy.qmd 
             text: Andrew Huberman Pregnancy Probability
-          - href: pizza.qmd
-            text: Pizza Calculations
 
 format:
   html:

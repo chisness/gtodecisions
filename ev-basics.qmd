@@ -1,5 +1,5 @@
 ---
-title: "Expected Value: Basics"
+title: "What is expected value?"
 format:
   html:
     math: true
