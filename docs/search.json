@@ -47,18 +47,6 @@
     ]
   },
   {
-    "objectID": "dreidel.html#dreidel-ev",
-    "href": "dreidel.html#dreidel-ev",
-    "title": "Expected Value Example: Dreidel",
-    "section": "",
-    "text": "Dreidel is a game played during Hanukkah where each player starts by putting 1 piece into the pot and then players rotate around spinning the 4-sided dreidel. If the pot goes to 0 or 1 then all players again put 1 unit into the pot.\nThe outcomes are: | Dreidel Spin | Probability | Game Outcome | | ——– | ——- | ——- | | נ (nun) | \\(\\frac{1}{4}\\) | Do nothing | | ג (gimel) | \\(\\frac{1}{4}\\) | Take whole pot | | ש (shin) | \\(\\frac{1}{4}\\) | Take half pot | | ה (hei) | \\(\\frac{1}{4}\\) | Put 1 unit into pot |\nSuppose it’s your turn to spin and the pot has 6 pieces in it.\nThe outcomes are: | Dreidel Spin | Probability | Game Outcome | | ——– | ——- | ——- | | נ (nun) | \\(\\frac{1}{4}\\) | 0 | | ג (gimel) | \\(\\frac{1}{4}\\) | +6 | | ש (shin) | \\(\\frac{1}{4}\\) | +3 | | ה (hei) | \\(\\frac{1}{4}\\) | -1 |\nWe can now compute the expected value of the spin:\n\\[\n\\begin{equation}\n\\begin{split}\n\\mathbb{E}[\\text{Dreidel Spin}] &= 0*\\frac{1}{4} + 6*\\frac{1}{4} + 3*\\frac{1}{4} + (-1)*\\frac{1}{4} \\\\\n  &= 0 + 1.5 + 0.75 + (-0.25) \\\\\n  &= 2\n\\end{split}\n\\end{equation}\n\\]\n(It turns out that the game is “painfully slow” such that a 4 person game where each player starts with 10 units and each spin takes 10 seconds would take an average of 2 hours and 23 minutes (860 spins). Ben Blatt has suggested improvements.)",
-    "crumbs": [
-      "About",
-      "EV EXAMPLES",
-      "Dreidel"
-    ]
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -393,7 +381,7 @@
     "href": "pizza.html#other-restaurants",
     "title": "Value Example: Pizza",
     "section": "Other Restaurants",
-    "text": "Other Restaurants\nHow to not make this mistake yourself? The above situation seems fairly rare.\nThe more common scenario is that larger pizzas are actually way cheaper than smaller ones per sq in.\nHere are some prices for Domino’s (most well known) and Lou Malnati’s (finest pizza around).\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nDomino’s 10”\n$12.99\n78.54\n6.05\n\n\nDomino’s 12”\n$15.99\n113.10\n7.07\n\n\nDomino’s 14”\n$18.99\n153.94\n8.11\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nLou Malnati’s 6”\n$10.59\n28.27\n2.67\n\n\nLou Malnati’s 9”\n$15.99\n63.62\n3.98\n\n\nLou Malnati’s 12”\n$21.49\n113.10\n5.26\n\n\nLou Malnati’s 14”\n$26.79\n153.94\n5.75\n\n\n\nAs you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6” pizzas instead of 12” makes sense, but the area equation is based on the square of the radius, and \\(3^2\\) is much smaller than \\(6^2\\) (it’s \\(1/4\\)!).\nAt Lou Malnati’s if you got two 6” pizzas, you’d be paying $21.18 for 56.54 sq in. of pizza, compared to a 12” for $21.49 that gives you 113.10 sq in. of pizza. The bigger one is exactly double the size for just about the same price!\n\nWhole Foods\nAt Whole Foods, a whole 18” cheese pizza is $12, which is 6 slices. By the slice it’s $8 for 2 or $4.29 each. In this case it’s quite clear that the full pizza is a better deal",
+    "text": "Other Restaurants\nHow to not make this mistake yourself? The above situation seems fairly rare.\nThe more common scenario is that larger pizzas are actually way cheaper than smaller ones per sq in.\nHere are some prices for Domino’s (most well known) and Lou Malnati’s (finest pizza around).\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nDomino’s 10”\n$12.99\n78.54\n6.05\n\n\nDomino’s 12”\n$15.99\n113.10\n7.07\n\n\nDomino’s 14”\n$18.99\n153.94\n8.11\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nLou Malnati’s 6”\n$10.59\n28.27\n2.67\n\n\nLou Malnati’s 9”\n$15.99\n63.62\n3.98\n\n\nLou Malnati’s 12”\n$21.49\n113.10\n5.26\n\n\nLou Malnati’s 14”\n$26.79\n153.94\n5.75\n\n\n\nAs you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6” pizzas instead of 12” makes sense, but the area equation is based on the square of the radius, and \\(3^2\\) is much smaller than \\(6^2\\) (it’s \\(1/4\\)!).\nAt Lou Malnati’s if you got two 6” pizzas, you’d be paying $21.18 for 56.54 sq in. of pizza, compared to a 12” for $21.49 that gives you 113.10 sq in. of pizza. The bigger one is exactly double the size for just about the same price!\n\nWhole Foods\nAt Whole Foods, a whole 18” cheese pizza is $12, which is 6 slices. By the slice it’s $8 for 2 or $4.29 each. In this case it’s quite clear that the full pizza is a better deal. It would cost $24 to buy 6 slices if buying in pairs compared to $12 for the same amount if buying a full pizza!",
     "crumbs": [
       "About",
       "EV EXAMPLES",
