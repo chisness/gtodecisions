@@ -181,9 +181,6 @@ window.Quarto = {
  <span class="menu-text">What is EV?</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
- <span class="menu-text">Soon</span>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -231,14 +228,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#dreidel-ev" id="toc-dreidel-ev" class="nav-link active" data-scroll-target="#dreidel-ev">Dreidel EV</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -262,12 +253,72 @@ window.Quarto = {
 </header>
 
 
-<section id="dreidel-ev" class="level2">
-<h2 class="anchored" data-anchor-id="dreidel-ev">Dreidel EV</h2>
 <p>Dreidel is a game played during Hanukkah where each player starts by putting 1 piece into the pot and then players rotate around spinning the 4-sided dreidel. If the pot goes to 0 or 1 then all players again put 1 unit into the pot.</p>
-<p>The outcomes are: | Dreidel Spin | Probability | Game Outcome | | ——– | ——- | ——- | | נ (nun) | <span class="math inline">\(\frac{1}{4}\)</span> | Do nothing | | ג (gimel) | <span class="math inline">\(\frac{1}{4}\)</span> | Take whole pot | | ש (shin) | <span class="math inline">\(\frac{1}{4}\)</span> | Take half pot | | ה (hei) | <span class="math inline">\(\frac{1}{4}\)</span> | Put 1 unit into pot |</p>
+<p>The outcomes are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dreidel Spin</th>
+<th>Probability</th>
+<th>Game Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>נ (nun)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>Do nothing</td>
+</tr>
+<tr class="even">
+<td>ג (gimel)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>Take whole pot</td>
+</tr>
+<tr class="odd">
+<td>ש (shin)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>Take half pot</td>
+</tr>
+<tr class="even">
+<td>ה (hei)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>Put 1 unit into pot</td>
+</tr>
+</tbody>
+</table>
 <p>Suppose it’s your turn to spin and the pot has 6 pieces in it.</p>
-<p>The outcomes are: | Dreidel Spin | Probability | Game Outcome | | ——– | ——- | ——- | | נ (nun) | <span class="math inline">\(\frac{1}{4}\)</span> | 0 | | ג (gimel) | <span class="math inline">\(\frac{1}{4}\)</span> | +6 | | ש (shin) | <span class="math inline">\(\frac{1}{4}\)</span> | +3 | | ה (hei) | <span class="math inline">\(\frac{1}{4}\)</span> | -1 |</p>
+<p>The outcomes are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dreidel Spin</th>
+<th>Probability</th>
+<th>Game Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>נ (nun)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>ג (gimel)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>+6</td>
+</tr>
+<tr class="odd">
+<td>ש (shin)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>+3</td>
+</tr>
+<tr class="even">
+<td>ה (hei)</td>
+<td><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
 <p>We can now compute the expected value of the spin:</p>
 <p><span class="math display">\[
 \begin{equation}
@@ -282,7 +333,6 @@ window.Quarto = {
 
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

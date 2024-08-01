@@ -29,7 +29,6 @@ website:
         contents: 
           - href: ev-basics.qmd
             text: What is EV?
-          - text: Soon
           # - href: ev-benefits.qmd
           #   text: EV Benefits
           # - href: ev-faults.qmd
