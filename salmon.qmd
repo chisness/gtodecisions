@@ -26,7 +26,7 @@ Because I eat salmon multiple times a week, I tend to go for other items at rest
 1. The Cheesecake Factory makes an excellent salmon (albeit farmed, @fig-cheesecake)
 2. Fish restaurants often have special kinds of salmon
 
-In 2021, I went to a good fish restaurant in the Chicago suburbs. I had previously eaten there pre-COVID and was excited for the large portions. Prices had gone up from the tremendous pre-COVID value, but still seemed reasonable. 
+In 2021, I went to a fish restaurant in the Chicago suburbs. I had previously eaten there pre-COVID and was excited for the large portions. Prices had gone up from the tremendous pre-COVID value, but still seemed reasonable. 
 
 As of August 2024, the prices are the following. All include a "14-16 oz portion, homemade roasted vegetables, and wild rice". 
 
@@ -76,23 +76,23 @@ When it arrived, it looked like @fig-restaurant (sides not shown):
 
 By standard restaurant serving sizes, this would be perfectly acceptable, but the menu claimed 14-16 oz. As a frequent salmon consumer, I knew this was wrong. 
 
-I had also previously eaten there and the meal looked like @fig-previous. 
+I had also previously eaten there and the meal looked like @fig-previous. A much healthier size!
 
 ::: {.column-margin}
 ![Previous restaurant salmon portion](assets/salmon/restaurantbefore.jpg){#fig-previous}
 :::
 
-A much healthier size!
-
 I mentioned the size issue to the food runner who escalated the matter to the waiter. The waiter told me that this was in fact the correct size. I said no I don't think so and he said yes and then left without resolving the issue. 
 
-Unsatisfied, I again brought it up and he then claimed that it must have shrunk a bit from the cooking. 
+Unsatisfied, I again brought it up and he then said that it must have shrunk a bit from the cooking. 
 
 ::: {.callout-tip collapse="true"}
 ## Cooked vs. Uncooked Weight Interlude
 
 Apparently the restaurant norm is to advertise the *uncooked* weight of food, e.g. a quarter pounder hamburger will be a quarter pound (4 oz) frozen and closer to 3 oz cooked. 
 :::
+
+### Size Specifics
 
 In the case of salmon, Claude claims that we should expect a weight loss of "15-25%". Given this, let's look at some estimates for the size of fish that we could expect. 
 
@@ -101,7 +101,8 @@ A 16 oz piece
 
 **Largest with shrinkage: **
 Start with a 16 oz piece, with 15% shrinkage: 
-$\text{Resulting Size} = 16*0.85 = 13.6 \text{oz}$
+
+Resulting size $= 16*0.85 = 13.6$ oz
 
 **Average with shrinkage: **
 Start with a 15 oz piece, with 20% shrinkage: 
@@ -111,17 +112,41 @@ $\text{Resulting Size} = 15*0.8 = 12 \text{oz}$
 Start with a 14 oz piece, with 25% shrinkage: 
 $\text{Resulting Size} = 14*0.75 = 10.5 \text{oz}$
 
+Hmm, so technically even a 10.5 oz piece would have been in the acceptable range. Admittedly, I think I would have complained about approximately anything <12 oz, but this size seemed even smaller. 
+
+After a brief and polite conversation raising my previous time at this restaurant and my deep general salmon experience, I insisted that we go to the kitchen to solve this the right way: on the scale (@fig-scale). 
+
+::: {.column-margin}
+![Salmon on the scale](assets/salmon/scale.jpg){#fig-scale}
+:::
+
+After weighing the plate with the salmon and a separate empty plate, we concluded that the salmon size was about **9 oz**! 
+
+Recall from above that we have 10.5 oz as the minimum size, 12 oz as the average size, and 15 oz as the average size without any shrinkage. This means this was too small by: 
+
+9/10.5 = 1
+
+9/12 = 1
+
+9/15 = 1
+
 ```{ojs}
 //| echo: false
-viewof rawWeight = Inputs.range([14, 16], {step: 0.1, label: "Raw Weight (oz)"})
-viewof shrinkagePercent = Inputs.range([15, 25], {step: 0.1, label: "Shrinkage (%)"})
+imagePath = FileAttachment("assets/salmon/plate.jpeg").url()
+
+viewof rawWeight = Inputs.range([14, 16], {step: 0.1, label: "Raw Weight (oz)", value: 15})
+viewof shrinkagePercent = Inputs.range([15, 25], {step: 0.1, label: "Shrinkage (%)", value: 20})
+viewof actualCookedWeight = Inputs.range([9, 16], {step: 0.1, label: "Actual Cooked Weight (oz)", value: 9})
 cookedWeight = rawWeight * (1 - shrinkagePercent / 100)
 
-md`The cooked weight is approximately ${cookedWeight.toFixed(2)} oz.`
+md`The expected cooked weight is approximately ${cookedWeight.toFixed(2)} oz.`
+md`The actual cooked weight is ${actualCookedWeight} oz.`
 
-chart = {
+function createChart() {
+  const minRawWeight = 9;
+  const maxRawWeight = 16;
   const data = [];
-  for (let weight = 14; weight <= 16; weight += 0.1) {
+  for (let weight = minRawWeight; weight <= maxRawWeight; weight += 0.1) {
     data.push({
       x: weight,
       y: weight * (1 - shrinkagePercent / 100)
@@ -130,7 +155,12 @@ chart = {
 
   const currentPoint = {
     x: rawWeight,
-    y: rawWeight * (1 - shrinkagePercent / 100)
+    y: cookedWeight
+  };
+
+  const actualPoint = {
+    x: actualCookedWeight / (1 - shrinkagePercent / 100),
+    y: actualCookedWeight
   };
 
   const margin = {top: 20, right: 30, bottom: 30, left: 40};
@@ -138,11 +168,12 @@ chart = {
   const height = 400 - margin.top - margin.bottom;
 
   const x = d3.scaleLinear()
-    .domain([14, 16])
+    .domain([minRawWeight, maxRawWeight])
     .range([0, width]);
 
   const y = d3.scaleLinear()
-    .domain([d3.min(data, d => d.y) * 0.9, d3.max(data, d => d.y) * 1.1])
+    .domain([Math.min(d3.min(data, d => d.y), actualCookedWeight) * 0.9, 
+             Math.max(d3.max(data, d => d.y), rawWeight) * 1.1])
     .range([height, 0]);
 
   const line = d3.line()
@@ -156,6 +187,28 @@ chart = {
 
   const g = svg.append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // Add the plate images along y = 9
+  const imgWidth = 40;  // Adjust as needed
+  const imgHeight = 30;  // Adjust as needed
+  const numPlates = Math.floor(width / (imgWidth * 1.5));  // Space plates out a bit
+  for (let i = 0; i < numPlates; i++) {
+    g.append("image")
+      .attr("xlink:href", imagePath)
+      .attr("x", i * imgWidth * 1.5)
+      .attr("y", y(9) - imgHeight / 2)
+      .attr("width", imgWidth)
+      .attr("height", imgHeight);
+  }
+
+  // Add a dashed line at y = 9
+  g.append("line")
+    .attr("x1", 0)
+    .attr("y1", y(9))
+    .attr("x2", width)
+    .attr("y2", y(9))
+    .attr("stroke", "red")
+    .attr("stroke-dasharray", "5,5");
 
   g.append("g")
     .attr("transform", `translate(0,${height})`)
@@ -183,21 +236,45 @@ chart = {
     .attr("stroke-width", 1.5)
     .attr("d", line);
 
+  // Add expected weight point (red)
   g.append("circle")
     .attr("cx", x(currentPoint.x))
     .attr("cy", y(currentPoint.y))
     .attr("r", 4)
     .attr("fill", "red");
 
+  // Add actual weight point (green)
+  g.append("circle")
+    .attr("cx", x(actualPoint.x))
+    .attr("cy", y(actualPoint.y))
+    .attr("r", 6)
+    .attr("fill", "green");
+
+  // Add legend
+  const legend = g.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .selectAll("g")
+    .data(["Expected Weight", "Actual Weight"])
+    .enter().append("g")
+    .attr("transform", (d, i) => `translate(0,${i * 20})`);
+
+  legend.append("rect")
+    .attr("x", width - 19)
+    .attr("width", 19)
+    .attr("height", 19)
+    .attr("fill", (d, i) => i === 0 ? "red" : "green");
+
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9.5)
+    .attr("dy", "0.32em")
+    .text(d => d);
+
   return svg.node();
 }
+
+md`### Salmon Weight Comparison`
+createChart()
 ```
-
-Hmm, so technically even a 10.5 oz piece would have been in the acceptable range. Admittedly, I think I would have complained about approximately anything <12 oz, but this size seemed even smaller. 
-
-After a brief and polite conversation raising my previous time at this restaurant and my deep general salmon experience, I insisted that we go to the kitchen to solve this the right way: on the scale (@fig-scale). 
-
-::: {.column-margin}
-![Salmon on the scale](assets/salmon/scale.jpg){#fig-scale}
-:::
-

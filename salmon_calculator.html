@@ -23,3 +23,87 @@ m.value("update", () => {
   m.redefine("cookedWeight", `The cooked weight is approximately ${cookedWeight.toFixed(2)} oz.`);
 });
 </script>
+
+
+<!-- 
+```{ojs}
+//| echo: false
+viewof rawWeight = Inputs.range([14, 16], {step: 0.1, label: "Raw Weight (oz)"})
+viewof shrinkagePercent = Inputs.range([15, 25], {step: 0.1, label: "Shrinkage (%)"})
+cookedWeight = rawWeight * (1 - shrinkagePercent / 100)
+
+md`The cooked weight is approximately ${cookedWeight.toFixed(2)} oz.`
+
+chart = {
+  const data = [];
+  for (let weight = 14; weight <= 16; weight += 0.1) {
+    data.push({
+      x: weight,
+      y: weight * (1 - shrinkagePercent / 100)
+    });
+  }
+
+  const currentPoint = {
+    x: rawWeight,
+    y: rawWeight * (1 - shrinkagePercent / 100)
+  };
+
+  const margin = {top: 20, right: 30, bottom: 30, left: 40};
+  const width = 640 - margin.left - margin.right;
+  const height = 400 - margin.top - margin.bottom;
+
+  const x = d3.scaleLinear()
+    .domain([14, 16])
+    .range([0, width]);
+
+  const y = d3.scaleLinear()
+    .domain([d3.min(data, d => d.y) * 0.9, d3.max(data, d => d.y) * 1.1])
+    .range([height, 0]);
+
+  const line = d3.line()
+    .x(d => x(d.x))
+    .y(d => y(d.y));
+
+  const svg = d3.create("svg")
+    .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom])
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom);
+
+  const g = svg.append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  g.append("g")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
+    .append("text")
+      .attr("x", width)
+      .attr("y", -6)
+      .attr("fill", "#000")
+      .attr("text-anchor", "end")
+      .text("Raw Weight (oz)");
+
+  g.append("g")
+    .call(d3.axisLeft(y))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .attr("fill", "#000")
+      .text("Cooked Weight (oz)");
+
+  g.append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 1.5)
+    .attr("d", line);
+
+  g.append("circle")
+    .attr("cx", x(currentPoint.x))
+    .attr("cy", y(currentPoint.y))
+    .attr("r", 4)
+    .attr("fill", "red");
+
+  return svg.node();
+}
+``` -->
