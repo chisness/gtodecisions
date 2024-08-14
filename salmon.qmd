@@ -4,12 +4,26 @@ format:
   html:
     math: true
 ---
-Salmon on a bed of pasta is my favorite meal in the world. Salmon on a bed of rice is for some reason the thing that I eat more frequently. My standard dinner is salmon with Costco stir-fry vegetables (frozen) sometimes with a cup of rice. (A dietician recently told me this is too much salmon/mercury.)
+Salmon on a bed of pasta is my favorite meal in the world (@fig-pasta).
+
+::: {.column-margin}
+![My dream meal](assets/salmon/salmonpasta.jpg){#fig-pasta}
+:::
+
+Salmon on a bed of rice is for some reason the thing that I eat more frequently. My standard dinner is salmon with Costco stir-fry vegetables (frozen) sometimes with a cup of rice (@fig-standard). (A dietician recently told me this is too much salmon/mercury.)
+
+::: {.column-margin}
+![My typical meal](assets/salmon/salmonstandard.jpg){#fig-standard}
+:::
 
 ## A Restaurant Incident
 Because I eat salmon multiple times a week, I tend to go for other items at restaurants. Two major exceptions: 
 
-1. The Cheesecake Factory makes an excellent salmon (albeit farmed)
+::: {.column-margin}
+![Cheesecake Factory](assets/salmon/cheesecake.jpg){#fig-cheesecake}
+:::
+
+1. The Cheesecake Factory makes an excellent salmon (albeit farmed, @fig-cheesecake)
 2. Fish restaurants often have special kinds of salmon
 
 In 2021, I went to a good fish restaurant in the Chicago suburbs. I had previously eaten there pre-COVID and was excited for the large portions. Prices had gone up from the tremendous pre-COVID value, but still seemed reasonable. 
@@ -181,4 +195,9 @@ chart = {
 
 Hmm, so technically even a 10.5 oz piece would have been in the acceptable range. Admittedly, I think I would have complained about approximately anything <12 oz, but this size seemed even smaller. 
 
-The waiter 
+After a brief and polite conversation raising my previous time at this restaurant and my deep general salmon experience, I insisted that we go to the kitchen to solve this the right way: on the scale (@fig-scale). 
+
+::: {.column-margin}
+![Salmon on the scale](assets/salmon/scale.jpg){#fig-scale}
+:::
+
