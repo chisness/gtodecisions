@@ -1,0 +1,175 @@
+---
+title: "Value Example: Salmon"
+format:
+  html:
+    math: true
+---
+Salmon on a bed of pasta is my favorite meal in the world. Salmon on a bed of rice is for some reason the thing that I eat more frequently. My standard dinner is salmon with Costco stir-fry vegetables (frozen) sometimes with a cup of rice. (A dietician recently told me this is too much salmon/mercury.)
+
+## A Restaurant Incident
+Because I eat salmon multiple times a week, I tend to go for other items at restaurants. Two major exceptions: 
+
+1. The Cheesecake Factory makes an excellent salmon (albeit farmed)
+2. Fish restaurants often have special kinds of salmon
+
+In 2021, I went to a good fish restaurant in the Chicago suburbs. I had previously eaten there pre-COVID and was excited for the large portions. Prices had gone up from the tremendous pre-COVID value, but still seemed reasonable. 
+
+As of August 2024, the prices are the following. All include a "14-16 oz portion, homemade roasted vegetables, and wild rice". 
+
+- Scottish Salmon: $32.99 
+- Wild Alaskan Salmon: $37.99
+- New Zealand Organic Salmon: $39.99
+
+Considering that these types of salmon would generally cost $15-30/lb in a supermarket, this still seems like a solid deal. 
+
+::: {.callout-tip collapse="true"}
+## Wild Salmon Interlude via Claude
+| Species | Quality | Farmed/Wild | Important Characteristics |
+|---------|---------|-------------|---------------------------|
+| Chinook (King) | High | Mostly wild | Largest salmon; rich, fatty flesh; high in omega-3s |
+| Coho (Silver) | Good | Mostly wild | Milder flavor; firm texture; popular for grilling |
+| Sockeye (Red) | High | Mostly wild | Deep red color; strong flavor; high in omega-3s |
+| Pink (Humpback) | Lower | Mostly wild | Lightest color and flavor; often canned |
+| Chum (Dog) | Lower | Mostly wild | Pale flesh; milder flavor; often smoked or canned |
+| Atlantic | Good | Mostly farmed | Mild flavor; adaptable to farming; controversial due to environmental concerns |
+| Kokanee | Good | Wild | Landlocked Sockeye; smaller size; popular for fishing |
+
+Some additional important points:
+
+1. Wild salmon generally have better flavor and nutritional profiles compared to farmed salmon, but they're often more expensive.
+
+2. Farming practices vary widely, affecting quality and environmental impact. Some farms are working on more sustainable practices.
+
+3. Salmon quality can vary based on the specific run and location, even within the same species.
+
+4. Conservation status is a concern for some wild salmon populations, particularly in certain regions.
+
+5. The taste and texture of salmon can be influenced by their diet and the waters they inhabit.
+
+6. King salmon has limited farming, mainly in New Zealand and very small operations elsewhere.
+
+:::
+
+While a little odd that a fish restaurant wouldn't be more specific about the type of its "Wild Alaskan Salmon", I proceeded to order that dish. 
+
+## Size Problems
+
+When it arrived, it looked like (sides not shown): 
+
+![](assets/salmon/restaurant.jpeg)
+
+By standard restaurant serving sizes, this would be perfectly acceptable, but the menu claimed 14-16 oz. As a frequent consumer, I knew this was wrong. 
+
+I had also previously eaten there and the meal looked like this: 
+
+![](assets/salmon/restaurantbefore.jpg)
+
+A much healthier size! 
+
+I mentioned the size issue to the food runner who escalated the matter to the waiter. The waiter told me that this was in fact the correct size. I said no I don't think so and he walked away. 
+
+Unsatisfied, I again brought up the issue and he then claimed that it must have shrunk a bit from the cooking. 
+
+::: {.callout-tip collapse="true"}
+## Cooked vs. Uncooked Weight Interlude
+
+Apparently the restaurant norm is to advertise the *uncooked* weight of food, e.g. a quarter pounder hamburger will be a quarter pound (4 oz) frozen and closer to 3 oz cooked. 
+:::
+
+In the case of salmon, Claude claims that we should expect a weight loss of "15-25%". Given this, let's look at some estimates for the size of fish that we could expect. 
+
+**Largest without shrinkage: **
+A 16 oz piece
+
+**Largest with shrinkage: **
+Start with a 16 oz piece, with 15% shrinkage: 
+$\text{Resulting Size} = 16*0.85 = 13.6 \text{oz}$
+
+**Average with shrinkage: **
+Start with a 15 oz piece, with 20% shrinkage: 
+$\text{Resulting Size} = 15*0.8 = 12 \text{oz}$
+
+**Smallest with shrinkage: **
+Start with a 14 oz piece, with 25% shrinkage: 
+$\text{Resulting Size} = 14*0.75 = 10.5 \text{oz}$
+
+```{ojs}
+viewof rawWeight = Inputs.range([14, 16], {step: 0.1, label: "Raw Weight (oz)"})
+viewof shrinkagePercent = Inputs.range([15, 25], {step: 0.1, label: "Shrinkage (%)"})
+cookedWeight = rawWeight * (1 - shrinkagePercent / 100)
+
+md`The cooked weight is approximately ${cookedWeight.toFixed(2)} oz.`
+
+chart = {
+  const data = [];
+  for (let weight = 14; weight <= 16; weight += 0.1) {
+    data.push({
+      x: weight,
+      y: weight * (1 - shrinkagePercent / 100)
+    });
+  }
+
+  const currentPoint = {
+    x: rawWeight,
+    y: rawWeight * (1 - shrinkagePercent / 100)
+  };
+
+  const margin = {top: 20, right: 30, bottom: 30, left: 40};
+  const width = 640 - margin.left - margin.right;
+  const height = 400 - margin.top - margin.bottom;
+
+  const x = d3.scaleLinear()
+    .domain([14, 16])
+    .range([0, width]);
+
+  const y = d3.scaleLinear()
+    .domain([d3.min(data, d => d.y) * 0.9, d3.max(data, d => d.y) * 1.1])
+    .range([height, 0]);
+
+  const line = d3.line()
+    .x(d => x(d.x))
+    .y(d => y(d.y));
+
+  const svg = d3.create("svg")
+    .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom])
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom);
+
+  const g = svg.append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  g.append("g")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
+    .append("text")
+      .attr("x", width)
+      .attr("y", -6)
+      .attr("fill", "#000")
+      .attr("text-anchor", "end")
+      .text("Raw Weight (oz)");
+
+  g.append("g")
+    .call(d3.axisLeft(y))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .attr("fill", "#000")
+      .text("Cooked Weight (oz)");
+
+  g.append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 1.5)
+    .attr("d", line);
+
+  g.append("circle")
+    .attr("cx", x(currentPoint.x))
+    .attr("cy", y(currentPoint.y))
+    .attr("r", 4)
+    .attr("fill", "red");
+
+  return svg.node();
+}
+```

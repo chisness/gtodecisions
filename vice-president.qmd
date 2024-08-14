@@ -1,0 +1,13 @@
+---
+title: "Vice President Expected Value with Nate Silver"
+format:
+  html:
+    math: true
+---
+A quote from Nate Silver's recent [post titled "Why She Should Pick Shapiro"](https://www.natesilver.net/p/why-she-should-pick-shapiro): 
+
+> One of the better arguments against Shapiro is the longstanding veepstakes principle of "do no harm" — one Trump violated with his selection of JD Vance, by the way. But it's a mediocre heuristic. Like the precautionary principle, it's not the most rigorous way to think about **expected value**. Instead, you should consider the downsides and the upsides. With Shapiro, the upsides are obvious: increase your chances of winning Pennsylvania and get someone with a proven track record of appealing to swing voters — a track record that Harris lacks — onto the ticket.
+
+> Plus, this is not a case like Hillary Clinton in 2016 — with her "do no harm" choice of Tim Kaine — when a candidate is picking from a position of presumed advantage. (And how did that work out for Clinton anyway, not that it was Kaine's fault?) That the race is now a toss-up must feel great for Democrats given their losing position with Biden. But it's still just a toss-up. If Harris were a 3:1 favorite, that's about when variance reduction might override what seems like the obvious +EV play. But instead it's 50/50.
+
+In other words, if you're already in a good position, then 

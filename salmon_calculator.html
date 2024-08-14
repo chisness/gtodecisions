@@ -1,0 +1,25 @@
+<div id="observablehq-e8df628f">
+  <div class="observablehq-viewof-rawWeight"></div>
+  <div class="observablehq-viewof-shrinkagePercent"></div>
+  <div class="observablehq-cookedWeight"></div>
+</div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@d3/hello-observable-inputs.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof rawWeight") return new Inspector(document.querySelector("#observablehq-e8df628f .observablehq-viewof-rawWeight"));
+  if (name === "viewof shrinkagePercent") return new Inspector(document.querySelector("#observablehq-e8df628f .observablehq-viewof-shrinkagePercent"));
+  if (name === "cookedWeight") return new Inspector(document.querySelector("#observablehq-e8df628f .observablehq-cookedWeight"));
+  return ["update","rawWeight","shrinkagePercent"].includes(name);
+});
+</script>
+
+<script type="module">
+const m = new Runtime().module(define);
+m.value("update", () => {
+  const rawWeight = m.value("rawWeight");
+  const shrinkagePercent = m.value("shrinkagePercent");
+  const cookedWeight = rawWeight * (1 - shrinkagePercent / 100);
+  m.redefine("cookedWeight", `The cooked weight is approximately ${cookedWeight.toFixed(2)} oz.`);
+});
+</script>

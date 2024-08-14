@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Roll Simulator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        button { margin: 5px; padding: 10px; }
+        #chart { height: 400px; }
+    </style>
+</head>
+<body>
+    <h1>Die Roll Simulator</h1>
+    <button onclick="handleRoll(1)">Roll Once</button>
+    <button onclick="handleRoll(10)">Roll 10 Times</button>
+    <button onclick="handleRoll(100)">Roll 100 Times</button>
+    <p>Total Rolls: <span id="totalRolls">0</span></p>
+    <p>Current Average: <span id="currentAverage">0</span></p>
+    <canvas id="chart"></canvas>
+
+    <script>
+        let rolls = [];
+        let average = 0;
+        const ctx = document.getElementById('chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Roll Value',
+                    data: [],
+                    borderColor: 'blue',
+                    tension: 0.1
+                }, {
+                    label: 'Average',
+                    data: [],
+                    borderColor: 'green',
+                    borderDash: [5, 5]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        min: 1,
+                        max: 6,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+
+        function rollDie() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function updateChart() {
+            chart.data.labels = rolls.map((_, index) => index + 1);
+            chart.data.datasets[0].data = rolls;
+            chart.data.datasets[1].data = new Array(rolls.length).fill(average);
+            chart.update();
+        }
+
+        function handleRoll(count) {
+            for (let i = 0; i < count; i++) {
+                rolls.push(rollDie());
+            }
+            if (rolls.length > 100) rolls = rolls.slice(-100);
+            average = rolls.reduce((sum, val) => sum + val, 0) / rolls.length;
+            
+            document.getElementById('totalRolls').textContent = rolls.length;
+            document.getElementById('currentAverage').textContent = average.toFixed(2);
+            
+            updateChart();
+        }
+    </script>
+</body>
+</html>
