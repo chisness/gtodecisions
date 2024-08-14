@@ -54,7 +54,7 @@ While a little odd that a fish restaurant wouldn't be more specific about the ty
 
 ## Size Problems
 
-When it arrived, it looked like (sides not shown): 
+When it arrived, it looked like @fig-restaurant (sides not shown): 
 
 ::: {.column-margin}
 ![Restaurant salmon portion](assets/salmon/restaurant.jpeg){#fig-restaurant}
@@ -62,7 +62,7 @@ When it arrived, it looked like (sides not shown):
 
 By standard restaurant serving sizes, this would be perfectly acceptable, but the menu claimed 14-16 oz. As a frequent salmon consumer, I knew this was wrong. 
 
-I had also previously eaten there and the meal looked like this: 
+I had also previously eaten there and the meal looked like @fig-previous. 
 
 ::: {.column-margin}
 ![Previous restaurant salmon portion](assets/salmon/restaurantbefore.jpg){#fig-previous}
