@@ -56,19 +56,23 @@ While a little odd that a fish restaurant wouldn't be more specific about the ty
 
 When it arrived, it looked like (sides not shown): 
 
-![](assets/salmon/restaurant.jpeg)
+::: {.column-margin}
+![Restaurant salmon portion](assets/salmon/restaurant.jpeg){#fig-restaurant}
+:::
 
-By standard restaurant serving sizes, this would be perfectly acceptable, but the menu claimed 14-16 oz. As a frequent consumer, I knew this was wrong. 
+By standard restaurant serving sizes, this would be perfectly acceptable, but the menu claimed 14-16 oz. As a frequent salmon consumer, I knew this was wrong. 
 
 I had also previously eaten there and the meal looked like this: 
 
-![](assets/salmon/restaurantbefore.jpg)
+::: {.column-margin}
+![Previous restaurant salmon portion](assets/salmon/restaurantbefore.jpg){#fig-previous}
+:::
 
-A much healthier size! 
+A much healthier size!
 
-I mentioned the size issue to the food runner who escalated the matter to the waiter. The waiter told me that this was in fact the correct size. I said no I don't think so and he walked away. 
+I mentioned the size issue to the food runner who escalated the matter to the waiter. The waiter told me that this was in fact the correct size. I said no I don't think so and he said yes and then left without resolving the issue. 
 
-Unsatisfied, I again brought up the issue and he then claimed that it must have shrunk a bit from the cooking. 
+Unsatisfied, I again brought it up and he then claimed that it must have shrunk a bit from the cooking. 
 
 ::: {.callout-tip collapse="true"}
 ## Cooked vs. Uncooked Weight Interlude
@@ -174,3 +178,7 @@ chart = {
   return svg.node();
 }
 ```
+
+Hmm, so technically even a 10.5 oz piece would have been in the acceptable range. Admittedly, I think I would have complained about approximately anything <12 oz, but this size seemed even smaller. 
+
+The waiter 
