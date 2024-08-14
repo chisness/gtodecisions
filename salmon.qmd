@@ -93,7 +93,7 @@ $\text{Resulting Size} = 15*0.8 = 12 \text{oz}$
 Start with a 14 oz piece, with 25% shrinkage: 
 $\text{Resulting Size} = 14*0.75 = 10.5 \text{oz}$
 
-```{ojs}
+```ojs
 viewof rawWeight = Inputs.range([14, 16], {step: 0.1, label: "Raw Weight (oz)"})
 viewof shrinkagePercent = Inputs.range([15, 25], {step: 0.1, label: "Shrinkage (%)"})
 cookedWeight = rawWeight * (1 - shrinkagePercent / 100)
