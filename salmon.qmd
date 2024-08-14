@@ -23,7 +23,7 @@ Because I eat salmon multiple times a week, I tend to go for other items at rest
 ![Cheesecake Factory](assets/salmon/cheesecake.jpg){#fig-cheesecake}
 :::
 
-1. The Cheesecake Factory makes an excellent salmon (albeit farmed, @fig-cheesecake)
+1. The Cheesecake Factory makes an excellent salmon meal (albeit farmed, @fig-cheesecake)
 2. Fish restaurants often have special kinds of salmon
 
 In 2021, I went to a fish restaurant in the Chicago suburbs. I had previously eaten there pre-COVID and was excited for the large portions. Prices had gone up from the tremendous pre-COVID value, but still seemed reasonable. 
@@ -68,19 +68,15 @@ While a little odd that a fish restaurant wouldn't be more specific about the ty
 
 ## Size Problems
 
-When it arrived, it looked like @fig-restaurant (sides not shown): 
+When it arrived, it looked way too small. 
 
-::: {.column-margin}
-![Restaurant salmon portion](assets/salmon/restaurant.jpeg){#fig-restaurant}
+::: {layout-ncol=2}
+![Salmon portion (sides not shown)](assets/salmon/restaurant.jpeg)
+
+![Previous portion at same restaurant (sides shown)](assets/salmon/restaurantbefore.jpg)
 :::
 
 By standard restaurant serving sizes, this would be perfectly acceptable, but the menu claimed 14-16 oz. As a frequent salmon consumer, I knew this was wrong. 
-
-I had also previously eaten there and the meal looked like @fig-previous. A much healthier size!
-
-::: {.column-margin}
-![Previous restaurant salmon portion](assets/salmon/restaurantbefore.jpg){#fig-previous}
-:::
 
 I mentioned the size issue to the food runner who escalated the matter to the waiter. The waiter told me that this was in fact the correct size. I said no I don't think so and he said yes and then left without resolving the issue. 
 
