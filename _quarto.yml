@@ -35,24 +35,28 @@ website:
           #   text: EV Faults
       - section: "EV EXAMPLES"
         contents: 
+          - href: dice.qmd
+            text: Dice
           - href: dreidel.qmd
             text: Dreidel
-          # - href: basketball.qmd
-          #   text: Basketball
-          # - href: dice.qmd
-          #   text: Dice
-          # - href: poker.qmd
-          #   text: Poker
-          # - href: medicine.qmd
-          #   text: Medicine
-          # - href: rice.qmd
-          #   text: Rice
+          - href: basicecon.qmd
+            text: Basic Economy
+          - href: blackjack.qmd
+            text: Blackjack
+          - href: gambler.qmd
+            text: Gambler Problem
+      - section: "NON-EV EXAMPLES"
+        contents: 
           - href: pizza.qmd
             text: Pizza
+          - href: salmon.qmd
+            text: Salmon
       - section: "CURRENT EVENTS"
         contents: 
           - href: huberman-pregnancy.qmd 
             text: Andrew Huberman Pregnancy Probability
+          # - href: vice-president.qmd
+          #   text: Vice President Selection
 
 format:
   html:

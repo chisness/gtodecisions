@@ -1,10 +1,43 @@
 [
   {
-    "objectID": "gamestop.html",
-    "href": "gamestop.html",
-    "title": "Expected Value Example: Roaring Kitty Gamestop",
+    "objectID": "basketball.html#section-1",
+    "href": "basketball.html#section-1",
+    "title": "Expected Value Example: Basketball",
+    "section": "Section 1",
+    "text": "Section 1"
+  },
+  {
+    "objectID": "basketball.html#section-2",
+    "href": "basketball.html#section-2",
+    "title": "Expected Value Example: Basketball",
+    "section": "Section 2",
+    "text": "Section 2\n\nSection 2.1\n\n\nSection 2.2"
+  },
+  {
+    "objectID": "basketball.html#section-3",
+    "href": "basketball.html#section-3",
+    "title": "Expected Value Example: Basketball",
+    "section": "Section 3",
+    "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3"
+  },
+  {
+    "objectID": "basketball.html#section-4",
+    "href": "basketball.html#section-4",
+    "title": "Expected Value Example: Basketball",
+    "section": "Section 4",
+    "text": "Section 4"
+  },
+  {
+    "objectID": "dice.html",
+    "href": "dice.html",
+    "title": "Expected Value Example: Dice",
     "section": "",
-    "text": "https://www.bloomberg.com/opinion/articles/2024-05-13/gamestop-is-back?srnd=undefined"
+    "text": "A roll of the dice is the typical first EV example.\nWhat is the expected value of a single 6 sided die?\nThe probability of rolling each side is the same, \\(1/6\\).\nThe value of each side is given by its number.\nTherefore we can write an equation to calculate the expected value:\n\\[\n\\begin{equation}\n\\begin{split}\n\\mathbb{E}[\\text{Die Roll}] &= 1*\\frac{1}{6} + 2*\\frac{1}{6} + 3*\\frac{1}{6} + (4)*\\frac{1}{6} + (5)*\\frac{1}{6} + (6)*\\frac{1}{6} \\\\\n  % &= \\frac{1}{6} + \\frac{2}{6} + *\\frac{3}{6} + \\frac{4}{6} + \\frac{5}{6} + \\frac{6}{6} \\\\\n  &= \\frac{21}{6} \\\\\n  % &= \\frac{7}{2} \\\\\n  &= 3.5\n\\end{split}\n\\end{equation}\n\\]",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Dice"
+    ]
   },
   {
     "objectID": "ev-faults.html#section-1",
@@ -51,7 +84,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "The Expected Value Foundation is run by Max Chiswick"
+    "text": "The Expected Value Foundation is run by Max Chiswick."
   },
   {
     "objectID": "poker.html#section-2",
@@ -250,6 +283,34 @@
     "text": "Section 4"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Expected Value: From Simple to Advanced",
+    "section": "",
+    "text": "Imagine you have a big jar of different colored marbles. Some are red, some are blue, and some are green. Your friend says, “If you pick a red marble, I’ll give you a cookie. If you pick a blue one, I’ll give you two cookies. If you pick a green one, you don’t get any cookies.”\nNow, let’s say there are:\n\n5 red marbles\n3 blue marbles\n2 green marbles\n\nIf you reach into the jar without looking, what can you expect? This is what we call “expected value.” It’s like guessing how many cookies you might get on average if you played this game many, many times.\nLet’s count it out. On average if you reach into the jar 10 times:\nRed marbles give you 5 cookies (1 cookie × 5 marbles) Blue marbles give you 6 cookies (2 cookies × 3 marbles) Green marbles give you 0 cookies (0 cookies × 2 marbles)\nThat’s 11 cookies in total.\nSo, if we divide 11 cookies by 10 marbles, we get 1.1 cookies.\nThis means, on average, you can expect to get about 1 cookie (and a tiny bit more) each time you pick a marble!\n\n\n\n\n\n\nTry it yourself!\n\n\n\nImagine reaching into the jar 10 times. How many cookies do you think you’d get? Try it out and see!\n\n\n\n\n  Cookies: 0\n  Picks: 0\n  Average: 0 cookies per pick\n  Pick a Marble\n  Reset\n  Last picked: None"
+  },
+  {
+    "objectID": "index.html#explain-it-like-im-5",
+    "href": "index.html#explain-it-like-im-5",
+    "title": "Expected Value: From Simple to Advanced",
+    "section": "",
+    "text": "Imagine you have a big jar of different colored marbles. Some are red, some are blue, and some are green. Your friend says, “If you pick a red marble, I’ll give you a cookie. If you pick a blue one, I’ll give you two cookies. If you pick a green one, you don’t get any cookies.”\nNow, let’s say there are:\n\n5 red marbles\n3 blue marbles\n2 green marbles\n\nIf you reach into the jar without looking, what can you expect? This is what we call “expected value.” It’s like guessing how many cookies you might get on average if you played this game many, many times.\nLet’s count it out. On average if you reach into the jar 10 times:\nRed marbles give you 5 cookies (1 cookie × 5 marbles) Blue marbles give you 6 cookies (2 cookies × 3 marbles) Green marbles give you 0 cookies (0 cookies × 2 marbles)\nThat’s 11 cookies in total.\nSo, if we divide 11 cookies by 10 marbles, we get 1.1 cookies.\nThis means, on average, you can expect to get about 1 cookie (and a tiny bit more) each time you pick a marble!\n\n\n\n\n\n\nTry it yourself!\n\n\n\nImagine reaching into the jar 10 times. How many cookies do you think you’d get? Try it out and see!\n\n\n\n\n  Cookies: 0\n  Picks: 0\n  Average: 0 cookies per pick\n  Pick a Marble\n  Reset\n  Last picked: None"
+  },
+  {
+    "objectID": "index.html#standard-explanation",
+    "href": "index.html#standard-explanation",
+    "title": "Expected Value: From Simple to Advanced",
+    "section": "Standard Explanation",
+    "text": "Standard Explanation\nExpected value is a concept in probability theory that represents the average outcome of an experiment if it is repeated many times. It’s calculated by multiplying each possible outcome by its probability of occurrence and then summing these products.\nMathematically, for a discrete random variable \\(X\\) with possible values \\(x_1, x_2, ..., x_n\\) and corresponding probabilities \\(p_1, p_2, ..., p_n\\), the expected value \\(E(X)\\) is:\n$ E(X) = _{i=1}^n x_i p_i $\nLet’s use our marble example:\n\nRed marble (1 cookie): 5/10 probability\nBlue marble (2 cookies): 3/10 probability\nGreen marble (0 cookies): 2/10 probability\n\n$ E(X) = 1 + 2 + 0 = 0.5 + 0.6 + 0 = 1.1 $\nSo, on average, you can expect to get 1.1 cookies per draw.\n\n\n\n\n\n\nTry it yourself!\n\n\n\nYou can use this tool to calculate any expected value. Just put the probabilities in the left column and the values in the right column. It’s pre-set with the cookie marble experiment. Remember that probabilities must sum to 1.\nThinking about something else to try? How about a 6-sided die? Each probability is 1/6 and the values are the 6 different die values.\n\n\n\n\n  \n    \n      Probability\n      Value\n    \n    \n  \n  Add Row\n  Calculate\n  Expected Value: 0"
+  },
+  {
+    "objectID": "index.html#advanced-explanation",
+    "href": "index.html#advanced-explanation",
+    "title": "Expected Value: From Simple to Advanced",
+    "section": "Advanced Explanation",
+    "text": "Advanced Explanation\nIn more complex scenarios, expected value becomes a powerful tool for decision-making under uncertainty. It’s particularly useful in fields like finance, economics, and data science.\nFor continuous random variables, the expected value is defined as an integral:\n\\[ E(X) = \\int_{-\\infty}^{\\infty} x f(x) dx \\]\nwhere \\(f(x)\\) is the probability density function of \\(X\\).\nExpected value has several important properties:\n\nLinearity: \\(E(aX + bY) = aE(X) + bE(Y)\\) for constants \\(a\\) and \\(b\\)\nLaw of the unconscious statistician: \\(E[g(X)] = \\int_{-\\infty}^{\\infty} g(x) f(x) dx\\)\n\nIn decision theory, we often use expected utility instead of expected value. This takes into account the decision-maker’s risk preferences:\n\\[ EU(X) = \\sum_{i=1}^n U(x_i) p_i \\]\nwhere \\(U(x)\\) is the utility function.\n\n\n\n\n\n\nImportant Consideration\n\n\n\nWhile expected value is a useful tool, it doesn’t account for the variance or risk associated with different outcomes. In some cases, especially with non-linear utility functions or when dealing with rare, high-impact events, decisions based solely on expected value may lead to suboptimal results.\n\n\n\nApplication: Kelly Criterion\nAn advanced application of expected value is the Kelly Criterion, used in betting and investment strategies. It determines the optimal size of a series of bets to maximize the long-term growth rate of capital.\nThe formula for the Kelly Criterion is:\n\\[ f^* = \\frac{bp - q}{b} \\]\nwhere:\n\n\\(f^*\\) is the fraction of the current bankroll to bet\n\\(b\\) is the net odds received on the bet\n\\(p\\) is the probability of winning\n\\(q\\) is the probability of losing (1 - p)\n\n\n\n\n\n\n\nInteractive Element Idea\n\n\n\nCreate an interactive simulation that demonstrates the long-term effects of using the Kelly Criterion versus other betting strategies. Allow users to adjust parameters like win probability, odds, and initial bankroll to see how these factors affect long-term outcomes."
+  },
+  {
     "objectID": "ev-basics.html",
     "href": "ev-basics.html",
     "title": "What is expected value?",
@@ -269,7 +330,7 @@
     "text": "Sorry, this is about value and not expected value. There’s an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.\nLast week I ate my first San Francisco pizza at Gioia’s. I of course got a margherita pizza (I don’t eat meat on pizza and don’t like vegetables on pizza cause then they remind me of omelettes (I also don’t like vegetables in omelettes)).\nThe menu was like this:\n\n\n\nPizza Type\nPrice\nNotes\n\n\n\n\n14” Pizza\n$24\n6 slices per pizza\n\n\n18” Pizza\n$34\n8 slices per pizza\n\n\n18” Pizza Slice\n$4.50\nSlice from 18”",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -281,7 +342,7 @@
     "text": "Sorry, this is about value and not expected value. There’s an assumption that at a pizza restaurant ordering by the full pizza is a better deal than ordering by the slice and also that ordering larger pizzas is a better deal than ordering smaller ones.\nLast week I ate my first San Francisco pizza at Gioia’s. I of course got a margherita pizza (I don’t eat meat on pizza and don’t like vegetables on pizza cause then they remind me of omelettes (I also don’t like vegetables in omelettes)).\nThe menu was like this:\n\n\n\nPizza Type\nPrice\nNotes\n\n\n\n\n14” Pizza\n$24\n6 slices per pizza\n\n\n18” Pizza\n$34\n8 slices per pizza\n\n\n18” Pizza Slice\n$4.50\nSlice from 18”",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -293,7 +354,7 @@
     "text": "General Pizza and Circle Computatations\nPizzas are approximately circular. The equation to calculate the area of a circle is below. Note that pizzas are shown with their diameter, but the equation uses radius, so we have to divide the diameters in 2 before using them.\n\\[\n\\text{Area} = \\pi * r^2\n\\]",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -305,7 +366,7 @@
     "text": "Area of Pizzas\nLet’s get the area of each pizza so they are directly comparable.\n\\[\n\\text{14\" Pizza Area} = \\pi * 7^2 = 153.94 \\text{ in.}^2\n\\]\n\\[\n\\text{18\" Pizza Area} = \\pi * 9^2 = 254.47 \\text{ in.}^2\n\\]\nThere are 8 slices in the 18” pizza, so we can compute the area per slice: \\[\n\\text{18\" Pizza Slice Area} = 254.47/8 = 31.81 \\text{ in.}^2\n\\]\nLet’s review:\n\n\n\nPizza Type\nPrice\nSquare Inches\nNotes\n\n\n\n\n14” Pizza\n$24\n153.94\n6 slices per pizza\n\n\n18” Pizza\n$34\n254.47\n8 slices per pizza\n\n\n18” Slice\n$4.50\n31.81\nSlice from 18”",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -317,7 +378,7 @@
     "text": "Price per Area of Pizzas\nNow let’s run the numbers on the square inches per dollar.\n\\[\n\\text{14\" Pizza Sq In. per Dollar} = 153.94/\\$24 = 6.41\n\\]\n\\[\n\\text{18\" Pizza Sq In. per Dollar} = 254.47/\\$34 = 7.48\n\\]\n\\[\n\\text{18\" Slice Sq In. per Dollar} = 31.81/\\$4.50 = 7.07\n\\]\n\n\n\n\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\nNotes\n\n\n\n\n14” Pizza\n$24\n153.94\n6.41\n6 slices per pizza\n\n\n18” Pizza\n$34\n254.47\n7.48\n8 slices per pizza\n\n\n18” Slice\n$4.50\n31.81\n7.07\nSlice from 18”",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -329,7 +390,7 @@
     "text": "Direct Comparisons\nFrom the above chart we see that the 18” pizza for $34 is the best deal because it has a value of 7.48 sq in. per dollar.\nSo if you want 8 large slices, that’s the way to go.\nThe 14” pizza is the most expensive option at $24 for the pizza, getting only 6.41 sq in. per dollar.\nTherefore if you want less than 8 large slices, it’s probably best to just order by the slice at 7.07 sq in. per dollar.\nHow many slices from the 18” pizza would it take to match the size of the 14”? The 14” is 153.94 sq in. and the 18” slices are 31.81 sq in.\n\\[\n\\text{How many slices?} = 153.94/31.81 = 4.84 \\text{ in.}^2\n\\]\nHow much would it cost for 4.84 slices?\n\\[\n\\text{Cost of 4.84 slices} = \\$4.50*4.84 = \\$21.78\n\\]\nThis means we can get the same amount of pizza for $21.78, except we can’t actually order 4.84 slices. So how about 5?\n\\[\n\\text{Cost of 5 slices} = \\$4.50*5 = \\$22.00\n\\]\nThe small pizza is a terrible deal! You can get 5 slices from the 18” pizza, which is slightly more pizza area (\\(31.81*5-153.94 = 5.11\\) bonus sq in.) and is $2 cheaper!\nAnd finally, if you spent the $24 you would have on the small pizza on slices, how many could you get?\n\\[\n\\text{Slices for \\$24?} = \\$24/\\$4.5 = 5.33\n\\]\nTherefore you would have \\(5.33*31.81 - 153.94 = 15.61\\) bonus sq in., or about half a slice bonus for the same price.",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -341,7 +402,7 @@
     "text": "Other Restaurants\nHow to not make this mistake yourself? The above situation seems fairly rare.\nThe more common scenario is that larger pizzas are actually way cheaper than smaller ones per sq in.\nHere are some prices for Domino’s (most well known) and Lou Malnati’s (finest pizza around).\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nDomino’s 10”\n$12.99\n78.54\n6.05\n\n\nDomino’s 12”\n$15.99\n113.10\n7.07\n\n\nDomino’s 14”\n$18.99\n153.94\n8.11\n\n\n\n\n\n\nPizza Type\nPrice\nSquare Inches\nSquare Inch per Dollar\n\n\n\n\nLou Malnati’s 6”\n$10.59\n28.27\n2.67\n\n\nLou Malnati’s 9”\n$15.99\n63.62\n3.98\n\n\nLou Malnati’s 12”\n$21.49\n113.10\n5.26\n\n\nLou Malnati’s 14”\n$26.79\n153.94\n5.75\n\n\n\nAs you can see, the square inch per dollar values tend to go up significantly as pizzas get larger. You might think that getting two 6” pizzas instead of 12” makes sense, but the area equation is based on the square of the radius, and \\(3^2\\) is much smaller than \\(6^2\\) (it’s \\(1/4\\)!).\nAt Lou Malnati’s if you got two 6” pizzas, you’d be paying $21.18 for 56.54 sq in. of pizza, compared to a 12” for $21.49 that gives you 113.10 sq in. of pizza. The bigger one is exactly double the size for just about the same price!\n\nWhole Foods\nAt Whole Foods, a whole 18” cheese pizza is $12, which is 6 slices. By the slice it’s $8 for 2 or $4.29 each. In this case it’s quite clear that the full pizza is a better deal. It would cost $24 to buy 6 slices if buying in pairs compared to $12 for the same amount if buying a full pizza!",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
@@ -353,57 +414,154 @@
     "text": "General Equations\nThe general equation for sq in. per dollar is:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Sq In. per Dollar} &= \\frac{\\text{Area}}{{\\text{Price}}} \\\\ \\\\\n&= \\frac{\\pi*r^2}{\\text{Price}}\n\\end{split}\n\\end{equation}\n\\]\nIf you want to compare two pizzas and you know the sizes and prices, you can use a shortcut and take the ratios.\nLet’s formalize and clarify this:\nGeneral Pizza \\(i\\) with diameter \\(d\\), radius \\(d/2 = r\\), price \\(p\\)\n\\[\n\\text{Sq In. per Dollar} = \\frac{\\pi*(\\frac{d_i}{2})^2}{p_i}\n\\]\nTo compare two, we can take the ratios:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Sq In. per Dollar} &= \\frac{\\frac{\\pi*(\\frac{d_1}{2})^2}{p_1}}{\\frac{\\pi*(\\frac{d_2}{2})^2}{p_2}} \\\\\n&= \\frac{\\pi*p_2*(\\frac{d_1}{2})^2}{\\pi*p_1*(\\frac{d_2}{2})^2} \\\\\n&= \\frac{p_2*d_1^2}{p_1*d_2^2}\n\\end{split}\n\\end{equation}\n\\]\nNote that \\(\\pi\\) and the denominator of \\(d/2 = r\\) drop out, so we only need to use \\(p_1\\), \\(p_2\\), \\(d_1\\), and \\(d_2\\).\n\nThe Comparison Equation\nThis is the important equation that you should use in real life pizza value scenarios!\nLet Pizza 1 be the larger one for consistency.\n\\[\n\\text{Value of Pizza 1 Compared to Pizza 2} = \\frac{p_2*d_1^2}{p_1*d_2^2}\n\\]\nHere’s an example using Lou Malnati’s 12” and 6” pizzas from above:\n\n\n\nPizza\nDiameter\nPrice\n\n\n\n\nPizza 1\n12”\n$21.49\n\n\nPizza 2\n6”\n$10.59\n\n\n\nNow we can use our equation:\n\\[\n\\begin{equation}\n\\begin{split}\n\\text{Value of Pizza 1 Compared to Pizza 2} &= \\frac{p_2*d_1^2}{p_1*d_2^2} \\\\\n&= \\frac{\\$10.59*12^2}{\\$21.49*6^2} \\\\\n&= 1.97\n\\end{split}\n\\end{equation}\n\\]\nThis shows us that Pizza 1 is about 1.97x better value than Pizza 2 (in terms of square inches per dollar)!",
     "crumbs": [
       "About",
-      "EV EXAMPLES",
+      "NON-EV EXAMPLES",
       "Pizza"
     ]
   },
   {
-    "objectID": "dice.html#section-2",
-    "href": "dice.html#section-2",
-    "title": "Expected Value Example: Dice",
-    "section": "Section 2",
-    "text": "Section 2\n\nSection 2.1\n\n\nSection 2.2"
+    "objectID": "vice-president.html",
+    "href": "vice-president.html",
+    "title": "Vice President Expected Value with Nate Silver",
+    "section": "",
+    "text": "A quote from Nate Silver’s recent post titled “Why She Should Pick Shapiro”:\n\nOne of the better arguments against Shapiro is the longstanding veepstakes principle of “do no harm” — one Trump violated with his selection of JD Vance, by the way. But it’s a mediocre heuristic. Like the precautionary principle, it’s not the most rigorous way to think about expected value. Instead, you should consider the downsides and the upsides. With Shapiro, the upsides are obvious: increase your chances of winning Pennsylvania and get someone with a proven track record of appealing to swing voters — a track record that Harris lacks — onto the ticket.\n\n\nPlus, this is not a case like Hillary Clinton in 2016 — with her “do no harm” choice of Tim Kaine — when a candidate is picking from a position of presumed advantage. (And how did that work out for Clinton anyway, not that it was Kaine’s fault?) That the race is now a toss-up must feel great for Democrats given their losing position with Biden. But it’s still just a toss-up. If Harris were a 3:1 favorite, that’s about when variance reduction might override what seems like the obvious +EV play. But instead it’s 50/50.\n\nIn other words, if you’re already in a good position, then"
   },
   {
-    "objectID": "dice.html#section-3",
-    "href": "dice.html#section-3",
-    "title": "Expected Value Example: Dice",
-    "section": "Section 3",
-    "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3"
+    "objectID": "gamestop.html",
+    "href": "gamestop.html",
+    "title": "Expected Value Example: Roaring Kitty Gamestop",
+    "section": "",
+    "text": "https://www.bloomberg.com/opinion/articles/2024-05-13/gamestop-is-back?srnd=undefined"
   },
   {
-    "objectID": "dice.html#section-4",
-    "href": "dice.html#section-4",
-    "title": "Expected Value Example: Dice",
-    "section": "Section 4",
-    "text": "Section 4"
+    "objectID": "blackjack.html",
+    "href": "blackjack.html",
+    "title": "Value Example: Blackjack",
+    "section": "",
+    "text": "The Reinforcement Learning book by Sutton and Barto has a blackjack example in chapter 5 that led to many of the ideas in this post.\n\nThe rules of the game directly from the book are below: “The object of the popular casino card game of blackjack is to obtain cards the sum of whose numerical values is as great as possible without exceeding 21. All face cards count as 10, and an ace can count either as 1 or as 11. We consider the version in which each player competes independently against the dealer. The game begins with two cards dealt to both dealer and player. One of the dealer’s cards is face up and the other is face down. If the player has 21 immediately (an ace and a 10-card), it is called a natural. He then wins unless the dealer also has a natural, in which case the game is a draw. If the player does not have a natural, then he can request additional cards, one by one (hits), until he either stops (sticks) or exceeds 21 (goes bust). If he goes bust, he loses; if he sticks, then it becomes the dealer’s turn. The dealer hits or sticks according to a fixed strategy without choice: he sticks on any sum of 17 or greater, and hits otherwise. If the dealer goes bust, then the player wins; otherwise, the outcome—win, lose, or draw—is determined by whose final sum is closer to 21.”",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
   },
   {
-    "objectID": "basketball.html#section-1",
-    "href": "basketball.html#section-1",
-    "title": "Expected Value Example: Basketball",
-    "section": "Section 1",
-    "text": "Section 1"
+    "objectID": "blackjack.html#blackjack-rules",
+    "href": "blackjack.html#blackjack-rules",
+    "title": "Value Example: Blackjack",
+    "section": "",
+    "text": "The Reinforcement Learning book by Sutton and Barto has a blackjack example in chapter 5 that led to many of the ideas in this post.\n\nThe rules of the game directly from the book are below: “The object of the popular casino card game of blackjack is to obtain cards the sum of whose numerical values is as great as possible without exceeding 21. All face cards count as 10, and an ace can count either as 1 or as 11. We consider the version in which each player competes independently against the dealer. The game begins with two cards dealt to both dealer and player. One of the dealer’s cards is face up and the other is face down. If the player has 21 immediately (an ace and a 10-card), it is called a natural. He then wins unless the dealer also has a natural, in which case the game is a draw. If the player does not have a natural, then he can request additional cards, one by one (hits), until he either stops (sticks) or exceeds 21 (goes bust). If he goes bust, he loses; if he sticks, then it becomes the dealer’s turn. The dealer hits or sticks according to a fixed strategy without choice: he sticks on any sum of 17 or greater, and hits otherwise. If the dealer goes bust, then the player wins; otherwise, the outcome—win, lose, or draw—is determined by whose final sum is closer to 21.”",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
   },
   {
-    "objectID": "basketball.html#section-2",
-    "href": "basketball.html#section-2",
-    "title": "Expected Value Example: Basketball",
-    "section": "Section 2",
-    "text": "Section 2\n\nSection 2.1\n\n\nSection 2.2"
+    "objectID": "blackjack.html#monte-carlo-basics",
+    "href": "blackjack.html#monte-carlo-basics",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Basics",
+    "text": "Monte Carlo Basics\nMonte Carlo methods use actual or simulated experience to sample returns from an environment. If we had five slot machines, we could pull the lever on each one a million times, average the results, and have a predicted return for each. We don’t need to know anything about the internal workings of the machines – we can learn from the experience. As we take more and more samples, the average should converge to the expected value.\nBlackjack is a good domain for using Monte Carlo reinforcement learning because we can easily generate sample hands while not needing to compute any probabilities. Sutton and Barto give an example of a player having a total of 14 and choosing to stick. Instead of needing to perform various calculations like the chance of winning that hand given the dealer’s particular upcard, we can just simulate a single result and know that after enough simulations, we will approximate the true values.",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
   },
   {
-    "objectID": "basketball.html#section-3",
-    "href": "basketball.html#section-3",
-    "title": "Expected Value Example: Basketball",
-    "section": "Section 3",
-    "text": "Section 3\n\nSection 3.1\n\n\nSection 3.2\n\n\nSection 3.3"
+    "objectID": "blackjack.html#monte-carlo-blackjack",
+    "href": "blackjack.html#monte-carlo-blackjack",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Blackjack",
+    "text": "Monte Carlo Blackjack\nEach hand in blackjack is considered an episode with rewards of +1 for winning, -1 for losing, and 0 for drawing.\nThe player’s actions are to hit or stick.\nA state in the game is defined as: [player card sum, dealer card showing, whether there is a usable Ace in the player’s hand]\nA usable Ace means that the player has an Ace that can be used as 11 without going bust. These are called “soft” hands. For example, a hand of Ace-6 means that the Ace can be used as 11 for a total of 17 (it can also always be used as 1 for a total of 6). This is called soft 17. If you hit and the next card was a 4, you would use the Ace as 11 and have the 6 and 4 for 21. If you got an 8, you’d use the Ace as 1 and have the 6 and 8 for a hard 15, and then would have the option to hit or stick.\nThere are a total of 200 possible states: (12-21) for the player card sum, (Ace-10) for the dealer card showing, and (0 or 1) for holding a usable Ace (10 * 10 * 2 = 200).\nAn example state is: [15, 7, 0], meaning that we have a total of 15, the dealer is showing a 7, and we don’t have a playable Ace.\nNote that any player card sum under 12 cannot bust, so will always hit and therefore no decision is needed, so we don’t include those other ones as a state. Also note that all face cards count as 10 for the dealer, so there are only 10 possibilities even though the deck has 13 types of cards in it.\nMonte Carlo RL in blackjack works by running out single hand samples repeatedly and deriving state-action values from the averages of the returns of each of these runouts. We simulate a large number of blackjack hands and attribute the results of each hand to the states and actions that were taken during the hand.\nFor example, if you were dealt 8-2 and the dealer was showing a 7 and you hit and got a Jack, then your total would be 20. If the dealer turned over a Queen, then you would have 20 to the dealer’s 17 and win 1 unit on the hand. We would attribute this return of +1 to (a) hitting with a 10 total against the dealer’s 7 and (b) sticking with a 20 total against the dealer’s 7.\nState 1: [10, 7, 0] Action 1: Hit\nState 2: [20, 7, 0] Action 2: Stick\nFor each state-action, we maintain a counter for how many times we’ve seen that state and a reward sum to count the total rewards earned after passing through this state. Note that all rewards come at the end of the hand so we can simply increment each state that we pass through in a sample with the final hand return for that sample and a counter increment of 1.\nIf we won the above hand example, the counters would increment like this:\nState-Action 1 counter: +1 State-Action 1 return: +1\nState-Action 2 counter: +1 State-Action 2 return: +1\nAfter many thousands or millions of simulations, we can take the means of each of these state-action returns (i.e. the return divided by the counter) and get an approximate value for taking that action in that state.\nThere is a first-visit and every-visit version of Monte Carlo, with the former averaging returns after the first visit to a state and the latter average returns after every visit to a state. In blackjack it’s not possible to visit the same state twice in one hand, so we focus only on the simpler first-visit version.",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
   },
   {
-    "objectID": "basketball.html#section-4",
-    "href": "basketball.html#section-4",
-    "title": "Expected Value Example: Basketball",
-    "section": "Section 4",
-    "text": "Section 4"
+    "objectID": "blackjack.html#monte-carlo-prediction-evaluating-a-fixed-policy",
+    "href": "blackjack.html#monte-carlo-prediction-evaluating-a-fixed-policy",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Prediction (Evaluating a fixed policy)",
+    "text": "Monte Carlo Prediction (Evaluating a fixed policy)\nWe can use Monte Carlo Prediction to evaluate a fixed blackjack strategy. Let’s consider a strategy (as given as an example in the Sutton Barto RL book) that sticks on 20 and 21 and hits on everything else. Note that this strategy is actually quite bad because it (a) doesn’t incorporate knowledge of the dealer’s hand and (b) hitting on 17/18/19 is not really a good idea!\nIn this case, we would maintain counters for only the states, since the actions are pre-defined by the fixed policy.\ndef play_action(self, blackjack_state):\n    #we don't actually need the state here for this policy! \n    return STICK if player_sum &gt;= 20 else HIT\nWe run this for 10,000 episodes and produce the following state-value functions:\n \nThe usable Ace figure after only 10,000 episodes is noticeably unstable because the states with usable Aces are relatively less common, so they haven’t been able to stabilize after so few simulations.\nWe do a longer run for 500,000 episodes and produce the following state-value functions:\n \nWe see that the values are quite low until the player sum reaches 20 and 21, which is when the strategy is to always stick. Sticking with 20 or 21 is a very good situation so results in high expected value. The entire left side of the figure has a tilt downwards because that is when the dealer is showing an Ace, which is the strongest card since it’s least likely to go bust with an Ace. It also means that if the dealer’s other card is a 10-value card, the dealer would have 21.\nFinally, we notice that the entire value function tilts downwards as the player sum increases, until 20 and 21 when it goes way up. This is because it’s actually generally a good strategy to hit on hands like 12 or 13 where the risk of busting is low, but hitting on hands like 18 or 19 is awful! 19 is a very strong hand and hitting has a small chance of making it slightly better with a 2 or Ace and a large chance of busting with any other cards.\nWe look at the value of the particular state of having 17 against various dealer upcards with a strategy of always hitting as above until getting to 20 vs. a new strategy of always sticking in this state.\n\nWe see that the results of hitting are quite similar regardless of the dealer upcard because the chance of busting is so high. The results for sticking are relatively poor when the dealer has a good upcard (8, 9, Ten, or Ace) and approaching 0 for other upcards. 17 isn’t a great hand because neither option produces great results, but the always stick strategy tends to be much better, which is true for all hand totals 17 and higher.",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
+  },
+  {
+    "objectID": "blackjack.html#monte-carlo-control-solving-for-an-optimal-policy",
+    "href": "blackjack.html#monte-carlo-control-solving-for-an-optimal-policy",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Control (Solving for an optimal policy)",
+    "text": "Monte Carlo Control (Solving for an optimal policy)\nNow instead of setting a fixed strategy, we use Monte Carlo methods to learn the optimal strategy (aka policy). We can use “exploring starts”, which in blackjack means simply dealing a random hand to the player and dealer and starting in this random state. If we always started with the dealer being dealt a 5 and the player being dealt 7-2, then we’d quickly learn the optimal strategy for that situation, but that’s all we’d know. By simply randomizing the player and dealer cards, we achieve exploring starts.\nWe begin with a default strategy of playing randomly, which means that when the only actions are hit and stick, each starts with a probability of 0.5. (We could start with any policy, including the previous one of sticking on 20 and 21 and hitting on everything else.)\nHow can we use Monte Carlo methods to learn the optimal strategy from here? We run simulations of hands as we did before, but now instead of just incrementing the returns and counters on the states that were passed through, we take an additional step. For each state that we saw in the simulated hand, we look at the estimated value for each action and set the best_action variable to be the action that results in the highest estimated value (we default everything to have a value of 0). Then we modify our policy so that we play that action almost always and play other actions (in this case just one other action) the rest of the time.\nSpecifically, we set the strategy for the best action \\[P(a_{b}) = 1 - \\epsilon + \\frac{\\epsilon}{\\text{num_actions}}\\]. All other actions are \\[P(a_{o})= \\frac{\\epsilon}{\\text{num_actions}}\\]. Where \\[\\epsilon\\] is a small value. If \\[\\epsilon = 0.1\\] and we had 2 actions, we would play the best action 95% of the time and the other action 5% of the time. This is called soft greedy; greedy would be playing the best estimated action 100% of the time.\nThe exploration vs. exploitation concept arises here. We want to mostly play what we currently believe to be the best action, but we don’t want to always play it. For example, if we sampled hitting on 19 on the first hand and got a 2 and won, we wouldn’t want to conclude that it’s always best to hit on 19. It’s important to keep exploring alternative actions. This can be refined to decrease \\[\\epsilon\\] over time when we become more certain of the values, but we keep things simple and used a fixed \\[\\epsilon\\] here.\nFor the simulations, we sample “on-policy”, which means we sample hands using the current strategy that keeps improving. After 10 million iterations, we can produce a strategy chart that shows every possible scenario and the optimal strategy, which is simply the estimated best action at each state after running all of the simulations. (The strategy is reasonable after 1 million iterations, but we had some extra free time.)\n \nWe can also show the value plots as we did before:\n \nWe can compare these figures to those from the Sutton Barton Reinforcement Learning book from chapter 5.\n\nOur result on the strategy charts is exactly the same except for the case of the player having 16 and the dealer showing a Ten. The book is correct. This is a very marginal spot, which is why the Monte Carlo method was more likely to be wrong about it. The computation shown on the Wizard of Odds site shows a difference between hitting and sticking of 0.000604 in favor of hitting! In practice with a real 8-card deck, there is discussion that the most optimal strategy is to stick on multiple-card 16 against a dealer 10 card when the 16 includes a 4 or 5.\nWe start our strategy charts at 12 because given these rules, hitting is mandatory on 11 and under since it’s not possible to bust. Also it isn’t actually possible to have 11 if you have a usable Ace – the minimum by definition is 12 (Ace-Ace).\nWe can then evaluate this by taking the final policy using the best action at each state (since exploration is no longer needed) and running simulations, then computing the total reward over all of the simulations divided by the number of simulations to find the average winnings per hand.\nOver 5 million evaluation hands, we find an estimated win per hand of -0.0474336, or losing about 4.7 cents per $1 bet.",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
+  },
+  {
+    "objectID": "blackjack.html#the-openai-gym-environment-and-modifications",
+    "href": "blackjack.html#the-openai-gym-environment-and-modifications",
+    "title": "Value Example: Blackjack",
+    "section": "The OpenAI Gym Environment and Modifications",
+    "text": "The OpenAI Gym Environment and Modifications\nThere is a built-in OpenAI Gym blackjack environment available to use in the gym’s toy_text directory. This environment is quite basic and handles the most standard rules as described above, including the dealer hitting until their hand is &gt;= 17. The environment draws cards from an “infinite” deck to simplify the probabilities. (Most casinos use 6-8 decks to reduce shuffling and make it more difficult for players to count cards.)\nThe environment has the option to get paid 1.5x your bet if you get a natural blackjack (when the dealer doesn’t also get a natural). In the above calculations, we did not use this.\nIn addition to hitting and sticking, most blackjack games allow for doubling down and splitting. Doubling down means that you can double your bet after seeing your 2 initial cards, but only get 1 total extra card. Splitting means that you can split a pair (e.g. 5-5) and turn it into two hands, each with the same bet as the original (so the overall bet is doubled).\nI implemented doubling down into the environment to make it a little more like the game found in casinos. For fun, I also added an option to show the dealer sum instead of only a single dealer card. These will be explored below.\nI copied the original blackjack.py gym file, made the updates to add in the double down state, and then saved as blackjack1.py. I put this file into the same directory as the code file and added the following lines of code:\nregister(id='BlackjackMax-v0', entry_point='blackjack1:BlackjackEnv1')\nENV_NAME = \"BlackjackMax-v0\"\nblackjack1.py is available here: blackjack1.py\nLink to full code: blackjacksolvedouble.py",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
+  },
+  {
+    "objectID": "blackjack.html#monte-carlo-implementation",
+    "href": "blackjack.html#monte-carlo-implementation",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Implementation",
+    "text": "Monte Carlo Implementation\nWe simulate hands and append each state and action from the hand to an “episode” list, which is a single Monte Carlo sample. Episode is the generic term for a sequence of states and actions.\nWhen the hand finishes, each state and action pair that was seen has a “total return” sum that is incremented by the final reward (i.e. winnings/losings from the result of the hand) and a “number of times seen” counter for that pair is incremented. These track the total rewards earned from each state and\nfor i in range(episodes):\n    while True:\n        action_probs = agent.play_action(new_state)\n        action = np.random.choice(BETS, p=action_probs)\n        episode.append((new_state, action))\n        new_state, reward, done, _ = agent.env.step(action)\n        if done:\n            for (state, action) in episode:\n                returns_sum[(state,action)] += reward\n                returns_count[(state,action)] += 1\n                agent.values[(state, action)] = returns_sum[(state,action)] / returns_count[(state,action)]\nAfter updating the values, we also need to update the policy. We first determine the best action given our value table for each state. Then we use the soft greedy policy rule from above.\nfor (state, _) in episode:\n    vals = [agent.values[(state, a)] for a in BETS]\n    best_action = np.argmax(vals)\n    for a in BETS:\n        if a == best_action:\n            agent.policy[state][a] = 1 - EPSILON + EPSILON/len(BETS)\n        else:\n            agent.policy[state][a] = EPSILON/len(BETS)\nThis repeats for some number of iterations, at which point we can use the final policy to show the optimal strategy and use the final value function to show the value plot.",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
+  },
+  {
+    "objectID": "blackjack.html#monte-carlo-control-with-blackjack-and-doubling-down",
+    "href": "blackjack.html#monte-carlo-control-with-blackjack-and-doubling-down",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Control with “Blackjack” and Doubling Down",
+    "text": "Monte Carlo Control with “Blackjack” and Doubling Down\nNow we run the same simulations as before, but allow the option of doubling down, meaning there are now 3 total actions at each state. We also now use the payout of 1.5 for a natural blackjack, which means having 21 on your first two cards, i.e. an Ace and a 10-value card (unless the dealer also has a natural 21, then it’s a tie).\nBoth of these are significant advantages for the player, so we expect to see a better expected value from playing this game.\nWe ran 10 million simulated hands. Here are plots for the optimal strategy:\n \nWe can compare these to optimal strategy charts from The Wizard of Odds. On these figures, S is for stick and H is for hit. Dh and Ds mean double if allowed, otherwise hit or stand, respectively. Rh is for surrender, which means folding the hand and losing only half of the bet, and when surrender isn’t allowed, then hit. To simplify, we don’t allow surrender or split (Wizard of Odds has a separate chart for the splits that we omit here). The upper part is for “hard” hands, which means no usable Ace and the lower part is for “soft” hands, which have a usable Ace.\n\nThere are a few discrepencies between our result and these charts (which are correct) like standing with 16 when the dealer has an 8/9/Ten in the Monte Carlo no usable Ace charts and standing on 18 vs. a dealer 8 and Ten in the usable Ace charts. These are likely very slightly in favor of the strategy shown on the Wizard of Odds chart and with more Monte Carlo simulations would come to the same result.\nAnd for the value functions, we have:\n \nOver 5 million evaluation hands, we find an estimated win per hand of -0.008034, or losing about 0.80 cents per $1 bet. Indeed, this is much better than the previous result of -0.0474336 per hand.\nIn a casino, we might expect to do even better because most casinos use 4-8 52-card decks rather than a simulated “infinite” deck as we have used here. This allows for a built-in advantage for getting a natural 21. Consider a 4-card deck. There are 208 cards of which 64 are valued as 10. This means a 30.77% chance of getting a 10-valued card on the first card (this is true regardless of deck size, including infinite decks). However, now what are the chances of getting an Ace? In an infinite deck, this probability is 7.69% (4/52 = 16/208). In a 4-card deck, this is 7.73% (16/207 since a single 10-valued card has already been dealt). The non-infinite decks also allow for the ability to “count” cards, a technique that involves counting to know when the deck is more or less favorable, and modifying bets based on that.",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
+  },
+  {
+    "objectID": "blackjack.html#monte-carlo-control-with-seeing-both-dealer-cards",
+    "href": "blackjack.html#monte-carlo-control-with-seeing-both-dealer-cards",
+    "title": "Value Example: Blackjack",
+    "section": "Monte Carlo Control with Seeing Both Dealer cards",
+    "text": "Monte Carlo Control with Seeing Both Dealer cards\nYou’re only supposed to see 1 dealer card. What if somehow the other flipped over and you saw both? Or maybe you somehow had access to the hidden hole card? How big of an advantage would this be? Normal strategy is to never hit on 19 because the risk of busting is so high. But if you saw that the dealer had 20, it would be mandatory to hit! We keep things simple and don’t differentiate between whether the dealer has a usable Ace or not.\nHere are the value charts and strategy charts for seeing both dealer cards and also using the same Blackjack and doubling down rules from the prior section with 10 million simulated hands:\n \nAs expected, the player sum of 19 hits when the dealer is showing 20 and in general the player strategy makes good use of knowing both dealer cards.\nWe do see some inconsistencies in these charts, especially the one with the usable Ace. In part this is because there are many more states now that we are looking at the entire dealer sum, so more Monte Carlo simulations are needed. Also some of these states are very rare in the usable Ace chart like player sum of 12 vs. dealer sum of 5 will only occur when the player has Ace-Ace and the dealer has a relatively rare sum of 5. However, most inconsistencies after this many iterations are likely to be for situations that are quite borderline.\n \nWe again simulated 5 million hands after finding the optimal strategy. Now we find an estimated win per hand of 0.0856133. Not surprisingly, when you can see both of the dealer’s cards, the game becomes profitable. The increase in profitability is about 9.36 cents per hand from the prior scenario (from losing 0.80 cents per hand to winning 8.56 cents per hand).",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
+  },
+  {
+    "objectID": "blackjack.html#importance-sampling-prediction",
+    "href": "blackjack.html#importance-sampling-prediction",
+    "title": "Value Example: Blackjack",
+    "section": "Importance Sampling Prediction",
+    "text": "Importance Sampling Prediction\nPreviously we showed that we could learn the optimal strategy by using a near-optimal policy that allowed for some exploring. That is, we played the predicted optimal strategy 95% of the time and other strategies 5% of the time and accumulated sample hand episodes.\nThere is another approach that uses two policies, one that is learned about and becomes the optimal policy (target policy) and one that is exploratory and is used to generate behavior (behavior policy). This is called off-policy learning.\nThe main idea is that we get returns from the behavior policy and take the ratio of the target policy divided by the behavior policy to represent the frequency of obtaining those returns under the target policy. The result is an estimate of the value of the state.\nThe Sutton Barto book looks at a particular state in which the sum of the player cards is 13 and there is a usable Ace (i.e. Ace-2 or Ace-Ace-Ace). We take the target policy as sticking on 20 and 21 and hitting on everything else and the behavior policy of hitting or sticking 50% each. They determined that the value of this state under the target policy is -0.27726 (we are now again using the original rules with no natural blackjack and no doubling down).\nWe perform 100 runs of 10,000 episodes (hands) all starting with the aforementioned starting state.\nAfter each episode, we compute the importance sampling ratio \\[\\rho\\], which is the target policy divided by the behavior policy. The behavior policy is always 0.5 by definition because regardless of the state, it is hitting 0.5 and sticking 0.5. The target policy is to always hit on 20 and 21 and to always stick otherwise. There are two cases:\n\\[\\rho = \\frac{1}{0.5} = 2\\]\n\\[\\rho = \\frac{0}{0.5} = 0\\]\nThe numerator is how frequent the action chosen by the behavioral policy is also chosen by the target policy. Since the target policy is fixed it is either always choosing that action or never choosing it, resulting in the above cases, respectively.\nOver a single hand episode, we multiply the \\[\\rho\\] values together for each state and append the result of this multiplication to a list of rhos. We also append the return for this hand episode to a list of returns.\nWe accumulate the \\[\\rho\\] importance sampling ratio and \\[G\\] return for each of the 10,000 episodes and multiply them together to result in the weighted return. These are then accumulated over all episodes, i.e. the final episode weighted return is the sum of all previous returns and the final return.\nFinally, to estimate the value of the state, we divide the weighted returns by the number of episodes for the ordinary case and divide by the \\[\\rho\\] values for the weighted case. The estimated value over time is shown here:\n\nThe mean squared error of both are plotted below:",
+    "crumbs": [
+      "About",
+      "EV EXAMPLES",
+      "Blackjack"
+    ]
   }
 ]
