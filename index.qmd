@@ -15,7 +15,7 @@ You’ll learn how to calculate odds, recognize and avoid common cognitive biase
 
 **Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
 
-**Sign Up:** Scroll down or [click here](#sign-up) to sign up now!
+<span style="background-color: #FFFF00; padding: 2px 4px; border-radius: 4px;">**Sign Up:** [Click here](#sign-up) to sign up now!</span>
 
 **Mailing List:** Stay updated on future courses with our [mailing list](https://forms.gle/JG7jd2KAUp3UWx4r7)
 
