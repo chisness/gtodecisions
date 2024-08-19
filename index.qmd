@@ -4,17 +4,15 @@ format:
   html
 ---
 ## Course Info
-We're running the first version of Behind the Cards and Beyond the Bet in NYC starting Monday, September 9.
+In Rounders (1998), Edward Norton’s character tells Matt Damon, “Life, like poker, has an element of risk. It shouldn’t be avoided. It should be faced.” As professional gamblers, we agree. But just as important as facing risk is understanding it. In this course, we’ll explore games of chance––poker, sports betting, rock paper scissors and more––to reveal the power of probabilistic thinking. 
+
+You’ll learn how to calculate odds, recognize and avoid common cognitive biases, apply game theory to real-world situations, and develop a “scout mindset” for clever decision making. Whether you’re looking to improve your poker game or choose a new roommate, this course will equip you with the tools to think rationally in the face of uncertainty.
 
 **Location:** Chinatown, NYC
 
 **Dates:** September 9th - October 14th, Mondays from 6-8pm (6 sessions) 
 
 **Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
-
-In Rounders (1998), Edward Norton’s character tells Matt Damon, “Life, like poker, has an element of risk. It shouldn’t be avoided. It should be faced.” As professional gamblers, we agree. But just as important as facing risk is understanding it. In this course, we’ll explore games of chance––poker, sports betting, rock paper scissors and more––to reveal the power of probabilistic thinking. 
-
-You’ll learn how to calculate odds, recognize and avoid common cognitive biases, apply game theory to real-world situations, and develop a “scout mindset” for clever decision making. Whether you’re looking to improve your poker game or choose a new roommate, this course will equip you with the tools to think rationally in the face of uncertainty.
 
 ## Course Sessions 
 
@@ -51,7 +49,7 @@ Crystal balls are rare, but cloudy ones are everywhere. In the final session we�
 ### Standard
 **$300**
 
-Join us for the first version of Behind the Cards and Beyond the Bets.
+Join us for the first edition of Behind the Cards and Beyond the Bets.
 
 - 6 class sessions 
 - Course materials and handouts
