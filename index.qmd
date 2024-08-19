@@ -1,5 +1,6 @@
 ---
 title: "Behind the Cards and Beyond the Bets: Optimal Decision Making in Gambling and Life"
+short-title: "Behind the Cards and Beyond the Bets"
 format: 
   html
 ---
@@ -8,13 +9,15 @@ In Rounders (1998), Edward Norton’s character tells Matt Damon, “Life, like 
 
 You’ll learn how to calculate odds, recognize and avoid common cognitive biases, apply game theory to real-world situations, and develop a “scout mindset” for clever decision making. Whether you’re looking to improve your poker game or choose a new roommate, this course will equip you with the tools to think rationally in the face of uncertainty.
 
-**Location:** Chinatown, NYC
-
 **Dates:** September 9th - October 14th, Mondays from 6-8pm (6 sessions) 
+
+**Location:** Chinatown, NYC
 
 **Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
 
-**Mailing List:** Stay updated on future courses with our [mailing list](https://forms.gle/JG7jd2KAUp3UWx4r7). 
+**Sign Up:** Scroll down or [click here](#sign-up) to sign up now!
+
+**Mailing List:** Stay updated on future courses with our [mailing list](https://forms.gle/JG7jd2KAUp3UWx4r7)
 
 ## Course Sessions 
 
@@ -54,13 +57,13 @@ Once we receive payment, we'll be in touch with more details.
 ### Standard
 **$300**
 
-Join us for the first edition of Behind the Cards and Beyond the Bets.
+Join us for the first edition of the course.
 
 - 6 class sessions 
-- Course materials and handouts
-- Discord server/channel for the class
+- Course materials
+- Private group chat
 
-[Buy a ticket](https://buy.stripe.com/28ocNj5Yvf2p9HicMP){.btn .btn-primary}
+[Sign up](https://buy.stripe.com/28ocNj5Yvf2p9HicMP){.btn .btn-primary}
 :::
 
 ::: {.g-col-4}
@@ -70,22 +73,22 @@ Join us for the first edition of Behind the Cards and Beyond the Bets.
 A discounted price for currently enrolled students.
 
 - 6 class sessions 
-- Course materials and handouts
-- Discord server/channel for the class
+- Course materials
+- Private group chat
 
-[Buy a ticket](https://buy.stripe.com/bIYaFbfz53jHf1C002){.btn .btn-primary}
+[Sign up](https://buy.stripe.com/bIYaFbfz53jHf1C002){.btn .btn-primary}
 :::
 
 ::: {.g-col-4}
 ### Supporter
 **$800**
 
-For those who want to pitch in extra to help us get this off the ground.
+For those who want to pitch to help us get this off the ground.
 
-- Everything from the Standard/Student tiers
-- A group dinner with the instructors and all supporters
+- All Standard tier
+- Group dinner with the instructors and supporters
 
-[Buy a ticket](https://buy.stripe.com/4gw5kR3Qn5rP2eQ9AE){.btn .btn-primary}
+[Sign up](https://buy.stripe.com/4gw5kR3Qn5rP2eQ9AE){.btn .btn-primary}
 :::
 
 :::
