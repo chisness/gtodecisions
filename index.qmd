@@ -12,11 +12,11 @@ We're running the first version of Behind the Cards and Beyond the Bet in NYC st
 
 **Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
 
-## Course Sessions
-
 In Rounders (1998), Edward Norton’s character tells Matt Damon, “Life, like poker, has an element of risk. It shouldn’t be avoided. It should be faced.” As professional gamblers, we agree. But just as important as facing risk is understanding it. In this course, we’ll explore games of chance––poker, sports betting, rock paper scissors and more––to reveal the power of probabilistic thinking. 
 
-You’ll learn how to calculate odds, recognize and avoid common cognitive biases, apply game theory to real-world situations, and develop a “scout mindset” for clever decision making. Whether you’re looking to improve your poker game or choose a new roommate, this course will equip you with the tools to think rationally in the face of uncertainty. 
+You’ll learn how to calculate odds, recognize and avoid common cognitive biases, apply game theory to real-world situations, and develop a “scout mindset” for clever decision making. Whether you’re looking to improve your poker game or choose a new roommate, this course will equip you with the tools to think rationally in the face of uncertainty.
+
+## Course Sessions 
 
 **Week 1: Thinking in Bets**
 
@@ -104,7 +104,7 @@ Max is a former professional poker player and founder of [Poker Camp](https://po
 
 ### [Isaac Rose-Berman](https://x.com/roundrobin42)
 
-Isaac is a professional sports bettor and author of the [How Gambling Works newsletter](https://howgamblingworks.com).
+Isaac is a professional sports bettor and author of the [How Gambling Works newsletter](https://howgamblingworks.substack.com/).
 :::
 
 :::
