@@ -11,33 +11,33 @@
     ]
   },
   {
-    "objectID": "coursef24/gametheory.html",
-    "href": "coursef24/gametheory.html",
-    "title": "#3: Game Theory",
+    "objectID": "coursef24/index.html",
+    "href": "coursef24/index.html",
+    "title": "Behind the Cards and Beyond the Bets: Optimal Decision Making in Gambling and Life",
     "section": "",
-    "text": "Game Theory",
+    "text": "Welcome to Behind the Cards and Beyond the Bets: Optimal Decision Making in Gambling and Life Fall 2024"
+  },
+  {
+    "objectID": "coursef24/thinkinginbets.html",
+    "href": "coursef24/thinkinginbets.html",
+    "title": "#1: Thinking in Bets",
+    "section": "",
+    "text": "Thinking in Bets",
     "crumbs": [
       "Sessions",
-      "#3: Game Theory"
+      "#1: Thinking in Bets"
     ]
   },
   {
-    "objectID": "coursef24/predictingthefuture.html",
-    "href": "coursef24/predictingthefuture.html",
-    "title": "#6: Predicting the Future",
+    "objectID": "coursef24/expectedvalue.html",
+    "href": "coursef24/expectedvalue.html",
+    "title": "#2: Expected Value",
     "section": "",
-    "text": "Predicting the Future",
+    "text": "Expected Value",
     "crumbs": [
       "Sessions",
-      "#6: Predicting the Future"
+      "#2: Expected Value"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "The Expected Value Foundation is run by Max Chiswick."
   },
   {
     "objectID": "index.html",
@@ -75,25 +75,32 @@
     "text": "Instructors\n\n\n\n\nMax Chiswick\nMax is a former professional poker player and founder of Poker Camp and the Expected Value Foundation.\n\n\n\n\n\nIsaac Rose-Berman\nIsaac is a professional sports bettor and author of the How Gambling Works newsletter."
   },
   {
-    "objectID": "coursef24/expectedvalue.html",
-    "href": "coursef24/expectedvalue.html",
-    "title": "#2: Expected Value",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Expected Value",
+    "text": "The Expected Value Foundation is run by Max Chiswick."
+  },
+  {
+    "objectID": "coursef24/predictingthefuture.html",
+    "href": "coursef24/predictingthefuture.html",
+    "title": "#6: Predicting the Future",
+    "section": "",
+    "text": "Predicting the Future",
     "crumbs": [
       "Sessions",
-      "#2: Expected Value"
+      "#6: Predicting the Future"
     ]
   },
   {
-    "objectID": "coursef24/thinkinginbets.html",
-    "href": "coursef24/thinkinginbets.html",
-    "title": "#1: Thinking in Bets",
+    "objectID": "coursef24/gametheory.html",
+    "href": "coursef24/gametheory.html",
+    "title": "#3: Game Theory",
     "section": "",
-    "text": "Thinking in Bets",
+    "text": "Game Theory",
     "crumbs": [
       "Sessions",
-      "#1: Thinking in Bets"
+      "#3: Game Theory"
     ]
   },
   {
