@@ -1,6 +1,6 @@
 ---
 title: "#4: Changing Your Mind"
-sidebar: odpcf24
+sidebar: coursef24
 format:
   html:
     math: true

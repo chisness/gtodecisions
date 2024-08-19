@@ -1,31 +1,43 @@
 [
   {
-    "objectID": "class/changingyourmind.html",
-    "href": "class/changingyourmind.html",
+    "objectID": "coursef24/changingyourmind.html",
+    "href": "coursef24/changingyourmind.html",
     "title": "#4: Changing Your Mind",
     "section": "",
-    "text": "Changing Your Mind"
+    "text": "Changing Your Mind",
+    "crumbs": [
+      "Sessions",
+      "#4: Changing Your Mind"
+    ]
   },
   {
-    "objectID": "class/index.html",
-    "href": "class/index.html",
-    "title": "Behind the Cards and Beyond the Bets: Optimal Decision Making in Gambling and Life",
+    "objectID": "coursef24/gametheory.html",
+    "href": "coursef24/gametheory.html",
+    "title": "#3: Game Theory",
     "section": "",
-    "text": "Welcome to Behind the Cards and Beyond the Bets: Optimal Decision Making in Gambling and Life"
+    "text": "Game Theory",
+    "crumbs": [
+      "Sessions",
+      "#3: Game Theory"
+    ]
   },
   {
-    "objectID": "class/thinkinginbets.html",
-    "href": "class/thinkinginbets.html",
-    "title": "ODPC #1: Thinking in Bets",
+    "objectID": "coursef24/predictingthefuture.html",
+    "href": "coursef24/predictingthefuture.html",
+    "title": "#6: Predicting the Future",
     "section": "",
-    "text": "Thinking in Bets"
+    "text": "Predicting the Future",
+    "crumbs": [
+      "Sessions",
+      "#6: Predicting the Future"
+    ]
   },
   {
-    "objectID": "class/expectedvalue.html",
-    "href": "class/expectedvalue.html",
-    "title": "ODPC #2: Expected Value",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Expected Value"
+    "text": "The Expected Value Foundation is run by Max Chiswick."
   },
   {
     "objectID": "index.html",
@@ -63,31 +75,36 @@
     "text": "Instructors\n\n\n\n\nMax Chiswick\nMax is a former professional poker player and founder of Poker Camp and the Expected Value Foundation.\n\n\n\n\n\nIsaac Rose-Berman\nIsaac is a professional sports bettor and author of the How Gambling Works newsletter."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "coursef24/expectedvalue.html",
+    "href": "coursef24/expectedvalue.html",
+    "title": "#2: Expected Value",
     "section": "",
-    "text": "The Expected Value Foundation is run by Max Chiswick."
+    "text": "Expected Value",
+    "crumbs": [
+      "Sessions",
+      "#2: Expected Value"
+    ]
   },
   {
-    "objectID": "class/predictingthefuture.html",
-    "href": "class/predictingthefuture.html",
-    "title": "ODPC #6: Predicting the Future",
+    "objectID": "coursef24/thinkinginbets.html",
+    "href": "coursef24/thinkinginbets.html",
+    "title": "#1: Thinking in Bets",
     "section": "",
-    "text": "Predicting the Future"
+    "text": "Thinking in Bets",
+    "crumbs": [
+      "Sessions",
+      "#1: Thinking in Bets"
+    ]
   },
   {
-    "objectID": "class/gametheory.html",
-    "href": "class/gametheory.html",
-    "title": "ODPC #3: Game Theory",
+    "objectID": "coursef24/riskandluck.html",
+    "href": "coursef24/riskandluck.html",
+    "title": "#5: Risk and Luck",
     "section": "",
-    "text": "Game Theory"
-  },
-  {
-    "objectID": "class/riskandluck.html",
-    "href": "class/riskandluck.html",
-    "title": "ODPC #5: Risk and Luck",
-    "section": "",
-    "text": "Risk and Luck"
+    "text": "Risk and Luck",
+    "crumbs": [
+      "Sessions",
+      "#5: Risk and Luck"
+    ]
   }
 ]

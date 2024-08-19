@@ -1,6 +1,6 @@
 ---
-title: "ODPC #5: Risk and Luck"
-sidebar: odpcf24
+title: "#5: Risk and Luck"
+sidebar: coursef24
 format:
   html:
     math: true

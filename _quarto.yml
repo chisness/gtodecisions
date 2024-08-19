@@ -21,14 +21,29 @@ website:
     #     href: https://x.com/chisness
     #   - icon: github
     #     href: https://github.com/chisness/expectedvalue
-  sidebar:
-    style: docked
-    background: light
-    contents: 
-      - section: "SOON"
-        contents: 
-          # - href: ev-basics.qmd
-          #   text: What is EV?
+    # style: docked
+    # background: light
+  sidebar: 
+    - id: course
+      style: "docked"
+      background: light
+      contents:
+        - text: "Fall 2024"
+          href: "/coursef24"
+        - section: "Sessions"
+          contents: 
+            - text: "#1: Thinking in Bets"
+              href: "coursef24/thinkinginbets.qmd"
+            - text: "#2: Expected Value"
+              href: "coursef24/expectedvalue.qmd"
+            - text: "#3: Game Theory"
+              href: "coursef24/gametheory.qmd"
+            - text: "#4: Changing Your Mind"
+              href: "coursef24/changingyourmind.qmd"
+            - text: "#5: Risk and Luck"
+              href: "coursef24/riskandluck.qmd"
+            - text: "#6: Predicting the Future"
+              href: "coursef24/predictingthefuture.qmd"
 
 format:
   html:
