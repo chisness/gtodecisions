@@ -1,0 +1,8 @@
+---
+title: "ODPC #6: Predicting the Future"
+sidebar: odpcf24
+format:
+  html:
+    math: true
+---
+Predicting the Future

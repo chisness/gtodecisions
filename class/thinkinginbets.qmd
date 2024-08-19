@@ -1,0 +1,8 @@
+---
+title: "ODPC #1: Thinking in Bets"
+sidebar: odpcf24
+format:
+  html:
+    math: true
+---
+Thinking in Bets

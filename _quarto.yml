@@ -3,64 +3,36 @@ project:
   output-dir: docs
 
 website:
-  title: "The EV Foundation"
+  title: "Behind the Cards and Beyond the Bets"
   open-graph: true
-  google-analytics: G-P015KRTLYQ
-  favicon: assets/favicon.png
-  twitter-card:
-    creator: "@chisness"
+  # google-analytics: 
+  # favicon: assets/favicon.png
+  # twitter-card:
+  #   creator: "@chisness"
   navbar: 
     background: primary
-    right: 
-      - text: "About"
-        href: about.qmd
-      - text: "Poker Camp"
-        href: https://poker.camp
-    tools: 
-      - icon: twitter
-        href: https://x.com/chisness
-      - icon: github
-        href: https://github.com/chisness/expectedvalue
+    # right: 
+    #   - text: "About"
+    #     href: about.qmd
+    #   - text: "Poker Camp"
+    #     href: https://poker.camp
+    # tools: 
+    #   - icon: twitter
+    #     href: https://x.com/chisness
+    #   - icon: github
+    #     href: https://github.com/chisness/expectedvalue
   sidebar:
     style: docked
     background: light
     contents: 
-      - section: "EXPECTED VALUE"
+      - section: "SOON"
         contents: 
-          - href: ev-basics.qmd
-            text: What is EV?
-          # - href: ev-benefits.qmd
-          #   text: EV Benefits
-          # - href: ev-faults.qmd
-          #   text: EV Faults
-      - section: "EV EXAMPLES"
-        contents: 
-          - href: dice.qmd
-            text: Dice
-          - href: dreidel.qmd
-            text: Dreidel
-          - href: basicecon.qmd
-            text: Basic Economy
-          - href: blackjack.qmd
-            text: Blackjack
-          - href: gambler.qmd
-            text: Gambler Problem
-      - section: "NON-EV EXAMPLES"
-        contents: 
-          - href: pizza.qmd
-            text: Pizza
-          - href: salmon.qmd
-            text: Salmon
-      - section: "CURRENT EVENTS"
-        contents: 
-          - href: huberman-pregnancy.qmd 
-            text: Andrew Huberman Pregnancy Probability
-          # - href: vice-president.qmd
-          #   text: Vice President Selection
+          # - href: ev-basics.qmd
+          #   text: What is EV?
 
 format:
   html:
-    theme: flatly
+    theme: cerulean
     math: true 
     toc: true
     toc-expand: true

@@ -1,0 +1,8 @@
+---
+title: "ODPC #5: Risk and Luck"
+sidebar: odpcf24
+format:
+  html:
+    math: true
+---
+Risk and Luck

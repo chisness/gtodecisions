@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Expected Value: From Simple to Advanced – The EV Foundation</title>
+<title>Behind the Cards and Beyond the Bets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,15 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P015KRTLYQ"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-P015KRTLYQ', { 'anonymize_ip': true});
-</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -107,13 +97,9 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Expected Value: From Simple to Advanced – The EV Foundation">
-<meta property="og:description" content="">
-<meta property="og:site_name" content="The EV Foundation">
-<meta name="twitter:title" content="Expected Value: From Simple to Advanced – The EV Foundation">
-<meta name="twitter:description" content="">
-<meta name="twitter:creator" content="@chisness">
-<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="ticket-styles.css">
+<meta property="og:title" content="Behind the Cards and Beyond the Bets">
+<meta property="og:site_name" content="Behind the Cards and Beyond the Bets">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -124,29 +110,12 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">The EV Foundation</span>
+    <span class="navbar-title">Behind the Cards and Beyond the Bets</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://poker.camp"> 
-<span class="menu-text">Poker Camp</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-    <a href="https://x.com/chisness" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/chisness/expectedvalue" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+        <div class="quarto-navbar-tools tools-end">
 </div>
+          <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
@@ -154,7 +123,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Expected Value: From Simple to Advanced</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Behind the Cards and Beyond the Bets</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -167,102 +136,8 @@ window.Quarto = {
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">EXPECTED VALUE</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ev-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is EV?</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">EV EXAMPLES</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dice</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dreidel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dreidel</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./basicecon.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Economy</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./blackjack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blackjack</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gambler.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gambler Problem</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">NON-EV EXAMPLES</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pizza.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pizza</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./salmon.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">CURRENT EVENTS</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./huberman-pregnancy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Andrew Huberman Pregnancy Probability</span></a>
-  </div>
-</li>
-      </ul>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">SOON</span></span>
   </li>
     </ul>
     </div>
@@ -274,12 +149,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#explain-it-like-im-5" id="toc-explain-it-like-im-5" class="nav-link active" data-scroll-target="#explain-it-like-im-5">Explain It Like I’m 5</a></li>
-  <li><a href="#standard-explanation" id="toc-standard-explanation" class="nav-link" data-scroll-target="#standard-explanation">Standard Explanation</a></li>
-  <li><a href="#advanced-explanation" id="toc-advanced-explanation" class="nav-link" data-scroll-target="#advanced-explanation">Advanced Explanation</a>
-  <ul class="collapse">
-  <li><a href="#application-kelly-criterion" id="toc-application-kelly-criterion" class="nav-link" data-scroll-target="#application-kelly-criterion">Application: Kelly Criterion</a></li>
-  </ul></li>
+  <li><a href="#main-tickets" id="toc-main-tickets" class="nav-link active" data-scroll-target="#main-tickets">Main Tickets</a></li>
   </ul>
 </nav>
     </div>
@@ -288,7 +158,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Expected Value: From Simple to Advanced</h1>
+<h1 class="title">Behind the Cards and Beyond the Bets</h1>
 </div>
 
 
@@ -305,306 +175,50 @@ window.Quarto = {
 </header>
 
 
-<!-- ```{=html}
-<iframe src="expected-value-widget.html" width="100%" height="500px" frameborder="0"></iframe> -->
-<section id="explain-it-like-im-5" class="level2">
-<h2 class="anchored" data-anchor-id="explain-it-like-im-5">Explain It Like I’m 5</h2>
-<p>Imagine you have a big jar of different colored marbles. Some are red, some are blue, and some are green. Your friend says, “If you pick a red marble, I’ll give you a cookie. If you pick a blue one, I’ll give you two cookies. If you pick a green one, you don’t get any cookies.”</p>
-<p>Now, let’s say there are:</p>
+<section id="main-tickets" class="level2 custom-header">
+<h2 class="custom-header anchored" data-anchor-id="main-tickets">Main Tickets</h2>
+<div class="grid">
+<section id="standard" class="level3 ticket-title g-col-4 ticket-box">
+<h3 class="ticket-title anchored" data-anchor-id="standard">Standard</h3>
+<p><strong>$499</strong> {.price}</p>
+<p>Get full access to the course!</p>
 <ul>
-<li>5 red marbles</li>
-<li>3 blue marbles</li>
-<li>2 green marbles</li>
+<li>Admission to all class sessions</li>
+<li>Course materials and handouts</li>
+<li>Access to online resources</li>
+<li>Certificate of completion</li>
 </ul>
-<p>If you reach into the jar without looking, what can you expect? This is what we call “expected value.” It’s like guessing how many cookies you might get on average if you played this game many, many times.</p>
-<p>Let’s count it out. On average if you reach into the jar 10 times:</p>
-<p>Red marbles give you 5 cookies (1 cookie × 5 marbles) Blue marbles give you 6 cookies (2 cookies × 3 marbles) Green marbles give you 0 cookies (0 cookies × 2 marbles)</p>
-<p>That’s 11 cookies in total.</p>
-<p>So, if we divide 11 cookies by 10 marbles, we get 1.1 cookies.</p>
-<p>This means, on average, you can expect to get about 1 cookie (and a tiny bit more) each time you pick a marble!</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Try it yourself!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Imagine reaching into the jar 10 times. How many cookies do you think you’d get? Try it out and see!</p>
-</div>
-</div>
-<div id="marble-picker">
-<div id="marble-picker">
-  <p>Cookies: <span id="cookie-count">0</span></p>
-  <p>Picks: <span id="pick-count">0</span></p>
-  <p>Average: <span id="average">0</span> cookies per pick</p>
-  <button id="pick-button">Pick a Marble</button>
-  <button id="reset-button">Reset</button>
-  <p>Last picked: <span id="last-picked">None</span></p>
-  <div id="marble-history"></div>
-</div>
-
-<style>
-  .marble {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 2px;
-  }
-  .red { background-color: red; }
-  .blue { background-color: blue; }
-  .green { background-color: green; }
-</style>
-
-<script>
-  const cookieCount = document.getElementById('cookie-count');
-  const pickCount = document.getElementById('pick-count');
-  const average = document.getElementById('average');
-  const pickButton = document.getElementById('pick-button');
-  const resetButton = document.getElementById('reset-button');
-  const lastPicked = document.getElementById('last-picked');
-  const marbleHistory = document.getElementById('marble-history');
-
-  let cookies = 0;
-  let picks = 0;
-
-  pickButton.addEventListener('click', () => {
-    const random = Math.random();
-    let marbleColor, cookiesWon;
-    
-    if (random < 0.5) {
-      marbleColor = 'red';
-      cookiesWon = 1;
-    } else if (random < 0.8) {
-      marbleColor = 'blue';
-      cookiesWon = 2;
-    } else {
-      marbleColor = 'green';
-      cookiesWon = 0;
-    }
-    
-    cookies += cookiesWon;
-    picks += 1;
-    
-    lastPicked.textContent = `${marbleColor} (${cookiesWon} cookie${cookiesWon !== 1 ? 's' : ''})`;
-    lastPicked.style.color = marbleColor;
-    
-    const marble = document.createElement('div');
-    marble.className = `marble ${marbleColor}`;
-    marbleHistory.prepend(marble);
-    
-    updateDisplay();
-  });
-
-  resetButton.addEventListener('click', () => {
-    cookies = 0;
-    picks = 0;
-    lastPicked.textContent = 'None';
-    lastPicked.style.color = 'black';
-    marbleHistory.innerHTML = '';
-    updateDisplay();
-  });
-
-  function updateDisplay() {
-    cookieCount.textContent = cookies;
-    pickCount.textContent = picks;
-    average.textContent = picks > 0 ? (cookies / picks).toFixed(2) : '0';
-  }
-</script>
-</div>
+<p><span class="btn btn-primary">Buy a ticket</span></p>
 </section>
-<section id="standard-explanation" class="level2">
-<h2 class="anchored" data-anchor-id="standard-explanation">Standard Explanation</h2>
-<p>Expected value is a concept in probability theory that represents the average outcome of an experiment if it is repeated many times. It’s calculated by multiplying each possible outcome by its probability of occurrence and then summing these products.</p>
-<p>Mathematically, for a discrete random variable <span class="math inline">\(X\)</span> with possible values <span class="math inline">\(x_1, x_2, ..., x_n\)</span> and corresponding probabilities <span class="math inline">\(p_1, p_2, ..., p_n\)</span>, the expected value <span class="math inline">\(E(X)\)</span> is:</p>
-<p>$ E(X) = _{i=1}^n x_i p_i $</p>
-<p>Let’s use our marble example:</p>
+<section id="student" class="level3 ticket-title g-col-4 ticket-box">
+<h3 class="ticket-title anchored" data-anchor-id="student">Student</h3>
+<p><strong>$299</strong> {.price}</p>
+<p>Half off for currently enrolled students.</p>
 <ul>
-<li>Red marble (1 cookie): 5/10 probability</li>
-<li>Blue marble (2 cookies): 3/10 probability</li>
-<li>Green marble (0 cookies): 2/10 probability</li>
+<li>All features of Standard ticket</li>
+<li>Special student networking events</li>
+<li>Mentorship opportunities</li>
+<li>Student-only Q&amp;A sessions</li>
 </ul>
-<p>$ E(X) = 1 + 2 + 0 = 0.5 + 0.6 + 0 = 1.1 $</p>
-<p>So, on average, you can expect to get 1.1 cookies per draw.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Try it yourself!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can use this tool to calculate any expected value. Just put the probabilities in the left column and the values in the right column. It’s pre-set with the cookie marble experiment. Remember that probabilities must sum to 1.</p>
-<p>Thinking about something else to try? How about a 6-sided die? Each probability is 1/6 and the values are the 6 different die values.</p>
-</div>
-</div>
-<div id="ev-calculator">
-<div id="ev-calculator">
-  <div id="inputs">
-    <div class="input-headers">
-      <span>Probability</span>
-      <span>Value</span>
-    </div>
-    <div id="input-rows"></div>
-  </div>
-  <button id="add-row">Add Row</button>
-  <button id="calculate">Calculate</button>
-  <p>Expected Value: <span id="expected-value">0</span></p>
-  <p id="error-message" style="color: red;"></p>
-</div>
-
-<style>
-  #ev-calculator {
-    font-family: Arial, sans-serif;
-    max-width: 400px;
-    margin: 20px auto;
-  }
-  .input-headers {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  .input-headers span {
-    width: 45%;
-  }
-  .input-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .input-row input {
-    width: 40%;
-  }
-  button {
-    margin-right: 10px;
-  }
-</style>
-
-<script>
-  const inputRows = document.getElementById('input-rows');
-  const addRowButton = document.getElementById('add-row');
-  const calculateButton = document.getElementById('calculate');
-  const expectedValueSpan = document.getElementById('expected-value');
-  const errorMessage = document.getElementById('error-message');
-
-  let inputs = [
-    { probability: 0.5, value: 1 },
-    { probability: 0.3, value: 2 },
-    { probability: 0.2, value: 0 },
-  ];
-
-  function renderInputs() {
-    inputRows.innerHTML = '';
-    inputs.forEach((input, index) => {
-      const row = document.createElement('div');
-      row.className = 'input-row';
-      row.innerHTML = `
-        <input type="number" placeholder="Probability" value="${input.probability}" step="0.01" min="0" max="1"
-               onchange="updateInput(${index}, 'probability', this.value)">
-        <input type="number" placeholder="Value" value="${input.value}" 
-               onchange="updateInput(${index}, 'value', this.value)">
-        <button onclick="removeRow(${index})">Remove</button>
-      `;
-      inputRows.appendChild(row);
-    });
-  }
-
-  function updateInput(index, field, value) {
-    inputs[index][field] = parseFloat(value) || 0;
-  }
-
-  function addRow() {
-    inputs.push({ probability: 0, value: 0 });
-    renderInputs();
-  }
-
-  function removeRow(index) {
-    inputs = inputs.filter((_, i) => i !== index);
-    renderInputs();
-  }
-
-  function calculateEV() {
-    const totalProbability = inputs.reduce((sum, { probability }) => sum + probability, 0);
-    
-    if (Math.abs(totalProbability - 1) > 0.0001) {  // Allow for small floating-point errors
-      errorMessage.textContent = `Error: Probabilities must sum to 1. Current sum: ${totalProbability.toFixed(4)}`;
-      expectedValueSpan.textContent = 'N/A';
-    } else {
-      errorMessage.textContent = '';
-      const ev = inputs.reduce((sum, { probability, value }) => sum + probability * value, 0);
-      expectedValueSpan.textContent = ev.toFixed(2);
-    }
-  }
-
-  addRowButton.addEventListener('click', addRow);
-  calculateButton.addEventListener('click', calculateEV);
-
-  renderInputs();
-</script>
-</div>
+<p><span class="btn btn-primary">Buy a ticket</span></p>
 </section>
-<section id="advanced-explanation" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-explanation">Advanced Explanation</h2>
-<p>In more complex scenarios, expected value becomes a powerful tool for decision-making under uncertainty. It’s particularly useful in fields like finance, economics, and data science.</p>
-<p>For continuous random variables, the expected value is defined as an integral:</p>
-<p><span class="math display">\[ E(X) = \int_{-\infty}^{\infty} x f(x) dx \]</span></p>
-<p>where <span class="math inline">\(f(x)\)</span> is the probability density function of <span class="math inline">\(X\)</span>.</p>
-<p>Expected value has several important properties:</p>
-<ol type="1">
-<li>Linearity: <span class="math inline">\(E(aX + bY) = aE(X) + bE(Y)\)</span> for constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span></li>
-<li>Law of the unconscious statistician: <span class="math inline">\(E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x) dx\)</span></li>
-</ol>
-<p>In decision theory, we often use expected utility instead of expected value. This takes into account the decision-maker’s risk preferences:</p>
-<p><span class="math display">\[ EU(X) = \sum_{i=1}^n U(x_i) p_i \]</span></p>
-<p>where <span class="math inline">\(U(x)\)</span> is the utility function.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important Consideration
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>While expected value is a useful tool, it doesn’t account for the variance or risk associated with different outcomes. In some cases, especially with non-linear utility functions or when dealing with rare, high-impact events, decisions based solely on expected value may lead to suboptimal results.</p>
-</div>
-</div>
-<section id="application-kelly-criterion" class="level3">
-<h3 class="anchored" data-anchor-id="application-kelly-criterion">Application: Kelly Criterion</h3>
-<p>An advanced application of expected value is the Kelly Criterion, used in betting and investment strategies. It determines the optimal size of a series of bets to maximize the long-term growth rate of capital.</p>
-<p>The formula for the Kelly Criterion is:</p>
-<p><span class="math display">\[ f^* = \frac{bp - q}{b} \]</span></p>
-<p>where:</p>
+<section id="vip" class="level3 ticket-title g-col-4 ticket-box">
+<h3 class="ticket-title anchored" data-anchor-id="vip">VIP</h3>
+<p><strong>$999</strong> {.price}</p>
+<p>For those who want an enhanced experience.</p>
 <ul>
-<li><span class="math inline">\(f^*\)</span> is the fraction of the current bankroll to bet</li>
-<li><span class="math inline">\(b\)</span> is the net odds received on the bet</li>
-<li><span class="math inline">\(p\)</span> is the probability of winning</li>
-<li><span class="math inline">\(q\)</span> is the probability of losing (1 - p)</li>
+<li>All features of Standard ticket</li>
+<li>Exclusive dinner with instructors</li>
+<li>One-on-one strategy session</li>
+<li>Priority seating and early access</li>
+<li>Lifetime access to course updates</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Interactive Element Idea
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Create an interactive simulation that demonstrates the long-term effects of using the Kelly Criterion versus other betting strategies. Allow users to adjust parameters like win probability, odds, and initial bankroll to see how these factors affect long-term outcomes.</p>
-</div>
-</div>
-
-
-
+<p><span class="btn btn-primary">Buy a ticket</span></p>
 </section>
+</div>
+
+
+
 </section>
 
 </main> <!-- /main -->

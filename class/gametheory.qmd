@@ -1,0 +1,8 @@
+---
+title: "ODPC #3: Game Theory"
+sidebar: odpcf24
+format:
+  html:
+    math: true
+---
+Game Theory
