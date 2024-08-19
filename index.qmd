@@ -94,7 +94,7 @@ For those who want to pitch in extra to help us get this off the ground.
 ::: {.g-col-6}
 ![](assets/mc.png)
 
-### Max Chiswick
+### [Max Chiswick](https://maxchiswick.com)
 
 Max is a former professional poker player and founder of [Poker Camp](https://poker.camp) and the [Expected Value Foundation](https://expectedvalue.org).
 :::
@@ -102,7 +102,7 @@ Max is a former professional poker player and founder of [Poker Camp](https://po
 ::: {.g-col-6}
 ![](assets/irb.png)
 
-### Isaac Rose-Berman
+### [Isaac Rose-Berman](https://x.com/roundrobin42)
 
 Isaac is a professional sports gambler and author of the [How Gambling Works newsletter](https://howgamblingworks.com).
 :::
