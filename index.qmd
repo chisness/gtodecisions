@@ -14,6 +14,8 @@ You’ll learn how to calculate odds, recognize and avoid common cognitive biase
 
 **Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
 
+**Mailing List:** Stay updated on future courses with our mailing list. 
+
 ## Course Sessions 
 
 **Week 1: Thinking in Bets** *(Monday, September 9)*
@@ -42,6 +44,9 @@ You’ve found a good bet. But just how good is it? This session dissects how to
 Crystal balls are rare, but cloudy ones are everywhere. In the final session we’ll synthesize skills from the entire course to demystify markets, decode politics, and navigate life’s uncertainties.
 
 ## Sign Up
+The links below are for credit card payments. If you prefer to use Zelle or Venmo, please [email us](mailto:max.chiswick@gmail.com). 
+
+Once we receive payment, we'll be in touch with more details. 
 
 ::: {.grid}
 
@@ -55,20 +60,20 @@ Join us for the first edition of Behind the Cards and Beyond the Bets.
 - Course materials and handouts
 - Discord server/channel for the class
 
-[Buy a ticket]{.btn .btn-primary}
+[Buy a ticket](https://buy.stripe.com/28ocNj5Yvf2p9HicMP){.btn .btn-primary}
 :::
 
 ::: {.g-col-4}
 ### Student
 **$100** 
 
-Discounted price for students.
+A discounted price for currently enrolled students.
 
 - 6 class sessions 
 - Course materials and handouts
 - Discord server/channel for the class
 
-[Buy a ticket]{.btn .btn-primary}
+[Buy a ticket](https://buy.stripe.com/bIYaFbfz53jHf1C002){.btn .btn-primary}
 :::
 
 ::: {.g-col-4}
@@ -77,10 +82,10 @@ Discounted price for students.
 
 For those who want to pitch in extra to help us get this off the ground.
 
-- All features of Standard
-- A group dinner with Max, Isaac, and all supporters
+- Everything from the Standard/Student tiers
+- A group dinner with the instructors and all supporters
 
-[Buy a ticket]{.btn .btn-primary}
+[Buy a ticket](https://buy.stripe.com/4gw5kR3Qn5rP2eQ9AE){.btn .btn-primary}
 :::
 
 :::
