@@ -1,6 +1,6 @@
 ---
 title: "#6: Predicting the Future"
-sidebar: coursef24
+sidebar: course
 format:
   html:
     math: true

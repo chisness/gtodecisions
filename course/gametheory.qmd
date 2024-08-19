@@ -1,6 +1,6 @@
 ---
 title: "#3: Game Theory"
-sidebar: coursef24
+sidebar: course
 format:
   html:
     math: true

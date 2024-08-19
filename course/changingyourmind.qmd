@@ -1,6 +1,6 @@
 ---
 title: "#4: Changing Your Mind"
-sidebar: coursef24
+sidebar: course
 format:
   html:
     math: true

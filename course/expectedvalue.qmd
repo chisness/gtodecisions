@@ -1,6 +1,6 @@
 ---
 title: "#2: Expected Value"
-sidebar: coursef24
+sidebar: course
 format:
   html:
     math: true

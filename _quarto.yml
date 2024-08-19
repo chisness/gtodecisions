@@ -5,45 +5,33 @@ project:
 website:
   title: "Behind the Cards and Beyond the Bets"
   open-graph: true
-  # google-analytics: 
-  # favicon: assets/favicon.png
-  # twitter-card:
-  #   creator: "@chisness"
+  google-analytics: G-K22WMCCPJ4
   navbar: 
     background: primary
-    # right: 
-    #   - text: "About"
-    #     href: about.qmd
-    #   - text: "Poker Camp"
-    #     href: https://poker.camp
-    # tools: 
-    #   - icon: twitter
-    #     href: https://x.com/chisness
-    #   - icon: github
-    #     href: https://github.com/chisness/expectedvalue
-    # style: docked
-    # background: light
+    tools: 
+        - icon: mailbox2-flag
+          href: https://forms.gle/JG7jd2KAUp3UWx4r7
   sidebar: 
     - id: course
       style: "docked"
       background: light
       contents:
         - text: "Fall 2024"
-          href: "/coursef24"
+          href: "/course"
         - section: "Sessions"
           contents: 
             - text: "#1: Thinking in Bets"
-              href: "coursef24/thinkinginbets.qmd"
+              href: "course/thinkinginbets.qmd"
             - text: "#2: Expected Value"
-              href: "coursef24/expectedvalue.qmd"
+              href: "course/expectedvalue.qmd"
             - text: "#3: Game Theory"
-              href: "coursef24/gametheory.qmd"
+              href: "course/gametheory.qmd"
             - text: "#4: Changing Your Mind"
-              href: "coursef24/changingyourmind.qmd"
+              href: "course/changingyourmind.qmd"
             - text: "#5: Risk and Luck"
-              href: "coursef24/riskandluck.qmd"
+              href: "course/riskandluck.qmd"
             - text: "#6: Predicting the Future"
-              href: "coursef24/predictingthefuture.qmd"
+              href: "course/predictingthefuture.qmd"
 
 format:
   html:

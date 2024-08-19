@@ -1,6 +1,6 @@
 ---
 title: "#5: Risk and Luck"
-sidebar: coursef24
+sidebar: course
 format:
   html:
     math: true

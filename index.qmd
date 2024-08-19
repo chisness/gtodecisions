@@ -1,5 +1,5 @@
 ---
-title: "Behind the Cards and Beyond the Bet: Optimal Decision Making in Gambling and Life"
+title: "Behind the Cards and Beyond the Bets: Optimal Decision Making in Gambling and Life"
 format: 
   html
 ---
@@ -14,7 +14,7 @@ You’ll learn how to calculate odds, recognize and avoid common cognitive biase
 
 **Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
 
-**Mailing List:** Stay updated on future courses with our mailing list. 
+**Mailing List:** Stay updated on future courses with our [mailing list](https://forms.gle/JG7jd2KAUp3UWx4r7). 
 
 ## Course Sessions 
 
