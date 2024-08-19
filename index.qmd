@@ -1,20 +1,18 @@
 ---
-title: "Behind the Cards and Beyond the Bets"
-title-block-banner: false
-title-block: false
+title: "Behind the Cards and Beyond the Bet: Optimal Decision Making in Gambling and Life"
 format: 
   html
 ---
-Behind the Cards and Beyond the Bets: 
-Optimal Decision Making in Gambling and Life
+## Course Info
+We're running the first version of Behind the Cards and Beyond the Bet in NYC starting Monday, September 9.
 
 **Location:** Chinatown, NYC
 
 **Dates:** September 9th - October 14th, Mondays from 6-8pm (6 sessions) 
 
-**Instructors:** [Max Chiswick](mailto:max.chiswick@gmail.com), [Isaac Rose-Berman](mailto:isaacroseberman@gmail.com)
+**Instructors:** [Max Chiswick](https://maxchiswick.com), [Isaac Rose-Berman](https://x.com/roundrobin42)
 
-***
+## Course Sessions
 
 In Rounders (1998), Edward Norton’s character tells Matt Damon, “Life, like poker, has an element of risk. It shouldn’t be avoided. It should be faced.” As professional gamblers, we agree. But just as important as facing risk is understanding it. In this course, we’ll explore games of chance––poker, sports betting, rock paper scissors and more––to reveal the power of probabilistic thinking. 
 
@@ -45,7 +43,7 @@ You’ve found a good bet. But just how good is it? This session dissects how to
 
 Crystal balls are rare, but cloudy ones are everywhere. In the final session we’ll synthesize skills from the entire course to demystify markets, decode politics, and navigate life’s uncertainties.
 
-## Join Us
+## Sign Up
 
 ::: {.grid}
 
@@ -63,10 +61,10 @@ Join us for the first version of Behind the Cards and Beyond the Bets.
 :::
 
 ::: {.g-col-4}
-### Low Income
+### Student
 **$100** 
 
-Discounted price for low income/students.
+Discounted price for students.
 
 - 6 class sessions 
 - Course materials and handouts
@@ -82,11 +80,31 @@ Discounted price for low income/students.
 For those who want to pitch in extra to help us get this off the ground.
 
 - All features of Standard
-- Dinner?
-- Credit 
-- Lifetime access to course updates
+- A group dinner with Max, Isaac, and all supporters
 
 [Buy a ticket]{.btn .btn-primary}
+:::
+
+:::
+
+## About the Instructors
+
+::: {.grid}
+
+::: {.g-col-6}
+![](assets/mc.png)
+
+### Max Chiswick
+
+Max is a former professional poker player and founder of [Poker Camp](https://poker.camp) and the [Expected Value Foundation](https://expectedvalue.org).
+:::
+
+::: {.g-col-6}
+![](assets/irb.png)
+
+### Isaac Rose-Berman
+
+Isaac is a professional sports gambler and author of the [How Gambling Works newsletter](https://howgamblingworks.com).
 :::
 
 :::
