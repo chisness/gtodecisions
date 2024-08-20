@@ -53,7 +53,7 @@ Once we receive payment, we'll be in touch with more details.
 
 ::: {.grid}
 
-::: {.g-col-4}
+::: {.g-col-4 .border .p-2}
 ### Standard
 **$300**
 
@@ -66,7 +66,7 @@ Join us for the first edition of the course.
 [Sign up](https://buy.stripe.com/28ocNj5Yvf2p9HicMP){.btn .btn-primary}
 :::
 
-::: {.g-col-4}
+::: {.g-col-4 .border .p-2}
 ### Student
 **$100** 
 
@@ -79,7 +79,7 @@ A discounted price for currently enrolled students.
 [Sign up](https://buy.stripe.com/bIYaFbfz53jHf1C002){.btn .btn-primary}
 :::
 
-::: {.g-col-4}
+::: {.g-col-4 .border .p-2}
 ### Supporter
 **$800**
 
@@ -97,7 +97,7 @@ For those who want to pitch in to help us get this off the ground.
 
 ::: {.grid}
 
-::: {.g-col-6}
+::: {.g-col-6 .border .p-2}
 ![](assets/mc.png)
 
 ### [Max Chiswick](https://maxchiswick.com)
@@ -105,7 +105,7 @@ For those who want to pitch in to help us get this off the ground.
 Max is a former professional poker player and founder of [Poker Camp](https://poker.camp) and the [Expected Value Foundation](https://expectedvalue.org).
 :::
 
-::: {.g-col-6}
+::: {.g-col-6 .border .p-2}
 ![](assets/irb.png)
 
 ### [Isaac Rose-Berman](https://x.com/roundrobin42)
