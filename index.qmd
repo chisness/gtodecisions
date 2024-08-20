@@ -53,7 +53,7 @@ Once we receive payment, we'll be in touch with more details.
 
 ::: {.grid}
 
-::: {.g-col-4 .border .p-2}
+::: {.g-col-4 .border}
 ### Standard
 **$300**
 
@@ -66,7 +66,7 @@ Join us for the first edition of the course.
 [Sign up](https://buy.stripe.com/28ocNj5Yvf2p9HicMP){.btn .btn-primary}
 :::
 
-::: {.g-col-4 .border .p-2}
+::: {.g-col-4 .border}
 ### Student
 **$100** 
 
@@ -79,7 +79,7 @@ A discounted price for currently enrolled students.
 [Sign up](https://buy.stripe.com/bIYaFbfz53jHf1C002){.btn .btn-primary}
 :::
 
-::: {.g-col-4 .border .p-2}
+::: {.g-col-4 .border}
 ### Supporter
 **$800**
 
