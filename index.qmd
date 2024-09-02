@@ -9,7 +9,7 @@ In Rounders (1998), Edward Norton’s character tells Matt Damon, “Life, like 
 
 You’ll learn how to calculate odds, recognize and avoid common cognitive biases, apply game theory to real-world situations, and develop a “scout mindset” for clever decision making. Whether you’re looking to improve your poker game or choose a new roommate, this course will equip you with the tools to think rationally in the face of uncertainty.
 
-**Dates:** September 9th - October 14th, Mondays from 6-8pm (6 sessions) 
+**Dates:** September 23rd - October 14th, Mondays from 6-8pm (4 sessions) 
 
 **Location:** Chinatown, NYC
 
@@ -20,6 +20,7 @@ You’ll learn how to calculate odds, recognize and avoid common cognitive biase
 **Mailing List:** Stay updated on future courses with our [mailing list](https://forms.gle/JG7jd2KAUp3UWx4r7)
 
 ## Course Sessions 
+*Previously this was going to run for 6 weeks, but it has been changed to 4 weeks. Updated syllabus coming soon.*
 
 **Week 1: Thinking in Bets** *(Monday, September 9)*
 
@@ -55,11 +56,11 @@ Once we receive payment, we'll be in touch with more details.
 
 ::: {.g-col-4}
 ### Standard
-**$300**
+**$200**
 
 Join us for the first edition of the course.
 
-- 6 class sessions 
+- 4 class sessions 
 - Course materials
 - Private group chat
 
@@ -68,11 +69,11 @@ Join us for the first edition of the course.
 
 ::: {.g-col-4}
 ### Student
-**$100** 
+**$60** 
 
 A discounted price for currently enrolled students.
 
-- 6 class sessions 
+- 4 class sessions 
 - Course materials
 - Private group chat
 
@@ -81,9 +82,9 @@ A discounted price for currently enrolled students.
 
 ::: {.g-col-4}
 ### Supporter
-**$800**
+**$500**
 
-For those who want to pitch in to help us get this off the ground.
+For those who want to pitch in extra to support the course.
 
 - All Standard tier
 - Group dinner with the instructors and supporters
