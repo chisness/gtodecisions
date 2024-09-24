@@ -20,18 +20,14 @@ website:
           href: "/course"
         - section: "Sessions"
           contents: 
-            - text: "#1: Thinking in Bets"
-              href: "course/thinkinginbets.qmd"
-            - text: "#2: Expected Value"
+            - text: "#1: Expected Value"
               href: "course/expectedvalue.qmd"
-            - text: "#3: Game Theory"
+            - text: "#2: Game Theory"
               href: "course/gametheory.qmd"
-            - text: "#4: Changing Your Mind"
+            - text: "#3: Changing Your Mind"
               href: "course/changingyourmind.qmd"
-            - text: "#5: Risk and Luck"
+            - text: "#4: Risk and Luck"
               href: "course/riskandluck.qmd"
-            - text: "#6: Predicting the Future"
-              href: "course/predictingthefuture.qmd"
 
 format:
   html:

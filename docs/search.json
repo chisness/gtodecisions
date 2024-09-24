@@ -42,7 +42,7 @@
     "text": "Risk and Luck",
     "crumbs": [
       "Sessions",
-      "#5: Risk and Luck"
+      "#4: Risk and Luck"
     ]
   },
   {
@@ -53,7 +53,7 @@
     "text": "Game Theory",
     "crumbs": [
       "Sessions",
-      "#3: Game Theory"
+      "#2: Game Theory"
     ]
   },
   {
@@ -61,21 +61,83 @@
     "href": "course/predictingthefuture.html",
     "title": "#6: Predicting the Future",
     "section": "",
-    "text": "Predicting the Future",
-    "crumbs": [
-      "Sessions",
-      "#6: Predicting the Future"
-    ]
+    "text": "Predicting the Future"
   },
   {
     "objectID": "course/expectedvalue.html",
     "href": "course/expectedvalue.html",
-    "title": "#2: Expected Value",
+    "title": "#1: Expected Value",
     "section": "",
-    "text": "Expected Value",
+    "text": "In the 1st session we started with some intros. Some things people mentioned that they want to get from the course:\n\nQuick math on the fly\nApply to trading and improve math\nMeet interesting people\nThinking in bets applied to real life\nMeet cool people\nBetter decision making\nHow to teach these ideas",
     "crumbs": [
       "Sessions",
-      "#2: Expected Value"
+      "#1: Expected Value"
+    ]
+  },
+  {
+    "objectID": "course/expectedvalue.html#intros",
+    "href": "course/expectedvalue.html#intros",
+    "title": "#1: Expected Value",
+    "section": "",
+    "text": "In the 1st session we started with some intros. Some things people mentioned that they want to get from the course:\n\nQuick math on the fly\nApply to trading and improve math\nMeet interesting people\nThinking in bets applied to real life\nMeet cool people\nBetter decision making\nHow to teach these ideas",
+    "crumbs": [
+      "Sessions",
+      "#1: Expected Value"
+    ]
+  },
+  {
+    "objectID": "course/expectedvalue.html#expected-value-examples",
+    "href": "course/expectedvalue.html#expected-value-examples",
+    "title": "#1: Expected Value",
+    "section": "Expected Value Examples",
+    "text": "Expected Value Examples\nWe went through a few basic expected value examples to get the hang of it.\n\nRain and Umbrellas\nHow much would you pay to have an umbrella if it was raining and you didn’t already have one?\nHow much would you pay to not have to carry an umbrella if there was no rain and you were already carrying one?\nThese are the answers from the class:\n\n\n\nRain and No Umbrella\nNo Rain and Carrying Umbrella\n\n\n\n\n$10\n$0\n\n\n$20\n$1\n\n\n$5\n$2\n\n\n$5\n$1\n\n\n$7\n$3\n\n\n$10\n$10\n\n\n$10\n$5\n\n\n$20\n$5\n\n\n$3\n$3\n\n\n$25\n$10\n\n\n\nRain and No Umbrella average: $115/10 = $11.50\nNo Rain and Umbrella average: $40/10 = $4.00\nFrom here we ask what is the breakeven percentage chance of rain that this average person should choose to carry vs. not carry an umbrella?\n\\[\n\\begin{equation}\n\\begin{split}\n11.5*P(\\text{rain}) &= 4*P(\\text{no rain}) && \\Rightarrow \\text{Let } P(\\text{rain}) = p \\\\\n11.5*p &= 4*(1-p) \\\\\n11.5*p &= 4 - 4*p \\\\\n15.5*p &= 4 \\\\\np &= .258 \\\\\n&= 25.8\\%\n\\end{split}\n\\end{equation}\n\\]\nTherefore if it’s more than 25.8% probable to rain, this person should take an umbrella, and if less then 25.8% then they should leave it at home.\n\n\nPoker\nNext we looked at this poker hand:\n\nWhat is the probability of winning the hand as the player with the 3♥4♥?\nWe see 8 total cards (our 2, opponent 2, and board 4). We need a heart of which there are 13 in the deck, but 4 already out (2 in our hand, 2 on the board).\nTherefore the odds of hitting our heart are 9/44 = 0.2 (rounding).\nAssume that the pot is currently $120.\nWhat all-in bet from our opponent can we profitably call?\nWe know that a tiny bet of $1 will definitely give us the correct odds of calling. We know that a huge bet of $10,000 will definitely not give us the correct odds of calling.\nWe can calculate this mathematically. Let \\(b\\) be the opponent’s bet size that we have to call.\nTotal pot if we call = \\(120 + b + b\\).\nOur equity of this pot is \\(0.2\\).\nTherefore we breakeven when \\(b = 0.2*(120 + 2b)\\).\n\\[\n\\begin{equation}\n\\begin{split}\nb &= 24 + 0.4b \\\\\n0.6b &= 24 \\\\\nb &= 40\n\\end{split}\n\\end{equation}\n\\]\nTherefore when the bet size is 40 we are indifferent to calling and folding. When it’s more than 40, we don’t have sufficient odds to call and should fold. When it’s less than 40, we have profitable odds to call and should call.\nNote that we make the call even when we are unlikely to win! This is because we’re making the decision based on the probabilities.\n\n\nBasketball Shots",
+    "crumbs": [
+      "Sessions",
+      "#1: Expected Value"
+    ]
+  },
+  {
+    "objectID": "course/expectedvalue.html#group-discussion",
+    "href": "course/expectedvalue.html#group-discussion",
+    "title": "#1: Expected Value",
+    "section": "Group Discussion",
+    "text": "Group Discussion\nWe talked about how these EV examples are relatively straightforward, but there are many factors that are not always easily quantifiable. There are also cases where our preferences (utility functions) are not aligned with the $EV. For example, if offered a coinflip for $100m vs. a free $40m, you’d probably need to be very rich or very risk-seeking to prefer the flip.\nOther examples:\n\nInsurance\nLoss aversion (losing $1000 worse than winning $1000)\nValue of time\nOpportunity cost\nSomething that’s -EV now but can open up a +EV opportunity later\nMoral issues\nStress avoidance\n\nWe split into groups where teams made up example scenarios that were less straightforward.\n\nRobbing a Bank\nWhat if you need to rob a bank to pay for your dog’s surgery? You might be thinking “There are probably better options”. But let’s check the EV just to be sure:\n\n\n\n\n\n\n\n\nHere we see that with 30% probability you immediately go to jail, which is worth -$100k.\nWith 70% probability, you successfully rob the bank for $10k.\nBut then once you successfully rob the bank, apparently the strategy is to rob another one. This works 80% of the time for another $10k. And if it fails, your loss is -$125k (only marginally worse than getting caught the first time). (Note that the tree diagram shows -$25k, but meant this in addition to the original possible loss.)\nFinally, if you succeded twice, you give it one last try, but this time is only 50% successful for another $10k and risks loss of -$133k.\nSo what’s the EV of success?\n\\(0.7*0.8*0.5 = 0.28\\) you will get $30k, for an EV of \\(\\$30*.28 = 8.4k\\)\n0.28 you get 30k Worth $8400 EV\n0.3 you get -100k = -30k\n.14 you get -125k = -17.5k\n.28 you get -133k = -37.24k\n-84.74k\n+8.4k\nNet -76.34k\n28% +$30k 72% in jail\n\n\nTurning Back on Everest\n\n\nPicking a Job",
+    "crumbs": [
+      "Sessions",
+      "#1: Expected Value"
+    ]
+  },
+  {
+    "objectID": "course/expectedvalue.html#fun-games",
+    "href": "course/expectedvalue.html#fun-games",
+    "title": "#1: Expected Value",
+    "section": "Fun Games",
+    "text": "Fun Games\n\nBirthday Order\n\n\nBirthday Sum\n\n\nWord Modal Length\n\n\nWord Most Common Letter\n\n\n2/3 Game",
+    "crumbs": [
+      "Sessions",
+      "#1: Expected Value"
+    ]
+  },
+  {
+    "objectID": "course/expectedvalue.html#poker-games",
+    "href": "course/expectedvalue.html#poker-games",
+    "title": "#1: Expected Value",
+    "section": "Poker Games",
+    "text": "Poker Games\nWe want to run this on Sundays. We’ll send out a message soon about scheduling and more info. We’ll probably do an online game on:\n\nSun Sep 29\nSun Oct 6\nSun Oct 13\n\nThen a final in person game on:\n\nMon Oct 14 after the final class",
+    "crumbs": [
+      "Sessions",
+      "#1: Expected Value"
+    ]
+  },
+  {
+    "objectID": "course/expectedvalue.html#location",
+    "href": "course/expectedvalue.html#location",
+    "title": "#1: Expected Value",
+    "section": "Location",
+    "text": "Location\n\n\n\nOutside\n\n\n\n\n\nInside",
+    "crumbs": [
+      "Sessions",
+      "#1: Expected Value"
     ]
   },
   {
@@ -83,11 +145,7 @@
     "href": "course/thinkinginbets.html",
     "title": "#1: Thinking in Bets",
     "section": "",
-    "text": "Thinking in Bets",
-    "crumbs": [
-      "Sessions",
-      "#1: Thinking in Bets"
-    ]
+    "text": "Thinking in Bets"
   },
   {
     "objectID": "course/index.html",
@@ -104,7 +162,7 @@
     "text": "Changing Your Mind",
     "crumbs": [
       "Sessions",
-      "#4: Changing Your Mind"
+      "#3: Changing Your Mind"
     ]
   }
 ]

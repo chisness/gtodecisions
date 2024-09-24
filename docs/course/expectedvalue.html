@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>#2: Expected Value – Behind the Cards and Beyond the Bets</title>
+<title>#1: Expected Value – Behind the Cards and Beyond the Bets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="#2: Expected Value – Behind the Cards and Beyond the Bets">
+<meta property="og:title" content="#1: Expected Value – Behind the Cards and Beyond the Bets">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Behind the Cards and Beyond the Bets">
 </head>
@@ -133,7 +133,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course/thinkinginbets.html">Sessions</a></li><li class="breadcrumb-item"><a href="../course/expectedvalue.html">#2: Expected Value</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course/expectedvalue.html">Sessions</a></li><li class="breadcrumb-item"><a href="../course/expectedvalue.html">#1: Expected Value</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -162,38 +162,26 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course/thinkinginbets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">#1: Thinking in Bets</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../course/expectedvalue.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">#2: Expected Value</span></a>
+ <span class="menu-text">#1: Expected Value</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course/gametheory.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">#3: Game Theory</span></a>
+ <span class="menu-text">#2: Game Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course/changingyourmind.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">#4: Changing Your Mind</span></a>
+ <span class="menu-text">#3: Changing Your Mind</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course/riskandluck.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">#5: Risk and Luck</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../course/predictingthefuture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">#6: Predicting the Future</span></a>
+ <span class="menu-text">#4: Risk and Luck</span></a>
   </div>
 </li>
       </ul>
@@ -203,15 +191,43 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#intros" id="toc-intros" class="nav-link active" data-scroll-target="#intros">Intros</a></li>
+  <li><a href="#expected-value-examples" id="toc-expected-value-examples" class="nav-link" data-scroll-target="#expected-value-examples">Expected Value Examples</a>
+  <ul class="collapse">
+  <li><a href="#rain-and-umbrellas" id="toc-rain-and-umbrellas" class="nav-link" data-scroll-target="#rain-and-umbrellas">Rain and Umbrellas</a></li>
+  <li><a href="#poker" id="toc-poker" class="nav-link" data-scroll-target="#poker">Poker</a></li>
+  <li><a href="#basketball-shots" id="toc-basketball-shots" class="nav-link" data-scroll-target="#basketball-shots">Basketball Shots</a></li>
+  </ul></li>
+  <li><a href="#group-discussion" id="toc-group-discussion" class="nav-link" data-scroll-target="#group-discussion">Group Discussion</a>
+  <ul class="collapse">
+  <li><a href="#robbing-a-bank" id="toc-robbing-a-bank" class="nav-link" data-scroll-target="#robbing-a-bank">Robbing a Bank</a></li>
+  <li><a href="#turning-back-on-everest" id="toc-turning-back-on-everest" class="nav-link" data-scroll-target="#turning-back-on-everest">Turning Back on Everest</a></li>
+  <li><a href="#picking-a-job" id="toc-picking-a-job" class="nav-link" data-scroll-target="#picking-a-job">Picking a Job</a></li>
+  </ul></li>
+  <li><a href="#fun-games" id="toc-fun-games" class="nav-link" data-scroll-target="#fun-games">Fun Games</a>
+  <ul class="collapse">
+  <li><a href="#birthday-order" id="toc-birthday-order" class="nav-link" data-scroll-target="#birthday-order">Birthday Order</a></li>
+  <li><a href="#birthday-sum" id="toc-birthday-sum" class="nav-link" data-scroll-target="#birthday-sum">Birthday Sum</a></li>
+  <li><a href="#word-modal-length" id="toc-word-modal-length" class="nav-link" data-scroll-target="#word-modal-length">Word Modal Length</a></li>
+  <li><a href="#word-most-common-letter" id="toc-word-most-common-letter" class="nav-link" data-scroll-target="#word-most-common-letter">Word Most Common Letter</a></li>
+  <li><a href="#game" id="toc-game" class="nav-link" data-scroll-target="#game">2/3 Game</a></li>
+  </ul></li>
+  <li><a href="#poker-games" id="toc-poker-games" class="nav-link" data-scroll-target="#poker-games">Poker Games</a></li>
+  <li><a href="#location" id="toc-location" class="nav-link" data-scroll-target="#location">Location</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course/thinkinginbets.html">Sessions</a></li><li class="breadcrumb-item"><a href="../course/expectedvalue.html">#2: Expected Value</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course/expectedvalue.html">Sessions</a></li><li class="breadcrumb-item"><a href="../course/expectedvalue.html">#1: Expected Value</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">#2: Expected Value</h1>
+<h1 class="title">#1: Expected Value</h1>
 </div>
 
 
@@ -228,10 +244,220 @@ window.Quarto = {
 </header>
 
 
-<p>Expected Value</p>
+<section id="intros" class="level2">
+<h2 class="anchored" data-anchor-id="intros">Intros</h2>
+<p>In the 1st session we started with some intros. Some things people mentioned that they want to get from the course:</p>
+<ul>
+<li>Quick math on the fly</li>
+<li>Apply to trading and improve math</li>
+<li>Meet interesting people</li>
+<li>Thinking in bets applied to real life</li>
+<li>Meet cool people</li>
+<li>Better decision making</li>
+<li>How to teach these ideas</li>
+</ul>
+</section>
+<section id="expected-value-examples" class="level2">
+<h2 class="anchored" data-anchor-id="expected-value-examples">Expected Value Examples</h2>
+<p>We went through a few basic expected value examples to get the hang of it.</p>
+<section id="rain-and-umbrellas" class="level3">
+<h3 class="anchored" data-anchor-id="rain-and-umbrellas">Rain and Umbrellas</h3>
+<p>How much would you pay to have an umbrella if it was raining and you didn’t already have one?</p>
+<p>How much would you pay to not have to carry an umbrella if there was no rain and you were already carrying one?</p>
+<p>These are the answers from the class:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Rain and No Umbrella</th>
+<th>No Rain and Carrying Umbrella</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$10</td>
+<td>$0</td>
+</tr>
+<tr class="even">
+<td>$20</td>
+<td>$1</td>
+</tr>
+<tr class="odd">
+<td>$5</td>
+<td>$2</td>
+</tr>
+<tr class="even">
+<td>$5</td>
+<td>$1</td>
+</tr>
+<tr class="odd">
+<td>$7</td>
+<td>$3</td>
+</tr>
+<tr class="even">
+<td>$10</td>
+<td>$10</td>
+</tr>
+<tr class="odd">
+<td>$10</td>
+<td>$5</td>
+</tr>
+<tr class="even">
+<td>$20</td>
+<td>$5</td>
+</tr>
+<tr class="odd">
+<td>$3</td>
+<td>$3</td>
+</tr>
+<tr class="even">
+<td>$25</td>
+<td>$10</td>
+</tr>
+</tbody>
+</table>
+<p>Rain and No Umbrella average: $115/10 = $11.50</p>
+<p>No Rain and Umbrella average: $40/10 = $4.00</p>
+<p>From here we ask what is the breakeven percentage chance of rain that this average person should choose to carry vs.&nbsp;not carry an umbrella?</p>
+<p><span class="math display">\[
+\begin{equation}
+\begin{split}
+11.5*P(\text{rain}) &amp;= 4*P(\text{no rain}) &amp;&amp; \Rightarrow \text{Let } P(\text{rain}) = p \\
+11.5*p &amp;= 4*(1-p) \\
+11.5*p &amp;= 4 - 4*p \\
+15.5*p &amp;= 4 \\
+p &amp;= .258 \\
+&amp;= 25.8\%
+\end{split}
+\end{equation}
+\]</span></p>
+<p>Therefore if it’s more than 25.8% probable to rain, this person should take an umbrella, and if less then 25.8% then they should leave it at home.</p>
+</section>
+<section id="poker" class="level3">
+<h3 class="anchored" data-anchor-id="poker">Poker</h3>
+<p>Next we looked at this poker hand:</p>
+<p><img src="pokerhand.jpg" class="img-fluid"></p>
+<p>What is the probability of winning the hand as the player with the 3♥4♥?</p>
+<p>We see 8 total cards (our 2, opponent 2, and board 4). We need a heart of which there are 13 in the deck, but 4 already out (2 in our hand, 2 on the board).</p>
+<p>Therefore the odds of hitting our heart are 9/44 = 0.2 (rounding).</p>
+<p>Assume that the pot is currently $120.</p>
+<p>What all-in bet from our opponent can we profitably call?</p>
+<p>We know that a tiny bet of $1 will definitely give us the correct odds of calling. We know that a huge bet of $10,000 will definitely not give us the correct odds of calling.</p>
+<p>We can calculate this mathematically. Let <span class="math inline">\(b\)</span> be the opponent’s bet size that we have to call.</p>
+<p>Total pot if we call = <span class="math inline">\(120 + b + b\)</span>.</p>
+<p>Our equity of this pot is <span class="math inline">\(0.2\)</span>.</p>
+<p>Therefore we breakeven when <span class="math inline">\(b = 0.2*(120 + 2b)\)</span>.</p>
+<p><span class="math display">\[
+\begin{equation}
+\begin{split}
+b &amp;= 24 + 0.4b \\
+0.6b &amp;= 24 \\
+b &amp;= 40
+\end{split}
+\end{equation}
+\]</span></p>
+<p>Therefore when the bet size is 40 we are indifferent to calling and folding. When it’s more than 40, we don’t have sufficient odds to call and should fold. When it’s less than 40, we have profitable odds to call and should call.</p>
+<p>Note that we make the call even when we are unlikely to win! This is because we’re making the decision based on the probabilities.</p>
+</section>
+<section id="basketball-shots" class="level3">
+<h3 class="anchored" data-anchor-id="basketball-shots">Basketball Shots</h3>
+</section>
+</section>
+<section id="group-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="group-discussion">Group Discussion</h2>
+<p>We talked about how these EV examples are relatively straightforward, but there are many factors that are not always easily quantifiable. There are also cases where our preferences (utility functions) are not aligned with the $EV. For example, if offered a coinflip for $100m vs.&nbsp;a free $40m, you’d probably need to be very rich or very risk-seeking to prefer the flip.</p>
+<p>Other examples:</p>
+<ul>
+<li>Insurance</li>
+<li>Loss aversion (losing $1000 worse than winning $1000)</li>
+<li>Value of time</li>
+<li>Opportunity cost</li>
+<li>Something that’s -EV now but can open up a +EV opportunity later</li>
+<li>Moral issues</li>
+<li>Stress avoidance</li>
+</ul>
+<p>We split into groups where teams made up example scenarios that were less straightforward.</p>
+<section id="robbing-a-bank" class="level3">
+<h3 class="anchored" data-anchor-id="robbing-a-bank">Robbing a Bank</h3>
+<p>What if you need to rob a bank to pay for your dog’s surgery? You might be thinking “There are probably better options”. But let’s check the EV just to be sure:</p>
+<div class="grid">
+<div class="g-col-6">
+<p><img src="bank.jpg" class="img-fluid"></p>
+</div>
+<div class="g-col-6">
+<p><img src="bankzoom.jpg" class="img-fluid"></p>
+</div>
+</div>
+<p>Here we see that with 30% probability you immediately go to jail, which is worth -$100k.</p>
+<p>With 70% probability, you successfully rob the bank for $10k.</p>
+<p>But then once you successfully rob the bank, apparently the strategy is to rob another one. This works 80% of the time for another $10k. And if it fails, your loss is -$125k (only marginally worse than getting caught the first time). (Note that the tree diagram shows -$25k, but meant this in addition to the original possible loss.)</p>
+<p>Finally, if you succeded twice, you give it one last try, but this time is only 50% successful for another $10k and risks loss of -$133k.</p>
+<p>So what’s the EV of success?</p>
+<p><span class="math inline">\(0.7*0.8*0.5 = 0.28\)</span> you will get $30k, for an EV of <span class="math inline">\(\$30*.28 = 8.4k\)</span></p>
+<p>0.28 you get 30k Worth $8400 EV</p>
+<p>0.3 you get -100k = -30k</p>
+<p>.14 you get -125k = -17.5k</p>
+<p>.28 you get -133k = -37.24k</p>
+<p>-84.74k</p>
+<p>+8.4k</p>
+<p>Net -76.34k</p>
+<p>28% +$30k 72% in jail</p>
+</section>
+<section id="turning-back-on-everest" class="level3">
+<h3 class="anchored" data-anchor-id="turning-back-on-everest">Turning Back on Everest</h3>
+</section>
+<section id="picking-a-job" class="level3">
+<h3 class="anchored" data-anchor-id="picking-a-job">Picking a Job</h3>
+</section>
+</section>
+<section id="fun-games" class="level2">
+<h2 class="anchored" data-anchor-id="fun-games">Fun Games</h2>
+<section id="birthday-order" class="level3">
+<h3 class="anchored" data-anchor-id="birthday-order">Birthday Order</h3>
+</section>
+<section id="birthday-sum" class="level3">
+<h3 class="anchored" data-anchor-id="birthday-sum">Birthday Sum</h3>
+</section>
+<section id="word-modal-length" class="level3">
+<h3 class="anchored" data-anchor-id="word-modal-length">Word Modal Length</h3>
+</section>
+<section id="word-most-common-letter" class="level3">
+<h3 class="anchored" data-anchor-id="word-most-common-letter">Word Most Common Letter</h3>
+</section>
+<section id="game" class="level3">
+<h3 class="anchored" data-anchor-id="game">2/3 Game</h3>
+</section>
+</section>
+<section id="poker-games" class="level2">
+<h2 class="anchored" data-anchor-id="poker-games">Poker Games</h2>
+<p>We want to run this on Sundays. We’ll send out a message soon about scheduling and more info. We’ll probably do an online game on:</p>
+<ul>
+<li>Sun Sep 29</li>
+<li>Sun Oct 6</li>
+<li>Sun Oct 13</li>
+</ul>
+<p>Then a final in person game on:</p>
+<ul>
+<li>Mon Oct 14 after the final class</li>
+</ul>
+</section>
+<section id="location" class="level2">
+<h2 class="anchored" data-anchor-id="location">Location</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="outside.jpg" class="img-fluid figure-img"></p>
+<figcaption>Outside</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="inside.jpg" class="img-fluid figure-img"></p>
+<figcaption>Inside</figcaption>
+</figure>
+</div>
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
