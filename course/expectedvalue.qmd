@@ -212,7 +212,7 @@ True letter: o
 
 Winner: John with o
 
-### 2/3 Game
+### 2/3 Game (10 chips)
 [Guess 2/3 of the average number game](https://en.wikipedia.org/wiki/Guess_2/3_of_the_average)
 
 | Submissions |
