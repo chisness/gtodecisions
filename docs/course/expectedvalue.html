@@ -209,12 +209,12 @@ window.Quarto = {
   <li><a href="#turning-back-on-everest" id="toc-turning-back-on-everest" class="nav-link" data-scroll-target="#turning-back-on-everest">Turning Back on Everest</a></li>
   <li><a href="#picking-a-job" id="toc-picking-a-job" class="nav-link" data-scroll-target="#picking-a-job">Picking a Job</a></li>
   </ul></li>
-  <li><a href="#fun-games" id="toc-fun-games" class="nav-link" data-scroll-target="#fun-games">Fun Games</a>
+  <li><a href="#games" id="toc-games" class="nav-link" data-scroll-target="#games">Games</a>
   <ul class="collapse">
-  <li><a href="#birthday-order" id="toc-birthday-order" class="nav-link" data-scroll-target="#birthday-order">Birthday Order</a></li>
-  <li><a href="#birthday-sum" id="toc-birthday-sum" class="nav-link" data-scroll-target="#birthday-sum">Birthday Sum</a></li>
-  <li><a href="#word-modal-length" id="toc-word-modal-length" class="nav-link" data-scroll-target="#word-modal-length">Word Modal Length</a></li>
-  <li><a href="#word-most-common-letter" id="toc-word-most-common-letter" class="nav-link" data-scroll-target="#word-most-common-letter">Word Most Common Letter</a></li>
+  <li><a href="#birthday-order-1-chip" id="toc-birthday-order-1-chip" class="nav-link" data-scroll-target="#birthday-order-1-chip">Birthday Order (1 chip)</a></li>
+  <li><a href="#birthday-sum-2-chips" id="toc-birthday-sum-2-chips" class="nav-link" data-scroll-target="#birthday-sum-2-chips">Birthday Sum (2 chips)</a></li>
+  <li><a href="#word-modal-length-5-chips" id="toc-word-modal-length-5-chips" class="nav-link" data-scroll-target="#word-modal-length-5-chips">Word Modal Length (5 chips)</a></li>
+  <li><a href="#word-most-common-letter-5-chips" id="toc-word-most-common-letter-5-chips" class="nav-link" data-scroll-target="#word-most-common-letter-5-chips">Word Most Common Letter (5 chips)</a></li>
   <li><a href="#game" id="toc-game" class="nav-link" data-scroll-target="#game">2/3 Game</a></li>
   </ul></li>
   <li><a href="#poker-games" id="toc-poker-games" class="nav-link" data-scroll-target="#poker-games">Poker Games</a></li>
@@ -345,10 +345,11 @@ p &amp;= .258 \\
 <p>We can calculate this mathematically. Let <span class="math inline">\(b\)</span> be the opponent’s bet size that we have to call.</p>
 <p>Total pot if we call = <span class="math inline">\(120 + b + b\)</span>.</p>
 <p>Our equity of this pot is <span class="math inline">\(0.2\)</span>.</p>
-<p>Therefore we breakeven when <span class="math inline">\(b = 0.2*(120 + 2b)\)</span>.</p>
+<p>Therefore we breakeven when:</p>
 <p><span class="math display">\[
 \begin{equation}
 \begin{split}
+b &amp;= 0.2*(120 + 2b) \\
 b &amp;= 24 + 0.4b \\
 0.6b &amp;= 24 \\
 b &amp;= 40
@@ -360,6 +361,16 @@ b &amp;= 40
 </section>
 <section id="basketball-shots" class="level3">
 <h3 class="anchored" data-anchor-id="basketball-shots">Basketball Shots</h3>
+<p>For the final example, we looked a shooting a 2-pointer vs.&nbsp;3-pointer in basketball.</p>
+<p>If we assume that a 2-pointer is 60% to make and a 3-pointer is 33% to make, then we have a relatively simple decision early in the game.</p>
+<p><span class="math inline">\(\mathbb{E}(\text{2-pointer}) = 0.6*2 = 1.2\)</span></p>
+<p><span class="math inline">\(\mathbb{E}(\text{3-pointer}) = 0.3*3 = 1\)</span></p>
+<p>Therefore we should take the 2-pointer. But let’s look at an end of game scenario where our team is down by 2 points and deciding on their final shot. Making a 2-pointer will go to overtime, while making a 3-pointer will instantly win.</p>
+<p><img src="basketball.jpg" class="img-fluid"></p>
+<p>We work out that now:</p>
+<p><span class="math inline">\(\mathbb{E}(\text{2-pointer win}) = 0.6*0.5 = 0.3\)</span></p>
+<p><span class="math inline">\(\mathbb{E}(\text{3-pointer win}) = 0.33\)</span></p>
+<p>Under this scenario, we see that it makes sense to go for the 3-pointer even though the immediate odds of the 3-pointer are lower as we showed at the beginning of this section.</p>
 </section>
 </section>
 <section id="group-discussion" class="level2">
@@ -391,40 +402,92 @@ b &amp;= 40
 <p>With 70% probability, you successfully rob the bank for $10k.</p>
 <p>But then once you successfully rob the bank, apparently the strategy is to rob another one. This works 80% of the time for another $10k. And if it fails, your loss is -$125k (only marginally worse than getting caught the first time). (Note that the tree diagram shows -$25k, but meant this in addition to the original possible loss.)</p>
 <p>Finally, if you succeded twice, you give it one last try, but this time is only 50% successful for another $10k and risks loss of -$133k.</p>
-<p>So what’s the EV of success?</p>
-<p><span class="math inline">\(0.7*0.8*0.5 = 0.28\)</span> you will get $30k, for an EV of <span class="math inline">\(\$30*.28 = 8.4k\)</span></p>
-<p>0.28 you get 30k Worth $8400 EV</p>
-<p>0.3 you get -100k = -30k</p>
-<p>.14 you get -125k = -17.5k</p>
-<p>.28 you get -133k = -37.24k</p>
-<p>-84.74k</p>
-<p>+8.4k</p>
-<p>Net -76.34k</p>
-<p>28% +$30k 72% in jail</p>
+<p>So what’s the EV?</p>
+<p><span class="math inline">\(0.7*0.8*0.5 = 0.28\)</span> you will get 30k, for an EV of <span class="math inline">\(30*.28 = 8.4\)</span></p>
+<p><span class="math inline">\(0.3\)</span> you go to jail (value -100k) for an EV of <span class="math inline">\(-100*.3 = -30\)</span></p>
+<p><span class="math inline">\(0.14\)</span> you go to jail (value -125k) for an EV of <span class="math inline">\(-125*.14 = -17.5\)</span></p>
+<p><span class="math inline">\(0.28\)</span> you go to jail (value -133k) for an EV of <span class="math inline">\(-133*.28 = -37.4\)</span></p>
+<p>There is a 28% of success and 72% of ending up in jail. If you do succeed, you’ll end up with $30k.</p>
+<p>We can sum all of the individual expected values and get total EV:</p>
+<p><span class="math inline">\(-84.9 + 8.4 = -76.5\)</span></p>
+<p><em>Whatever the EV calculations, don’t rob a bank.</em></p>
 </section>
 <section id="turning-back-on-everest" class="level3">
 <h3 class="anchored" data-anchor-id="turning-back-on-everest">Turning Back on Everest</h3>
+<p><img src="everest.jpg" class="img-fluid"></p>
 </section>
 <section id="picking-a-job" class="level3">
 <h3 class="anchored" data-anchor-id="picking-a-job">Picking a Job</h3>
+<p><img src="pickingjob.jpg" class="img-fluid"></p>
 </section>
 </section>
-<section id="fun-games" class="level2">
-<h2 class="anchored" data-anchor-id="fun-games">Fun Games</h2>
-<section id="birthday-order" class="level3">
-<h3 class="anchored" data-anchor-id="birthday-order">Birthday Order</h3>
+<section id="games" class="level2">
+<h2 class="anchored" data-anchor-id="games">Games</h2>
+<p>Everyone wrote down their birthday and a word on a paper. Then we played these games. 9 people entered for all of them.</p>
+<section id="birthday-order-1-chip" class="level3">
+<h3 class="anchored" data-anchor-id="birthday-order-1-chip">Birthday Order (1 chip)</h3>
+<p>Number to select where your birthday (not including year) is in the order of all the students</p>
+<p>Winner: Arjun</p>
 </section>
-<section id="birthday-sum" class="level3">
-<h3 class="anchored" data-anchor-id="birthday-sum">Birthday Sum</h3>
+<section id="birthday-sum-2-chips" class="level3">
+<h3 class="anchored" data-anchor-id="birthday-sum-2-chips">Birthday Sum (2 chips)</h3>
+<p>Number to select the sum of all birth dates (i.e.&nbsp;just the day of the month) of the students</p>
+<p>True sum: 133</p>
+<p>Winners: Michel, Reet with 134</p>
 </section>
-<section id="word-modal-length" class="level3">
-<h3 class="anchored" data-anchor-id="word-modal-length">Word Modal Length</h3>
+<section id="word-modal-length-5-chips" class="level3">
+<h3 class="anchored" data-anchor-id="word-modal-length-5-chips">Word Modal Length (5 chips)</h3>
+<p>Number to select the most common length of the submitted words</p>
+<p>True mode: 7</p>
+<p>Winners: Michel, Arjun, Brandon with 6s and 8s</p>
 </section>
-<section id="word-most-common-letter" class="level3">
-<h3 class="anchored" data-anchor-id="word-most-common-letter">Word Most Common Letter</h3>
+<section id="word-most-common-letter-5-chips" class="level3">
+<h3 class="anchored" data-anchor-id="word-most-common-letter-5-chips">Word Most Common Letter (5 chips)</h3>
+<p>Number to select the most common letter of the submitted words</p>
+<p>True letter: o</p>
+<p>Winner: John with o</p>
 </section>
 <section id="game" class="level3">
 <h3 class="anchored" data-anchor-id="game">2/3 Game</h3>
+<p><a href="https://en.wikipedia.org/wiki/Guess_2/3_of_the_average">Guess 2/3 of the average number game</a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Submissions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3</td>
+</tr>
+<tr class="even">
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+</tr>
+<tr class="even">
+<td>93</td>
+</tr>
+<tr class="odd">
+<td>34</td>
+</tr>
+<tr class="even">
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>34</td>
+</tr>
+<tr class="even">
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The average was 25.1 and 2/3 of that is 16.7.</p>
+<p>Winner: Alex with 17</p>
 </section>
 </section>
 <section id="poker-games" class="level2">

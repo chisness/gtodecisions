@@ -83,11 +83,12 @@ Total pot if we call = $120 + b + b$.
 
 Our equity of this pot is $0.2$. 
 
-Therefore we breakeven when $b = 0.2*(120 + 2b)$.
+Therefore we breakeven when:
 
 $$
 \begin{equation}
 \begin{split}
+b &= 0.2*(120 + 2b) \\
 b &= 24 + 0.4b \\
 0.6b &= 24 \\
 b &= 40
@@ -100,6 +101,25 @@ Therefore when the bet size is 40 we are indifferent to calling and folding. Whe
 Note that we make the call even when we are unlikely to win! This is because we're making the decision based on the probabilities. 
 
 ### Basketball Shots
+For the final example, we looked a shooting a 2-pointer vs. 3-pointer in basketball. 
+
+If we assume that a 2-pointer is 60% to make and a 3-pointer is 33% to make, then we have a relatively simple decision early in the game. 
+
+$\mathbb{E}(\text{2-pointer}) = 0.6*2 = 1.2$
+
+$\mathbb{E}(\text{3-pointer}) = 0.3*3 = 1$
+
+Therefore we should take the 2-pointer. But let's look at an end of game scenario where our team is down by 2 points and deciding on their final shot. Making a 2-pointer will go to overtime, while making a 3-pointer will instantly win. 
+
+![](basketball.jpg)
+
+We work out that now:
+
+$\mathbb{E}(\text{2-pointer win}) = 0.6*0.5 = 0.3$
+
+$\mathbb{E}(\text{3-pointer win}) = 0.33$
+
+Under this scenario, we see that it makes sense to go for the 3-pointer even though the immediate odds of the 3-pointer are lower as we showed at the beginning of this section. 
 
 ## Group Discussion
 We talked about how these EV examples are relatively straightforward, but there are many factors that are not always easily quantifiable. There are also cases where our preferences (utility functions) are not aligned with the $EV. For example, if offered a coinflip for $100m vs. a free $40m, you'd probably need to be very rich or very risk-seeking to prefer the flip. 
@@ -139,47 +159,77 @@ But then once you successfully rob the bank, apparently the strategy is to rob a
 
 Finally, if you succeded twice, you give it one last try, but this time is only 50% successful for another $10k and risks loss of -$133k. 
 
-So what's the EV of success? 
+So what's the EV? 
 
-$0.7*0.8*0.5 = 0.28$ you will get \$30k, for an EV of $\$30*.28 = 8.4k$
+$0.7*0.8*0.5 = 0.28$ you will get 30k, for an EV of $30*.28 = 8.4$
 
+$0.3$ you go to jail (value -100k) for an EV of $-100*.3 = -30$
 
-0.28 you get 30k 
-Worth $8400 EV
+$0.14$ you go to jail (value -125k) for an EV of $-125*.14 = -17.5$ 
 
-0.3 you get -100k = -30k
+$0.28$ you go to jail (value -133k) for an EV of $-133*.28 = -37.4$
 
-.14 you get -125k = -17.5k
+There is a 28% of success and 72% of ending up in jail. If you do succeed, you'll end up with $30k. 
 
-.28 you get -133k = -37.24k
+We can sum all of the individual expected values and get total EV: 
 
+$-84.9 + 8.4 = -76.5$
 
--84.74k
-
-+8.4k 
-
-
-Net -76.34k 
-
-28% +$30k
-72% in jail 
-
+*Whatever the EV calculations, don't rob a bank.*
 
 ### Turning Back on Everest
+![](everest.jpg)
 
 ### Picking a Job
+![](pickingjob.jpg)
 
-## Fun Games
+## Games
+Everyone wrote down their birthday and a word on a paper. Then we played these games. 9 people entered for all of them. 
 
-### Birthday Order
+### Birthday Order (1 chip)
+Number to select where your birthday (not including year) is in the order of all the students
 
-### Birthday Sum
+Winner: Arjun
 
-### Word Modal Length
+### Birthday Sum (2 chips)
+Number to select the sum of all birth dates (i.e. just the day of the month) of the students
 
-### Word Most Common Letter
+True sum: 133
+
+Winners: Michel, Reet with 134
+
+### Word Modal Length (5 chips)
+Number to select the most common length of the submitted words
+
+True mode: 7
+
+Winners: Michel, Arjun, Brandon with 6s and 8s
+
+### Word Most Common Letter (5 chips)
+Number to select the most common letter of the submitted words
+
+True letter: o 
+
+Winner: John with o
 
 ### 2/3 Game
+[Guess 2/3 of the average number game](https://en.wikipedia.org/wiki/Guess_2/3_of_the_average)
+
+| Submissions |
+|---------|
+| 3       |
+| 20      |
+| 13      |
+| 93      |
+| 34      |
+| 17      |
+| 34      |
+| 12      |
+| 0       |
+
+The average was 25.1 and 2/3 of that is 16.7. 
+
+Winner: Alex with 17
 
 ## Poker Games
 We want to run this on Sundays. We'll send out a message soon about scheduling and more info. We'll probably do an online game on: 
