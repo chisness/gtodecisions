@@ -1,5 +1,5 @@
 ---
-title: "#5: Risk and Luck"
+title: "#4: Risk and Luck"
 sidebar: course
 format:
   html:

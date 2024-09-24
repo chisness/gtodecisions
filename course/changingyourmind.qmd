@@ -1,5 +1,5 @@
 ---
-title: "#4: Changing Your Mind"
+title: "#3: Changing Your Mind"
 sidebar: course
 format:
   html:

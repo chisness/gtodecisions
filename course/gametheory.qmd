@@ -1,5 +1,5 @@
 ---
-title: "#3: Game Theory"
+title: "#2: Game Theory"
 sidebar: course
 format:
   html:
