@@ -76,8 +76,22 @@ gtag('js', new Date());
 gtag('config', 'G-K22WMCCPJ4', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -318,7 +332,7 @@ window.Quarto = {
 <p>Rain and No Umbrella average: $115/10 = $11.50</p>
 <p>No Rain and Umbrella average: $40/10 = $4.00</p>
 <p>From here we ask what is the breakeven percentage chance of rain that this average person should choose to carry vs.&nbsp;not carry an umbrella?</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{equation}
 \begin{split}
 11.5*P(\text{rain}) &amp;= 4*P(\text{no rain}) &amp;&amp; \Rightarrow \text{Let } P(\text{rain}) = p \\
@@ -329,7 +343,7 @@ p &amp;= .258 \\
 &amp;= 25.8\%
 \end{split}
 \end{equation}
-\]</span></p>
+</span></p>
 <p>Therefore if it’s more than 25.8% probable to rain, this person should take an umbrella, and if less then 25.8% then they should leave it at home.</p>
 </section>
 <section id="poker" class="level3">
@@ -342,11 +356,11 @@ p &amp;= .258 \\
 <p>Assume that the pot is currently $120.</p>
 <p>What all-in bet from our opponent can we profitably call?</p>
 <p>We know that a tiny bet of $1 will definitely give us the correct odds of calling. We know that a huge bet of $10,000 will definitely not give us the correct odds of calling.</p>
-<p>We can calculate this mathematically. Let <span class="math inline">\(b\)</span> be the opponent’s bet size that we have to call.</p>
-<p>Total pot if we call = <span class="math inline">\(120 + b + b\)</span>.</p>
-<p>Our equity of this pot is <span class="math inline">\(0.2\)</span>.</p>
+<p>We can calculate this mathematically. Let <span class="math inline">b</span> be the opponent’s bet size that we have to call.</p>
+<p>Total pot if we call = <span class="math inline">120 + b + b</span>.</p>
+<p>Our equity of this pot is <span class="math inline">0.2</span>.</p>
 <p>Therefore we breakeven when:</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{equation}
 \begin{split}
 b &amp;= 0.2*(120 + 2b) \\
@@ -355,7 +369,7 @@ b &amp;= 24 + 0.4b \\
 b &amp;= 40
 \end{split}
 \end{equation}
-\]</span></p>
+</span></p>
 <p>Therefore when the bet size is 40 we are indifferent to calling and folding. When it’s more than 40, we don’t have sufficient odds to call and should fold. When it’s less than 40, we have profitable odds to call and should call.</p>
 <p>Note that we make the call even when we are unlikely to win! This is because we’re making the decision based on the probabilities.</p>
 </section>
@@ -363,13 +377,13 @@ b &amp;= 40
 <h3 class="anchored" data-anchor-id="basketball-shots">Basketball Shots</h3>
 <p>For the final example, we looked a shooting a 2-pointer vs.&nbsp;3-pointer in basketball.</p>
 <p>If we assume that a 2-pointer is 60% to make and a 3-pointer is 33% to make, then we have a relatively simple decision early in the game.</p>
-<p><span class="math inline">\(\mathbb{E}(\text{2-pointer}) = 0.6*2 = 1.2\)</span></p>
-<p><span class="math inline">\(\mathbb{E}(\text{3-pointer}) = 0.33*3 = 1\)</span></p>
+<p><span class="math inline">\mathbb{E}(\text{2-pointer}) = 0.6*2 = 1.2</span></p>
+<p><span class="math inline">\mathbb{E}(\text{3-pointer}) = 0.33*3 = 1</span></p>
 <p>Therefore we should take the 2-pointer. But let’s look at an end of game scenario where our team is down by 2 points and deciding on their final shot. Making a 2-pointer will go to overtime, while making a 3-pointer will instantly win.</p>
 <p><img src="basketball.jpg" class="img-fluid"></p>
 <p>We work out that now:</p>
-<p><span class="math inline">\(\mathbb{E}(\text{2-pointer win}) = 0.6*0.5 = 0.3\)</span></p>
-<p><span class="math inline">\(\mathbb{E}(\text{3-pointer win}) = 0.33\)</span></p>
+<p><span class="math inline">\mathbb{E}(\text{2-pointer win}) = 0.6*0.5 = 0.3</span></p>
+<p><span class="math inline">\mathbb{E}(\text{3-pointer win}) = 0.33</span></p>
 <p>Under this scenario, we see that it makes sense to go for the 3-pointer even though the immediate odds of the 3-pointer are lower as we showed at the beginning of this section.</p>
 </section>
 </section>
@@ -403,13 +417,13 @@ b &amp;= 40
 <p>But then once you successfully rob the bank, apparently the strategy is to rob another one. This works 80% of the time for another $10k. And if it fails, your loss is -$125k (only marginally worse than getting caught the first time). (Note that the tree diagram shows -$25k, but meant this in addition to the original possible loss.)</p>
 <p>Finally, if you succeded twice, you give it one last try, but this time is only 50% successful for another $10k and risks loss of -$133k.</p>
 <p>So what’s the EV?</p>
-<p><span class="math inline">\(0.7*0.8*0.5 = 0.28\)</span> you will get 30k, for an EV of <span class="math inline">\(30*.28 = 8.4\)</span></p>
-<p><span class="math inline">\(0.3\)</span> you go to jail (value -100k) for an EV of <span class="math inline">\(-100*.3 = -30\)</span></p>
-<p><span class="math inline">\(0.14\)</span> you go to jail (value -125k) for an EV of <span class="math inline">\(-125*.14 = -17.5\)</span></p>
-<p><span class="math inline">\(0.28\)</span> you go to jail (value -133k) for an EV of <span class="math inline">\(-133*.28 = -37.4\)</span></p>
+<p><span class="math inline">0.7*0.8*0.5 = 0.28</span> you will get 30k, for an EV of <span class="math inline">30*.28 = 8.4</span></p>
+<p><span class="math inline">0.3</span> you go to jail (value -100k) for an EV of <span class="math inline">-100*.3 = -30</span></p>
+<p><span class="math inline">0.14</span> you go to jail (value -125k) for an EV of <span class="math inline">-125*.14 = -17.5</span></p>
+<p><span class="math inline">0.28</span> you go to jail (value -133k) for an EV of <span class="math inline">-133*.28 = -37.4</span></p>
 <p>There is a 28% of success and 72% of ending up in jail. If you do succeed, you’ll end up with $30k.</p>
 <p>We can sum all of the individual expected values and get total EV:</p>
-<p><span class="math inline">\(-84.9 + 8.4 = -76.5\)</span></p>
+<p><span class="math inline">-84.9 + 8.4 = -76.5</span></p>
 <p><em>Whatever the EV calculations, don’t rob a bank.</em></p>
 </section>
 <section id="turning-back-on-everest" class="level3">

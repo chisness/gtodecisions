@@ -76,8 +76,22 @@ gtag('js', new Date());
 gtag('config', 'G-K22WMCCPJ4', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -191,8 +205,31 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#game" id="toc-game" class="nav-link active" data-scroll-target="#game">2/3 Game</a></li>
+  <li><a href="#rock-paper-scissors" id="toc-rock-paper-scissors" class="nav-link" data-scroll-target="#rock-paper-scissors">Rock Paper Scissors</a>
+  <ul class="collapse">
+  <li><a href="#nash-vs.-exploitative" id="toc-nash-vs.-exploitative" class="nav-link" data-scroll-target="#nash-vs.-exploitative">Nash vs.&nbsp;Exploitative</a></li>
+  <li><a href="#opponent-modeling" id="toc-opponent-modeling" class="nav-link" data-scroll-target="#opponent-modeling">Opponent Modeling</a></li>
+  <li><a href="#data-talk-paper-scissors" id="toc-data-talk-paper-scissors" class="nav-link" data-scroll-target="#data-talk-paper-scissors">Data: Talk Paper Scissors</a></li>
+  </ul></li>
+  <li><a href="#soccer-kicker" id="toc-soccer-kicker" class="nav-link" data-scroll-target="#soccer-kicker">Soccer Kicker</a></li>
+  <li><a href="#make-your-own" id="toc-make-your-own" class="nav-link" data-scroll-target="#make-your-own">Make Your Own</a>
+  <ul class="collapse">
+  <li><a href="#odds-vs.-evens" id="toc-odds-vs.-evens" class="nav-link" data-scroll-target="#odds-vs.-evens">Odds vs.&nbsp;Evens</a></li>
+  </ul></li>
+  <li><a href="#indifference-in-poker" id="toc-indifference-in-poker" class="nav-link" data-scroll-target="#indifference-in-poker">Indifference in Poker</a></li>
+  <li><a href="#end-games" id="toc-end-games" class="nav-link" data-scroll-target="#end-games">End Games</a>
+  <ul class="collapse">
+  <li><a href="#highest-number-up-to-100" id="toc-highest-number-up-to-100" class="nav-link" data-scroll-target="#highest-number-up-to-100">Highest Number Up to 100</a></li>
+  <li><a href="#aumann-game" id="toc-aumann-game" class="nav-link" data-scroll-target="#aumann-game">Aumann Game</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -216,10 +253,647 @@ window.Quarto = {
 </header>
 
 
-<p>Game Theory</p>
+<section id="game" class="level2">
+<h2 class="anchored" data-anchor-id="game">2/3 Game</h2>
+<p>We played the 2/3 game twice. The goal is to select the number that is 2/3 of the average. We talked a bit about the theory.</p>
+<ol type="1">
+<li>It’s impossible for anything over 66.67 to win (these are dominated, i.e.&nbsp;always worse) because the maximum is if everyone picks 100 and 2/3 of this is 66.67.</li>
+<li>Once you eliminate everything over 66.67, then the maximum anyone should pick is <span class="math inline">2/3 * 66.67 = 44.44</span>. Second level domination: Superior strategy if the opponent doesn’t play the first level dominated strategy.</li>
+<li>We can keep going by this logic and we’d end up with everyone choosing 0.</li>
+<li>But in the real world, this doesn’t work!</li>
+<li>We can try to model the real world, for example by assuming a uniform random such that the average is 50 and then could choose 2/3, which is 33.33.</li>
+<li>The next level to that assumption is that the first level people will choose 33.33, so we should go to the second level and take 2/3 of that, which is 22.22.</li>
+<li>What level are people on? What other assumptions could we make?</li>
+</ol>
+</section>
+<section id="rock-paper-scissors" class="level2">
+<h2 class="anchored" data-anchor-id="rock-paper-scissors">Rock Paper Scissors</h2>
+<p>RPS is a zero-sum game and the payouts are symmetrical as follows:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Player 1/2</th>
+<th>Rock</th>
+<th>Paper</th>
+<th>Scissors</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rock</td>
+<td>(0, 0)</td>
+<td>(-1, 1)</td>
+<td>(1, -1)</td>
+</tr>
+<tr class="even">
+<td>Paper</td>
+<td>(1, -1)</td>
+<td>(0, 0)</td>
+<td>(-1, 1)</td>
+</tr>
+<tr class="odd">
+<td>Scissors</td>
+<td>(-1, 1)</td>
+<td>(1, -1)</td>
+<td>(0, 0)</td>
+</tr>
+</tbody>
+</table>
+<p>The Nash Equilibrium strategy is to play each action <span class="math inline">r = p = s = 1/3</span> of the time. Under Nash equilibrium, no player can gain by unilaterally deviating from their strategy.</p>
+<p>A <em>pure</em> strategy would mean always playing one action, but a <em>mixed</em> strategy is mixing over your possible actions, which is what we see here.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nash Equilibrium Strategy for RPS
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If Player 1 plays Rock with probability <span class="math inline">r</span>, Paper with probability <span class="math inline">p</span>, and Scissors with probability <span class="math inline">s</span>, we have the following expected value equations for Player 2:</p>
+<p><span class="math inline">\mathbb{E}(\text{R}) = -1p + 1s</span></p>
+<p><span class="math inline">\mathbb{E}(\text{P}) = 1r - 1s</span></p>
+<p><span class="math inline">\mathbb{E}(\text{S}) = -1r + 1p</span></p>
+<p>Since no action dominates, we know that the EV of every strategic action should be equal (since if a certain strategy was best, we’d want to always play that strategy).</p>
+<p>To solve for <span class="math inline">r</span>, <span class="math inline">p</span>, and <span class="math inline">s</span>, we can start by setting these EVs equal:</p>
+<p><span class="math inline">\mathbb{E}(\text{R}) = \mathbb{E}(\text{P})</span></p>
+<p><span class="math inline">-1p + 1s = 1r - 1s</span></p>
+<p><span class="math inline">2s = p + r</span></p>
+<p>Then setting these equal:</p>
+<p><span class="math inline">\mathbb{E}(\text{R}) = \mathbb{E}(\text{S})</span></p>
+<p><span class="math inline">-1p + 1s = -1r + 1p</span></p>
+<p><span class="math inline">s + r = 2p</span></p>
+<p>And finally setting these equal:</p>
+<p><span class="math inline">\mathbb{E}(\text{P}) = \mathbb{E}(\text{S})</span></p>
+<p><span class="math inline">1r - 1s = -1r + 1p</span></p>
+<p><span class="math inline">2r = s + p</span></p>
+<p>Now we have these equations:</p>
+<p><span class="math display">
+\begin{cases}
+2s = p + r \\
+s + r = 2p \\
+2r = s + p
+\end{cases}
+</span></p>
+<p>We can rewrite the 1st:</p>
+<p><span class="math inline">r = 2s - p</span></p>
+<p>And combine with the 2nd:</p>
+<p><span class="math inline">s + (2s - p) = 2p</span></p>
+<p><span class="math inline">3s = 3p</span></p>
+<p>Resulting in:</p>
+<p><span class="math inline">s = p</span></p>
+<p>Now we can go back to the 2nd equation:</p>
+<p><span class="math inline">s + r = 2p</span></p>
+<p>And insert <span class="math inline">s</span> = <span class="math inline">p</span>:</p>
+<p><span class="math inline">s + r = 2s</span></p>
+<p>And arrive at:</p>
+<p><span class="math inline">r = s</span></p>
+<p>We now see that all are equal:</p>
+<p><span class="math inline">s = p = r</span></p>
+<p>We also know that they must all sum to <span class="math inline">1</span>:</p>
+<p><span class="math inline">r + p + s = 1</span></p>
+<p>Since they’re all equal and sum to <span class="math inline">1</span>, we can substitute <span class="math inline">p</span> and <span class="math inline">s</span> with <span class="math inline">r</span>:</p>
+<p><span class="math inline">3r = 1</span></p>
+<p><span class="math inline">r = 1/3</span></p>
+<p>So all actions are taken with probability <span class="math inline">1/3</span>:</p>
+<p><span class="math inline">r = p = s = 1/3 \quad \blacksquare</span></p>
+</div>
+</div>
+</div>
+<p>Playing this strategy means that whatever your opponent does, you will breakeven! For example, think about an opponent that always plays Rock.</p>
+<p><span class="math display">
+\begin{equation}
+\begin{split}
+\mathbb{E}(\text{Equilibrium vs. Rock}) &amp;= r*0 + p*1 + s*-1 \\
+&amp;= 1/3*0 + 1/3*1 + 1/3*-1 \\
+&amp;= 0
+\end{split}
+\end{equation}
+</span></p>
+<section id="nash-vs.-exploitative" class="level3">
+<h3 class="anchored" data-anchor-id="nash-vs.-exploitative">Nash vs.&nbsp;Exploitative</h3>
+<p>Although we can play the equilibrium strategy and never lose, we also can’t win! If we have a predictable opponent, we’re better off in expectation to try to beat them exploitatively. In practice, you could spend some time trying to figure out what they’re doing and revert to equilibrium if you’re losing.</p>
+</section>
+<section id="opponent-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="opponent-modeling">Opponent Modeling</h3>
+<p>Suppose you knew your opponent played the following, what are the optimal strategies?</p>
+<ol type="1">
+<li>60% rock, 0% paper, 40% scissors</li>
+</ol>
+<p>Always rock: <span class="math inline">0.6*0 + 0*-1 + 0.4*1 = 0.4</span></p>
+<p>Always paper: <span class="math inline">0.6*1 + 0*0 + 0.4*-1 = 0.2</span></p>
+<p>Always scissors: <span class="math inline">0.6*-1 + 0*1 + 0.4*0 = -0.6</span></p>
+<p>Rock is best!</p>
+<p>This is a tricky one because paper beats the most common opponent move, but is actually worse than rock!</p>
+<p>Note that we only would use a mixed strategy if the EVs were the same for multiple pure strategies.</p>
+<ol start="2" type="1">
+<li>20% rock, 20% paper, 60% scissors</li>
+</ol>
+<p>Always rock: <span class="math inline">0.2*0 + 0.2*-1 + 0.6*1 = 0.4</span></p>
+<p>Always paper: <span class="math inline">0.2*1 + 0.2*0 + 0.6*-1 = -0.4</span></p>
+<p>Always scissors: <span class="math inline">0.2*-1 + 0.2*1 + 0.6*0 = 0</span></p>
+<p>Rock is best again!</p>
+<p>Note that we assume that the opponent plays fixed strategies. If they were able to update, then we’d probably want to be more subtle about our exploitation.</p>
+</section>
+<section id="data-talk-paper-scissors" class="level3">
+<h3 class="anchored" data-anchor-id="data-talk-paper-scissors">Data: Talk Paper Scissors</h3>
+<p><a href="https://eieio.games/nonsense/game-13-talk-paper-scissors/">eieio games</a> made a Rock Paper Scissors over voice game in which players call a phone number and get matched up with another player for a 3 game RPS match.</p>
+<p>They published their 40,000 round data on X:</p>
+<p><img src="tps.png" class="img-fluid"> <strong>Overall: R 37.2%, P 35.4%, S 27.4%</strong></p>
+<p><img src="tpsr1.png" class="img-fluid"> <strong>Round 1: R 39.7%, P 37.6%, S 22.7%</strong></p>
+<p><img src="tpsr2.png" class="img-fluid"> <strong>Round 2: R 34.0%, 33.4%, 32.6%</strong></p>
+<p><img src="tpsr3.png" class="img-fluid"> <strong>Round 3: R 37.2%, 34.7%, 28.1%</strong></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expected Value Against TPS Player
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What is the best strategy per round against the average TPS player? What is your expected value per round and overall?</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The best strategy is to always play Paper.</p>
+<p><span class="math inline">\mathbb{E}(\text{Round 1}) = 0.397*1 + 0.376*0 + 0.227*-1 = 0.17</span></p>
+<p><span class="math inline">\mathbb{E}(\text{Round 2}) = 0.34*1 + 0.334*0 + 0.326*-1 = 0.014</span></p>
+<p><span class="math inline">\mathbb{E}(\text{Round 3}) = 0.372*1 + 0.347*0 + 0.281*-1 = 0.091</span></p>
+<p><span class="math inline">\mathbb{E}(\text{Overall}) = 0.17 + 0.014 + 0.091 = 0.275</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="soccer-kicker" class="level2">
+<h2 class="anchored" data-anchor-id="soccer-kicker">Soccer Kicker</h2>
+<p>Consider the <strong>Soccer Penalty Kick</strong> game where a Kicker is trying to score a goal and the Goalie is trying to block it.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kicker/Goalie</th>
+<th>Lean Left</th>
+<th>Lean Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kick Left</td>
+<td>0, 0</td>
+<td>+2, -2</td>
+</tr>
+<tr class="even">
+<td>Kick Right</td>
+<td>+1, -1</td>
+<td>0, 0</td>
+</tr>
+</tbody>
+</table>
+<p>The game setup is zero-sum. If Kicker and Goalie both go in one direction, then it’s assumed that the goal will miss and both get <span class="math inline">0</span> payoffs. If the Kicker plays Kick Right when the Goalie plays Lean Left, then the Kicker is favored and gets a payoff of <span class="math inline">+1</span>. If the Kicker plays Kick Left when the Goalie plays Lean Right, then the kicker is even more favored, because it’s easier to kick left than right, and gets <span class="math inline">+2</span>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nash Equilibrium Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Which of these, if any, is a Nash equilibrium? You can check by seeing if either player would benefit by changing their action.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kicker</th>
+<th>Goalie</th>
+<th>Equilibrium or Change?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Left</td>
+<td>Left</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Left</td>
+<td>Right</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Right</td>
+<td>Left</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Right</td>
+<td>Right</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There are no pure Nash equilibrium solutions because when the actions match, the Kicker will always want to change, and when they don’t match, the Goalie will always want to change.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kicker</th>
+<th>Goalie</th>
+<th>Equilibrium or Change?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Left</td>
+<td>Left</td>
+<td>Kicker changes to right</td>
+</tr>
+<tr class="even">
+<td>Left</td>
+<td>Right</td>
+<td>Goalie changes to left</td>
+</tr>
+<tr class="odd">
+<td>Right</td>
+<td>Left</td>
+<td>Goalie changes to right</td>
+</tr>
+<tr class="even">
+<td>Right</td>
+<td>Right</td>
+<td>Kicker changes to left</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expected Value Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Assume that they both play Left 50% and Right 50% – what is the expected value of the game?</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kicker/Goalie</th>
+<th>Lean Left (0.5)</th>
+<th>Lean Right (0.5)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kick Left (0.5)</td>
+<td>0, 0</td>
+<td>+2, -2</td>
+</tr>
+<tr class="even">
+<td>Kick Right (0.5)</td>
+<td>+1, -1</td>
+<td>0, 0</td>
+</tr>
+</tbody>
+</table>
+<p>We apply these probabilities to each of the 4 outcomes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kicker/Goalie</th>
+<th>Lean Left (0.5)</th>
+<th>Lean Right (0.5)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kick Left (0.5)</td>
+<td>0, 0 (0.25)</td>
+<td>+2, -2 (0.25)</td>
+</tr>
+<tr class="even">
+<td>Kick Right (0.5)</td>
+<td>+1, -1 (0.25)</td>
+<td>0, 0 (0.25)</td>
+</tr>
+</tbody>
+</table>
+<p>Now for the Kicker, we have <span class="math inline">\mathbb{E} = 0.25*0 + 0.25*2 + 0.25*1 + 0.25*0 = 0.75</span>.</p>
+<p>Since it’s zero-sum, we have <span class="math inline">\mathbb{E} = -0.75</span> for the Goalie.</p>
+<p>Note that, for example, the Kicker playing 50% Left and 50% Right could be interpreted as a single player having these probabilities or a field of players averaging to these probabilities. So out of 100 players, this could mean:</p>
+<ul>
+<li>100 players playing 50% Left and 50% Right</li>
+<li>50 players playing 100% Left and 50 players playing 100% Right</li>
+<li>50 players playing 75% Left/25% Right and 50 players playing 25% Left/75% right</li>
+</ul>
+</div>
+</div>
+</div>
+<p>When the Goalie plays left with probability <span class="math inline">p</span> and right with probability <span class="math inline">1-p</span>, we can find the expected value of the Kicker actions.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kicker/Goalie</th>
+<th>Lean Left (p)</th>
+<th>Lean Right (1-p)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kick Left</td>
+<td>0, 0</td>
+<td>+2, -2</td>
+</tr>
+<tr class="even">
+<td>Kick Right</td>
+<td>+1, -1</td>
+<td>0, 0</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\mathbb{E}(\text{Kick Left}) = 0*p + 2*(1-p) = 2 - 2*p</span></p>
+<p><span class="math inline">\mathbb{E}(\text{Kick Right}) = 1*p + 0*(1-p) = 1*p</span></p>
+<p>The Kicker is going to play the best response to the Goalie’s strategy. The Goalie wants to make the Kicker <strong>indifferent</strong> to Kick Left and Kick Right because if the Kicker was not going to be indifferent, then he would prefer one of the actions, meaning that action would be superior to the other. Therefore the Kicker will play a mixed strategy in response that will result in a Nash equilibrium where neither player benefits from unilaterally changing strategies. (Note that indifferent does not mean 50% each, but means the expected value is the same for each.)</p>
+<p><img src="kickergoalieplot.png" class="img-fluid"></p>
+<p>By setting the values equal, we get <span class="math inline">2 - 2*p = 1*p \Rightarrow p = \frac{2}{3}</span> as shown in the plot. This means that <span class="math inline">1-p = 1 - \frac{2}{3} = \frac{1}{3}</span>. Therefore the Goalie should play Lean Left <span class="math inline">\frac{2}{3}</span> and Lean Right <span class="math inline">\frac{1}{3}</span>. The value for the Kicker is <span class="math inline">\frac{2}{3}</span>, or <span class="math inline">(0.67)</span>, for both actions, regardless of the Kicker’s mixing strategy.</p>
+<p>Note that the Kicker is worse off now (<span class="math inline">0.67</span> now compared to <span class="math inline">0.75</span>) than when both players played 50% each action. Why?</p>
+<p>If the Kicker plays Left with probability <span class="math inline">q</span> and Right with probability <span class="math inline">1-q</span>, then the Goalie’s values are:</p>
+<p><span class="math inline">\mathbb{E}(\text{Lean Left}) = 0*q - 1*(1-q) = -1 + q</span></p>
+<p><span class="math inline">\mathbb{E}(\text{Lean Right}) = -2*q + 0 = -2*q</span></p>
+<p>Setting equal,</p>
+<p><span class="math display">
+\begin{equation}
+\begin{split}
+-1 + q &amp;= -2*q \\
+-1 &amp;= -3*q  \\
+\frac{1}{3} &amp;= q
+\end{split}
+\end{equation}
+</span></p>
+<p>Therefore the Kicker should play Left <span class="math inline">\frac{1}{3}</span> and Right <span class="math inline">\frac{2}{3}</span>, giving a value of <span class="math inline">-\frac{2}{3}</span> to the Goalie.</p>
+<p>We can see this from the game table:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 35%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kicker/Goalie</th>
+<th>Lean Left (<span class="math inline">\frac{2}{3}</span>)</th>
+<th>Lean Right (<span class="math inline">\frac{1}{3}</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kick Left (<span class="math inline">\frac{1}{3}</span>)</td>
+<td>0, 0 (<span class="math inline">\frac{2}{9}</span>)</td>
+<td>+2, -2 (<span class="math inline">\frac{1}{9}</span>)</td>
+</tr>
+<tr class="even">
+<td>Kick Right (<span class="math inline">\frac{2}{3}</span>)</td>
+<td>+1, -1 (<span class="math inline">\frac{4}{9}</span>)</td>
+<td>0, 0 (<span class="math inline">\frac{2}{9}</span>)</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore the expected payoffs in this game are <span class="math inline">\frac{2}{9}*0 + \frac{1}{9}*2 + \frac{4}{9}*1 + \frac{2}{9}*0 = \frac{6}{9} = 0.67</span> for the Kicker and <span class="math inline">-0.67</span> for the Goalie.</p>
+<p>In an equilibrium, no player should be able to unilaterally improve by changing their strategy. What if the Kicker switches to always Kick Left?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 35%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kicker/Goalie</th>
+<th>Lean Left (<span class="math inline">\frac{2}{3}</span>)</th>
+<th>Lean Right (<span class="math inline">\frac{1}{3}</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kick Left (<span class="math inline">1</span>)</td>
+<td>0, 0 (<span class="math inline">\frac{2}{3}</span>)</td>
+<td>+2, -2 (<span class="math inline">\frac{1}{3}</span>)</td>
+</tr>
+<tr class="even">
+<td>Kick Right (<span class="math inline">0</span>)</td>
+<td>+1, -1 (<span class="math inline">0</span>)</td>
+<td>0, 0 (<span class="math inline">0</span>)</td>
+</tr>
+</tbody>
+</table>
+<p>Now the Kicker’s payoff is still <span class="math inline">\frac{1}{3}*2 = 0.67</span>.</p>
+<p>When a player makes their opponent indifferent, this means that any action the opponent takes (within the set of equilibrium actions) will result in the same payoff!</p>
+<p>So if you know your opponent is playing the equilibrium strategy, then you can actually do whatever you want with no penalty with the mixing actions. Sort of.</p>
+<p>The risk is that the opponent can now deviate from equilibrium and take advantage of your new strategy. For example, if the Goalie caught on and moved to always Lean Left, then expected value is reduced to <span class="math inline">0</span> for both players.</p>
+<p>To summarize, you can only be penalized for not playing the equilibrium mixing strategy if your opponent plays a non-equilibrium strategy that exploits your strategy.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Indifference
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Why do players make their opponent indifferent?</p>
+</div>
+</div>
+</section>
+<section id="make-your-own" class="level2">
+<h2 class="anchored" data-anchor-id="make-your-own">Make Your Own</h2>
+<p>We spent some time thinking of games in groups to try to stump the opposing team.</p>
+<section id="odds-vs.-evens" class="level3">
+<h3 class="anchored" data-anchor-id="odds-vs.-evens">Odds vs.&nbsp;Evens</h3>
+<p>A game was presented where each player has to simultaneously put out a number 1 or 2 with their fingers. The Odds player wins the sum if it’s odd and the Evens player wins the sum if it’s even. Would you rather be the Evens or Odds player?</p>
+<p><img src="evensodds.jpg" class="img-fluid"></p>
+<p><img src="evensodds2.png" class="img-fluid"></p>
+<p>It turns out that the Odds player has a small advantage and wins 1/12 in expectation at equilibrium.</p>
+</section>
+</section>
+<section id="indifference-in-poker" class="level2">
+<h2 class="anchored" data-anchor-id="indifference-in-poker">Indifference in Poker</h2>
+<p>We didn’t get to this in the class. It’s a <a href="https://en.wikipedia.org/wiki/Kuhn_poker">Kuhn Poker</a> example (see link). It’s the simplest strategic poker game that uses a 3 card deck of cards Q/K/A. Each player starts with 2 chips, antes 1 of them, and then has 1 left for betting.</p>
+<p>We can apply the indifference principle in computing equilibrium strategies in poker. When you make your opponent indifferent, then you don’t give them any best play.</p>
+<p>Let’s look at one particular situation in Kuhn Poker and work it out by hand. Suppose that you are Player 2 with card Q after a Check from Player 1. (We could equivalently structure this as a river situation in Hold’em where Player 2 has a bluff or a very strong hand and Player 1 has a mid-strength hand.)</p>
+<p><img src="kuhnindiff.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expected Value Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What indifference is Player 2 trying to induce? Compute it.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Making P1 indifferent between calling and folding with a K</p>
+<p>We can work out Player 2’s betting strategy by calculating the indifference. Let <span class="math inline">b</span> be the probability that P2 bets with a Q after P1 checks.</p>
+<p><span class="math display">\begin{equation}
+\begin{split}
+\mathbb{E}(\text{P1 Check K then Fold to Bet}) &amp;= 0 \\
+\\
+
+\mathbb{E}(\text{P1 Check K then Call Bet}) &amp;= -1*\Pr(\text{P2 has A and Bets}) + 3*\Pr(\text{P2 has Q and Bets}) \\
+  &amp;= -1*\frac{1}{2} + 3*\frac{1}{2}*b \\
+  &amp;= -0.5 + 1.5*b
+\end{split}
+\end{equation}</span></p>
+<p>Setting these equal:</p>
+<p><span class="math inline">0 = -0.5 + 1.5*b</span></p>
+<p><span class="math inline">b = \frac{1}{3}</span></p>
+<p>Therefore in equilibrium, P2 should bet <span class="math inline">\frac{1}{3}</span> with Q after P1 checks.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Equilibrium Mixed Strategy Change Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If P2 bet <span class="math inline">\frac{2}{3}</span> instead of <span class="math inline">\frac{1}{3}</span> with Q after P1 checks and P1 is playing an equilibrium strategy, how would P2’s expected value change?</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>It wouldn’t! As long as P1 doesn’t modify their equilibrium strategy, then P2 can mix his strategy however he wants and have the same EV.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bluff:Value Ratio Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given that P2 has bet after P1 checks and is playing the equilibrium strategy, what is the probability that they are bluffing?</p>
+<p>(Note: Including cases where you have an A, so Q bets are bluffs and A bets are value bets.)</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>P2 has Q and A each <span class="math inline">\frac{1}{2}</span> of the time.</p>
+<p>P2 is betting Q <span class="math inline">\frac{1}{3}</span> of the time (bluffing).</p>
+<p>P2 is betting A always (value betting).</p>
+<p>Therefore for every 3 times you have Q you will bet once and for every 3 times you have A you will bet 3 times. Out of the 4 bets, 1 of them is a bluff.</p>
+<p><span class="math inline">\Pr(\text{P2 Bluff after P1 Check}) = \frac{1}{4}</span></p>
+</div>
+</div>
+</div>
+<p>Note: If you play an equilibrium strategy, opponents will only get penalized for playing hands <strong>outside</strong> of the set of hands in the mixed strategy equilibrium (also known as the support, or the set of pure strategies that are played with non-zero probability under the mixed strategy). If opponents are not playing equilibrium, though, then they open themselves up to exploitation.</p>
+</section>
+<section id="end-games" class="level2">
+<h2 class="anchored" data-anchor-id="end-games">End Games</h2>
+<section id="highest-number-up-to-100" class="level3">
+<h3 class="anchored" data-anchor-id="highest-number-up-to-100">Highest Number Up to 100</h3>
+<p>Everyone chooses a number, maximum 100. The highest unique number chosen wins.</p>
+</section>
+<section id="aumann-game" class="level3">
+<h3 class="anchored" data-anchor-id="aumann-game">Aumann Game</h3>
+<p>Everyone gets a paper with a possible solution to a trivia question – only one is correct. We then go around and everyone says what probability they believe their answer is correct.</p>
+<p>We had 8 people, so with no info, you’d expect your answer to be 12.5%. We ended with very polarized numbers where most were 0 and there was a 5%, 40%, and 80%. The 5% ended up being correct (better than 0)!.</p>
+<p><img src="aumann.jpg" class="img-fluid"></p>
 
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
